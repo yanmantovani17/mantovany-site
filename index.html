@@ -441,5 +441,23 @@ a.logo-parceiro:hover{border-color:var(--ouro,#c9a227);transform:translateY(-2px
     document.querySelectorAll('[data-contar]').forEach((el) => { el.textContent = '0'; io.observe(el); });
   }
 </script>
+<script>
+  // Contador de acessos sem cookie (só números por dia, sem IP nem identificação): vai para a Central do YMOBRA
+  (() => { try {
+    const C = 'https://ymobra-central.comercial-cf9.workers.dev/v1/acesso';
+    const q = new URLSearchParams(location.search);
+    const enviar = (e) => navigator.sendBeacon && navigator.sendBeacon(C, JSON.stringify({ e, p: location.pathname, r: document.referrer, u: q.get('utm_source') || '' }));
+    let nova = true; try { nova = !sessionStorage.getItem('acesso'); sessionStorage.setItem('acesso', '1'); } catch (x) {}
+    if (nova) enviar('entrada');
+    enviar('visita');
+    document.addEventListener('click', (ev) => {
+      const a = ev.target.closest && ev.target.closest('a'); if (!a) return;
+      const h = a.href || '', m = h.match(/[?&]plano=([a-z]+)/);
+      const alvo = m ? 'plano-' + m[1] : /wa\.me|whatsapp/.test(h) ? 'whatsapp' : h.startsWith('tel:') ? 'telefone' : h.startsWith('mailto:') ? 'email'
+        : /app\.ymobra\.com\.br\/?$/.test(h) ? 'entrar' : /ymobra\.com\.br/.test(h) && !location.hostname.includes('ymobra') ? 'ymobra' : /instagram\.com/.test(h) ? 'instagram' : '';
+      if (alvo) enviar('clique:' + alvo);
+    });
+  } catch (x) {} })();
+</script>
 </body>
 </html>
