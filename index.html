@@ -63,28 +63,27 @@ p{margin:0}
 @media (max-width:1020px){.nav{display:none}}
 @media (max-width:620px){.fone{display:none}.nav-dir .btn{display:none}}
 
-/* hero cinematográfico com slides */
-.hero{position:relative;height:100svh;min-height:600px;overflow:hidden;background:var(--preto)}
-.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity 1.2s ease,visibility 0s 1.2s}
-.slide.ativo{opacity:1;visibility:visible;transition:opacity 1.2s ease}
-.slide .fundo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 9s cubic-bezier(.2,.6,.3,1)}
-.slide.ativo .fundo{transform:scale(1)}
-.slide::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 40%,transparent 30%,rgba(11,21,34,.75) 100%),linear-gradient(180deg,rgba(11,21,34,.55) 0%,rgba(11,21,34,.05) 30%,rgba(11,21,34,.15) 60%,rgba(11,21,34,.95) 100%)}
-.slide.esq::after{background:radial-gradient(120% 90% at 50% 40%,transparent 30%,rgba(11,21,34,.7) 100%),linear-gradient(90deg,rgba(11,21,34,.85),rgba(11,21,34,.1) 60%),linear-gradient(180deg,rgba(11,21,34,.5),transparent 30%,rgba(11,21,34,.9))}
-.slide.dir::after{background:radial-gradient(120% 90% at 50% 40%,transparent 30%,rgba(11,21,34,.7) 100%),linear-gradient(270deg,rgba(11,21,34,.85),rgba(11,21,34,.1) 60%),linear-gradient(180deg,rgba(11,21,34,.5),transparent 30%,rgba(11,21,34,.9))}
-.slide .texto{position:absolute;z-index:2;bottom:clamp(110px,18vh,190px);left:max(16px,calc((100% - 1240px)/2));max-width:min(620px,calc(100% - 32px))}
-.slide.dir .texto{left:auto;right:max(16px,calc((100% - 1240px)/2));text-align:right}
-.slide .texto>*{opacity:0;transform:translateY(28px);filter:blur(8px);transition:opacity .9s,transform .9s,filter .9s}
-.slide.ativo .texto>*{opacity:1;transform:none;filter:none}
-.slide.ativo .texto>:nth-child(2){transition-delay:.15s}
-.slide.ativo .texto>:nth-child(3){transition-delay:.3s}
-.slide.ativo .texto>:nth-child(4){transition-delay:.45s}
-.slide.dir .rotulo{flex-direction:row-reverse}
-.slide h1,.slide h2{font-size:clamp(2.6rem,6.2vw,5.4rem);font-weight:700;letter-spacing:-.04em;line-height:.98;margin-top:22px}
-.slide .lead{margin-top:22px;font-size:clamp(1rem,1.4vw,1.15rem);color:#cfd5de;max-width:30em}
-.slide.dir .lead{margin-left:auto}
-.slide .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.slide.dir .acoes{justify-content:flex-end}
+/* hero 3D: pilar que se abre com a rolagem */
+.hero3d{position:relative;height:340vh;background:var(--preto)}
+.palco3d{position:sticky;top:0;height:100svh;min-height:560px;overflow:hidden}
+#cena{position:absolute;inset:0;width:100%;height:100%;display:block}
+.palco3d .reserva{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none}
+.sem-3d #cena{display:none}.sem-3d .reserva{display:block}
+.palco3d::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(130% 100% at 60% 45%,transparent 35%,rgba(11,21,34,.7) 100%),linear-gradient(180deg,rgba(11,21,34,.55) 0%,transparent 22%,transparent 62%,rgba(11,21,34,.9) 100%)}
+.fase{position:absolute;z-index:2;bottom:clamp(110px,17vh,180px);left:max(16px,calc((100% - 1240px)/2));max-width:min(560px,calc(100% - 32px));pointer-events:none}
+.fase.dir{left:auto;right:max(16px,calc((100% - 1240px)/2));text-align:right}
+.fase>*{opacity:0;transform:translateY(30px);filter:blur(8px);transition:opacity .8s,transform .8s,filter .8s}
+.fase.ativa{pointer-events:auto}
+.fase.ativa>*{opacity:1;transform:none;filter:none}
+.fase.ativa>:nth-child(2){transition-delay:.12s}
+.fase.ativa>:nth-child(3){transition-delay:.24s}
+.fase.ativa>:nth-child(4){transition-delay:.36s}
+.fase.dir .rotulo{flex-direction:row-reverse}
+.fase h1,.fase h2{font-size:clamp(2.5rem,5.8vw,5rem);font-weight:700;letter-spacing:-.04em;line-height:.98;margin-top:22px}
+.fase .lead{margin-top:20px;font-size:clamp(1rem,1.35vw,1.12rem);color:#cfd5de;max-width:30em}
+.fase.dir .lead{margin-left:auto}
+.fase .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.fase.dir .acoes{justify-content:flex-end}
 .hero-meta{position:absolute;z-index:3;top:104px;left:0;right:0}
 .hero-meta .miolo{display:flex;justify-content:space-between;font:500 .7rem/1 var(--mono);letter-spacing:.22em;color:#aab3c2;text-transform:uppercase}
 .hero-base{position:absolute;z-index:3;bottom:34px;left:0;right:0}
@@ -92,19 +91,15 @@ p{margin:0}
 .rolar{font:500 .7rem/1 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:#aab3c2;display:flex;align-items:center;gap:12px;text-decoration:none}
 .rolar i{width:1px;height:38px;background:linear-gradient(var(--amarelo),transparent);animation:desce 2s infinite}
 @keyframes desce{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-.pontos{display:flex;gap:10px;align-items:center}
-.pontos button{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;font:500 .72rem/1 var(--mono);color:#7d8696;padding:8px 0}
-.pontos button span{display:block;width:34px;height:2px;background:rgba(255,255,255,.2);position:relative;overflow:hidden}
-.pontos button span::after{content:"";position:absolute;inset:0;background:var(--amarelo);transform:scaleX(0);transform-origin:left}
-.pontos button.ativo{color:#fff}
-.pontos button.ativo span::after{animation:barra var(--tempo,6.5s) linear forwards}
-@keyframes barra{to{transform:scaleX(1)}}
+.etapas-hero{display:flex;gap:14px;align-items:center;font:500 .72rem/1 var(--mono);color:#6f7d93}
+.etapas-hero span{display:flex;align-items:center;gap:10px}
+.etapas-hero span i{display:block;width:34px;height:2px;background:rgba(255,255,255,.18);position:relative;overflow:hidden}
+.etapas-hero span i::after{content:"";position:absolute;inset:0;background:var(--amarelo);transform-origin:left;transform:scaleX(var(--f,0))}
+.etapas-hero span.ativa{color:#fff}
 @media (max-width:620px){
-  .slide .texto,.slide.dir .texto{left:16px;right:16px;text-align:left;bottom:150px}
-  .slide.dir .rotulo{flex-direction:row}
-  .slide.dir .acoes{justify-content:flex-start}
-  .slide.dir .lead{margin-left:0}
-  .slide.dir::after,.slide.esq::after{background:linear-gradient(180deg,rgba(11,21,34,.55),transparent 30%,rgba(11,21,34,.3) 50%,rgba(11,21,34,.96))}
+  .fase,.fase.dir{left:16px;right:16px;text-align:left;bottom:150px}
+  .fase.dir .rotulo{flex-direction:row}.fase.dir .acoes{justify-content:flex-start}.fase.dir .lead{margin-left:0}
+  .palco3d::after{background:linear-gradient(180deg,rgba(11,21,34,.5),transparent 25%,transparent 42%,rgba(11,21,34,.96) 78%)}
   .hero-meta{top:96px}.hero-meta .miolo span:last-child{display:none}
   .hero-base{bottom:96px}.rolar{display:none}
 }
@@ -332,48 +327,39 @@ footer a{color:#c4cedb}
 </header>
 
 <main id="inicio">
-<section class="hero" aria-roledescription="carrossel" aria-label="Destaques" style="padding:0">
-  <div class="slide esq ativo">
-    <video class="fundo" autoplay muted loop playsinline preload="metadata" poster="https://assets.mixkit.co/videos/21230/21230-thumb-720-0.jpg" aria-hidden="true">
+<section class="hero3d" id="hero" aria-label="Destaques" style="padding:0">
+  <div class="palco3d">
+    <canvas id="cena" aria-hidden="true"></canvas>
+    <video class="reserva" muted loop playsinline preload="none" poster="https://assets.mixkit.co/videos/21230/21230-thumb-720-0.jpg" aria-hidden="true">
       <source src="https://assets.mixkit.co/videos/21230/21230-720.mp4" type="video/mp4">
     </video>
-    <div class="texto">
-      <span class="rotulo">01 / Vistoria</span>
-      <h1>Vistoria e laudo <span class="destaque">antes que vire processo.</span></h1>
-      <p class="lead">Engenheiro civil com CREA ativo para laudo cautelar, inspeção predial, vistoria de recebimento e regularização em São Paulo e Grande SP.</p>
+    <div class="hero-meta" aria-hidden="true"><div class="miolo"><span>Mantovany / Engenharia</span><span>São Paulo · Grande SP</span></div></div>
+
+    <div class="fase ativa">
+      <span class="rotulo">01 / Estrutura</span>
+      <h1>Estrutura segura <span class="destaque">começa por dentro.</span></h1>
+      <p class="lead">O que sustenta o seu imóvel não fica à vista. A vistoria técnica mostra, com engenheiro civil e CREA ativo.</p>
       <div class="acoes">
         <a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20vistoria">Pedir orçamento no WhatsApp</a>
         <a class="btn btn-vidro" href="#servicos">Ver serviços</a>
       </div>
     </div>
-  </div>
-  <div class="slide dir" aria-hidden="true">
-    <img class="fundo" src="https://images.unsplash.com/photo-1577089816717-d55d6e857f3e?w=1920&q=75&auto=format&fit=crop" alt="">
-    <div class="texto">
-      <span class="rotulo">02 / Laudo com ART</span>
-      <h2>Imóvel bem cuidado. <span class="destaque">Documentado na medida.</span></h2>
-      <p class="lead">Fotos datadas, classificação de risco e PDF assinado com ART. Um laudo que se sustenta quando é questionado.</p>
+    <div class="fase dir">
+      <span class="rotulo">02 / Diagnóstico</span>
+      <h2>Cada camada avaliada. <span class="destaque">Nada fica escondido.</span></h2>
+      <p class="lead">Fissuras, armaduras, umidade e recalque registrados com foto datada, medição e classificação de risco.</p>
+    </div>
+    <div class="fase">
+      <span class="rotulo">03 / Laudo com ART</span>
+      <h2>Do pilar ao laudo, <span class="destaque">documentado na medida.</span></h2>
+      <p class="lead">PDF assinado com ART, que se sustenta perante condomínio, prefeitura, seguradora ou Justiça.</p>
       <div class="acoes"><a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20preciso%20de%20um%20laudo%20t%C3%A9cnico">Pedir laudo</a></div>
     </div>
-  </div>
-  <div class="slide esq" aria-hidden="true">
-    <video class="fundo" muted loop playsinline preload="none" poster="https://assets.mixkit.co/videos/4010/4010-thumb-720-0.jpg" aria-hidden="true"><source src="https://assets.mixkit.co/videos/4010/4010-720.mp4" type="video/mp4"></video>
-    <div class="texto">
-      <span class="rotulo">03 / Obra vizinha</span>
-      <h2>Obra ao lado? <span class="destaque">Registre antes de começar.</span></h2>
-      <p class="lead">O laudo cautelar de vizinhança é a prova técnica de como o imóvel estava antes da primeira escavação.</p>
-      <div class="acoes"><a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20preciso%20de%20um%20laudo%20cautelar">Agendar laudo cautelar</a></div>
-    </div>
-  </div>
 
-  <div class="hero-meta" aria-hidden="true"><div class="miolo"><span>Mantovany / Engenharia</span><span>São Paulo · Grande SP</span></div></div>
-  <div class="hero-base">
-    <div class="miolo">
-      <a class="rolar" href="#sinais"><i></i>Role para explorar</a>
-      <div class="pontos" role="tablist" aria-label="Escolher destaque">
-        <button class="ativo" role="tab" aria-label="Destaque 1">01<span></span></button>
-        <button role="tab" aria-label="Destaque 2">02<span></span></button>
-        <button role="tab" aria-label="Destaque 3">03<span></span></button>
+    <div class="hero-base">
+      <div class="miolo">
+        <a class="rolar" href="#sinais"><i></i>Role para explorar</a>
+        <div class="etapas-hero" aria-hidden="true"><span class="ativa">01<i></i></span><span>02<i></i></span><span>03<i></i></span></div>
       </div>
     </div>
   </div>
@@ -587,23 +573,6 @@ footer a{color:#c4cedb}
   const ajustar = () => topo.classList.toggle('solido', scrollY > 40);
   addEventListener('scroll', ajustar, { passive: true }); ajustar();
 
-  // hero: slides que trocam sozinhos
-  const slides = [...document.querySelectorAll('.slide')];
-  const botoes = [...document.querySelectorAll('.pontos button')];
-  const TEMPO = 6500; let atual = 0, timer;
-  const ir = (i) => {
-    slides[atual].classList.remove('ativo'); slides[atual].setAttribute('aria-hidden', 'true'); botoes[atual].classList.remove('ativo');
-    atual = (i + slides.length) % slides.length;
-    slides[atual].classList.add('ativo'); slides[atual].removeAttribute('aria-hidden');
-    void botoes[atual].offsetWidth; botoes[atual].classList.add('ativo');
-    const v = slides[atual].querySelector('video'); if (v) { try { v.play(); } catch (e) {} }
-    agendar();
-  };
-  const agendar = () => { clearTimeout(timer); if (!reduzir) timer = setTimeout(() => ir(atual + 1), TEMPO); };
-  botoes.forEach((b, i) => b.addEventListener('click', () => ir(i)));
-  document.documentElement.style.setProperty('--tempo', TEMPO + 'ms');
-  agendar();
-
   // sinais de risco: um por vez conforme a rolagem
   const sec = document.querySelector('.sinais'), trilho = sec.querySelector('.trilho');
   const itens = [...sec.querySelectorAll('.sinal')], marca = sec.querySelector('[data-atual]'), barra = sec.querySelector('.progresso');
@@ -641,6 +610,192 @@ footer a{color:#c4cedb}
     document.querySelectorAll('[data-contar]').forEach((el) => { el.textContent = '0'; io2.observe(el); });
   } else document.querySelectorAll('.revela').forEach((el) => el.classList.add('visivel'));
 })();
+</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+// Cena 3D do topo: um pilar de concreto que se abre com a rolagem e mostra a armadura,
+// depois a câmera recua e revela a estrutura do prédio.
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+const hero = document.getElementById('hero');
+const canvas = document.getElementById('cena');
+const fases = [...hero.querySelectorAll('.fase')];
+const marcas = [...hero.querySelectorAll('.etapas-hero span')];
+const reduzir = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+let renderer;
+try {
+  renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
+} catch (e) {
+  hero.classList.add('sem-3d');
+  const v = hero.querySelector('.reserva'); if (v) { v.preload = 'metadata'; v.play().catch(() => {}); }
+}
+
+// textos e marcadores acompanham a rolagem mesmo sem 3D
+const progresso = () => {
+  const r = hero.getBoundingClientRect(), total = r.height - innerHeight;
+  return Math.min(1, Math.max(0, -r.top / total));
+};
+let faseAtual = -1;
+const atualizarTextos = (p) => {
+  const f = p < 0.34 ? 0 : p < 0.68 ? 1 : 2;
+  marcas.forEach((m, i) => m.querySelector('i').style.setProperty('--f', Math.min(1, Math.max(0, (p - i / 3) * 3))));
+  if (f === faseAtual) return; faseAtual = f;
+  fases.forEach((el, i) => { el.classList.toggle('ativa', i === f); el.toggleAttribute('aria-hidden', i !== f); });
+  marcas.forEach((m, i) => m.classList.toggle('ativa', i === f));
+};
+addEventListener('scroll', () => atualizarTextos(progresso()), { passive: true });
+atualizarTextos(progresso());
+
+if (renderer) {
+  const celular = innerWidth < 700;
+  renderer.setPixelRatio(Math.min(devicePixelRatio, celular ? 1.5 : 2));
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.05;
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+  const AZUL = 0x0b1522, OURO = 0xd4a83a;
+  const cena = new THREE.Scene();
+  cena.background = new THREE.Color(AZUL);
+  cena.fog = new THREE.Fog(AZUL, 7, 30);
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  cena.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+
+  const camera = new THREE.PerspectiveCamera(34, 1, 0.1, 100);
+
+  // textura de concreto feita no navegador (nada para baixar)
+  const concreto = (base, linhas) => {
+    const c = document.createElement('canvas'); c.width = c.height = 512;
+    const g = c.getContext('2d'); g.fillStyle = base; g.fillRect(0, 0, 512, 512);
+    const img = g.getImageData(0, 0, 512, 512), d = img.data;
+    for (let i = 0; i < d.length; i += 4) { const n = (Math.random() - 0.5) * 34; d[i] += n; d[i + 1] += n; d[i + 2] += n; }
+    g.putImageData(img, 0, 0);
+    for (let i = 0; i < 320; i++) { g.fillStyle = `rgba(30,34,40,${Math.random() * 0.55})`; g.beginPath(); g.arc(Math.random() * 512, Math.random() * 512, Math.random() * 2.4 + 0.4, 0, 7); g.fill(); }
+    if (linhas) { g.strokeStyle = 'rgba(40,45,52,.45)'; g.lineWidth = 2; for (let y = 64; y < 512; y += 128) { g.beginPath(); g.moveTo(0, y); g.lineTo(512, y); g.stroke(); } }
+    const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.wrapS = t.wrapT = THREE.RepeatWrapping; t.anisotropy = 4; return t;
+  };
+  const texPilar = concreto('#9a9fa6', true); texPilar.repeat.set(0.5, 2.5);
+  const texCorte = concreto('#5d6168', false);
+  const texPredio = concreto('#6f747c', false); texPredio.repeat.set(2, 2);
+  const matPilar = new THREE.MeshStandardMaterial({ map: texPilar, roughness: 0.92, metalness: 0, envMapIntensity: 0.35 });
+  const matCorte = new THREE.MeshStandardMaterial({ map: texCorte, roughness: 1, envMapIntensity: 0.2, emissive: 0x3a2a08, emissiveIntensity: 0 });
+  const matPredio = new THREE.MeshStandardMaterial({ map: texPredio, roughness: 0.95, envMapIntensity: 0.25 });
+  const matAco = new THREE.MeshStandardMaterial({ color: OURO, metalness: 1, roughness: 0.3, emissive: 0x8a5a10, emissiveIntensity: 0 });
+
+  // pilar em duas metades (face interna mais escura, como um corte)
+  const H = 4.2, L = 1.2;
+  const geoMetade = new THREE.BoxGeometry(L / 2, H, L);
+  const esq = new THREE.Mesh(geoMetade, [matCorte, matPilar, matPilar, matPilar, matPilar, matPilar]);
+  const dir = new THREE.Mesh(geoMetade, [matPilar, matCorte, matPilar, matPilar, matPilar, matPilar]);
+  cena.add(esq, dir);
+
+  // armadura: barras longitudinais + estribos
+  const armadura = new THREE.Group(); cena.add(armadura);
+  const c = 0.43, barras = [[-c, -c], [c, -c], [-c, c], [c, c], [0, -c], [0, c], [-c, 0], [c, 0]];
+  const geoBarra = new THREE.CylinderGeometry(0.038, 0.038, H + 0.6, 14);
+  barras.forEach(([x, z]) => { const b = new THREE.Mesh(geoBarra, matAco); b.position.set(x, 0, z); armadura.add(b); });
+  const niveis = Math.floor(H / 0.22), estribos = new THREE.InstancedMesh(new THREE.BoxGeometry(1, 0.026, 0.026), matAco, niveis * 4);
+  const m4 = new THREE.Matrix4(), q = new THREE.Quaternion(), giro = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), Math.PI / 2), esc = new THREE.Vector3(2 * c + 0.03, 1, 1);
+  let k = 0;
+  for (let n = 0; n < niveis; n++) {
+    const y = -H / 2 + 0.15 + n * 0.22;
+    estribos.setMatrixAt(k++, m4.compose(new THREE.Vector3(0, y, -c), q, esc));
+    estribos.setMatrixAt(k++, m4.compose(new THREE.Vector3(0, y, c), q, esc));
+    estribos.setMatrixAt(k++, m4.compose(new THREE.Vector3(-c, y, 0), giro, esc));
+    estribos.setMatrixAt(k++, m4.compose(new THREE.Vector3(c, y, 0), giro, esc));
+  }
+  armadura.add(estribos);
+
+  // prédio em estrutura ao redor (pilares, lajes e contorno dourado)
+  const predio = new THREE.Group(); cena.add(predio);
+  const linhas = new THREE.LineBasicMaterial({ color: OURO, transparent: true, opacity: 0 });
+  const xs = [-9, -4.5, 0, 4.5], zs = [0, -4.5, -9], andares = 4;
+  const geoPil = new THREE.BoxGeometry(0.7, H, 0.7);
+  const geoLaje = new THREE.BoxGeometry(15.4, 0.3, 11);
+  const bordaPil = new THREE.EdgesGeometry(geoPil), bordaLaje = new THREE.EdgesGeometry(geoLaje);
+  for (let a = 0; a <= andares; a++) {
+    const yl = -H / 2 - 0.15 + a * (H + 0.3);
+    const laje = new THREE.Mesh(geoLaje, matPredio); laje.position.set(-2.25, yl, -4.3);
+    const bl = new THREE.LineSegments(bordaLaje, linhas); bl.position.copy(laje.position);
+    predio.add(laje, bl);
+    if (a === andares) break;
+    xs.forEach((x) => zs.forEach((z) => {
+      if (a === 0 && x === 0 && z === 0) return; // esse é o pilar que se abre
+      const p = new THREE.Mesh(geoPil, matPredio); p.position.set(x, yl + 0.15 + H / 2, z);
+      const bp = new THREE.LineSegments(bordaPil, linhas); bp.position.copy(p.position);
+      predio.add(p, bp);
+    }));
+  }
+
+  // luzes
+  cena.add(new THREE.HemisphereLight(0x3a5580, 0x0b1522, 0.6));
+  const chave = new THREE.DirectionalLight(0xffd9a0, 2.4); chave.position.set(5, 6, 5); cena.add(chave);
+  const contra = new THREE.SpotLight(OURO, 90, 22, 0.55, 0.7, 2); contra.position.set(-4, 3.5, -3); cena.add(contra, contra.target);
+  const brilho = new THREE.PointLight(0xffb44a, 0, 5, 2); brilho.position.set(0, 0, 0.4); cena.add(brilho);
+  [[-4.5, 2.2, -4.5], [-9, 6.4, -4.5], [4.5, 10.6, -6]].forEach(([x, y, z]) => { const l = new THREE.PointLight(0xffb44a, 26, 11, 2); l.position.set(x, y, z); cena.add(l); });
+
+  // poeira dourada
+  const N = celular ? 260 : 520, pos = new Float32Array(N * 3), vel = new Float32Array(N);
+  for (let i = 0; i < N; i++) { pos[i * 3] = (Math.random() - 0.5) * 9; pos[i * 3 + 1] = (Math.random() - 0.5) * 7; pos[i * 3 + 2] = (Math.random() - 0.5) * 7; vel[i] = 0.05 + Math.random() * 0.15; }
+  const geoPo = new THREE.BufferGeometry(); geoPo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const po = new THREE.Points(geoPo, new THREE.PointsMaterial({ color: 0xffd27a, size: 0.028, transparent: true, opacity: 0.75, blending: THREE.AdditiveBlending, depthWrite: false }));
+  cena.add(po);
+
+  // trajetória da câmera
+  const kf = (a) => a.map(([p, alvo]) => ({ p: new THREE.Vector3(...p), a: new THREE.Vector3(...alvo) }));
+  const K_LARGO = kf([[[3.4, 1.1, 8.2], [-1.5, 0.3, 0]], [[1.9, 0.35, 3.9], [0.95, 0.05, 0]], [[11, 8, 15.5], [-2.5, 3, -4]]]);
+  const K_ALTO = kf([[[0.8, 1.2, 11], [0, -2.3, 0]], [[1.1, 0.6, 6.2], [0, -1.6, 0]], [[13, 10, 20], [-2.5, 0.8, -4]]]);
+  const suave = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+  const camPos = new THREE.Vector3(), alvo = new THREE.Vector3();
+
+  const redimensionar = () => {
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    renderer.setSize(w, h, false); camera.aspect = w / h; camera.fov = camera.aspect < 1 ? 52 : 34; camera.updateProjectionMatrix();
+  };
+  addEventListener('resize', redimensionar); redimensionar();
+
+  let pSuave = progresso(), visivel = true, t0 = performance.now(), ultimo = t0;
+  new IntersectionObserver(([e]) => { visivel = e.isIntersecting; if (visivel) requestAnimationFrame(quadro); }, { rootMargin: '100px' }).observe(hero);
+
+  function quadro(agora) {
+    if (!visivel) return;
+    const dt = Math.min(0.25, (agora - ultimo) / 1000); ultimo = agora;
+    const t = (agora - t0) / 1000;
+    pSuave += (progresso() - pSuave) * (reduzir ? 1 : 1 - Math.exp(-dt * 5));
+    const p = pSuave;
+
+    // abertura do pilar
+    const abre = suave(0.1, 0.48, p);
+    esq.position.set(-L / 4 - abre * 0.95, 0, 0); esq.rotation.y = -abre * 0.5;
+    dir.position.set(L / 4 + abre * 0.95, 0, 0); dir.rotation.y = abre * 0.5;
+    matAco.emissiveIntensity = 0.15 + abre * 0.9;
+    matCorte.emissiveIntensity = abre * 0.5;
+    brilho.intensity = abre * 9;
+    armadura.rotation.y = abre * 0.12;
+
+    // contorno do prédio aparece no fim
+    linhas.opacity = suave(0.55, 0.95, p) * 0.75;
+
+    // câmera
+    const K = camera.aspect < 1 ? K_ALTO : K_LARGO;
+    if (p < 0.5) { const s = suave(0, 0.5, p); camPos.lerpVectors(K[0].p, K[1].p, s); alvo.lerpVectors(K[0].a, K[1].a, s); }
+    else { const s = suave(0.5, 1, p); camPos.lerpVectors(K[1].p, K[2].p, s); alvo.lerpVectors(K[1].a, K[2].a, s); }
+    if (!reduzir) { camPos.x += Math.sin(t * 0.3) * 0.08; camPos.y += Math.sin(t * 0.42) * 0.05; }
+    camera.position.copy(camPos); camera.lookAt(alvo);
+
+    // poeira subindo
+    if (!reduzir) {
+      for (let i = 0; i < N; i++) { pos[i * 3 + 1] += vel[i] * dt * (1 + abre); pos[i * 3] += Math.sin(t + i) * 0.0015; if (pos[i * 3 + 1] > 3.5) pos[i * 3 + 1] = -3.5; }
+      geoPo.attributes.position.needsUpdate = true;
+    }
+
+    renderer.render(cena, camera);
+    atualizarTextos(progresso());
+    requestAnimationFrame(quadro);
+  }
+  requestAnimationFrame(quadro);
+}
 </script>
 <script>
   // Contador de acessos sem cookie (só números por dia, sem IP nem identificação): vai para a Central do YMOBRA
