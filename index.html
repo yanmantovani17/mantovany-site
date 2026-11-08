@@ -222,7 +222,7 @@ footer a{color:#c4cedb}
 .zoom .palco{position:sticky;top:0;height:100svh;min-height:560px;overflow:hidden}
 .zoom .gigante{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:800 clamp(4.5rem,17vw,16rem)/.8 var(--sans);letter-spacing:-.06em;color:rgba(255,255,255,.045);white-space:nowrap;pointer-events:none;transition:opacity .3s}
 .zoom .midia{position:absolute;inset:0;will-change:clip-path}
-.zoom .midia>img,.zoom .midia>canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;will-change:transform}
+.zoom .midia>img,.zoom .midia>canvas,.zoom .midia>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;will-change:transform}
 .zoom .midia::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,21,34,.82) 0%,rgba(11,21,34,.25) 45%,transparent 70%),linear-gradient(0deg,rgba(11,21,34,.75),transparent 40%);opacity:var(--escuro,0);pointer-events:none}
 .zoom .aro{position:absolute;left:50%;top:50%;border-radius:46% / 32%;box-shadow:0 0 0 12px #1b2a40,0 0 0 13px rgba(255,255,255,.12),inset 0 18px 30px rgba(0,0,0,.45),0 40px 80px -20px rgba(0,0,0,.8);pointer-events:none;transform:translate(-50%,-50%)}
 .zoom .num{position:absolute;left:max(16px,calc((100% - 1240px)/2));top:112px;font:500 .72rem/1 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:#8b98ab;z-index:2}
@@ -273,7 +273,7 @@ footer a{color:#c4cedb}
 @media (max-width:760px){.troca .caixa{grid-template-columns:1fr}.troca .x{width:auto;height:56px;border-inline:0;border-block:1px solid rgba(255,255,255,.08)}}
 
 /* ===== GANTT animado (planejamento e gestão) ===== */
-.gantt{position:absolute;inset:0;background:radial-gradient(90% 70% at 70% 40%,#16283f,#0b1522 70%);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.gantt{position:absolute;inset:0;background:linear-gradient(rgba(11,21,34,.78),rgba(11,21,34,.9)),url("https://images.pexels.com/photos/8960944/pexels-photo-8960944.jpeg?auto=compress&cs=tinysrgb&w=1920") center/cover;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .gantt .quadro{width:min(1100px,92vw);padding:28px 30px 30px;position:relative}
 .gantt .cab{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font:500 .72rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#8b98ab}
 .gantt .cab b{color:#fff;font:600 1.05rem/1 var(--sans);letter-spacing:-.01em;text-transform:none}
@@ -364,11 +364,11 @@ footer a{color:#c4cedb}
       <p>Escolha por onde começar. Em todas, você fala direto com o engenheiro e recebe tudo por escrito.</p>
     </div>
     <div class="janelas">
-      <a class="janela revela" href="#obras"><div class="moldura"><div class="vista"><img src="img/obras.webp" alt="Estrutura de prédio em construção à noite" loading="lazy"></div></div><div class="rot"><b>Obras</b><span>01</span></div><p>Construção e reforma com responsável técnico.</p></a>
-      <a class="janela revela d1" href="#gestao"><div class="moldura"><div class="vista"><img src="img/gestao.webp" alt="Cronograma de obra em gráfico de barras" loading="lazy"></div></div><div class="rot"><b>Planejamento e gestão</b><span>02</span></div><p>Cronograma, orçamento e gerenciamento.</p></a>
-      <a class="janela revela d2" href="#laudos"><div class="moldura"><div class="vista"><img src="img/laudos.webp" alt="Pilar com concreto desplacado e armadura corroída" loading="lazy"></div></div><div class="rot"><b>Laudos técnicos</b><span>03</span></div><p>Diagnóstico de patologias com ART.</p></a>
-      <a class="janela revela d3" href="#vistorias"><div class="moldura"><div class="vista"><img src="img/vistorias.webp" alt="Pilar de concreto em ambiente vistoriado" loading="lazy"></div></div><div class="rot"><b>Vistorias técnicas</b><span>04</span></div><p>Recebimento, cautelar e inspeção predial.</p></a>
-      <a class="janela revela" href="#projetos"><div class="moldura"><div class="vista"><img src="img/projetos.webp" alt="Modelo 3D em linhas douradas de um edifício" loading="lazy"></div></div><div class="rot"><b>Projetos</b><span>05</span></div><p>Do levantamento à aprovação na prefeitura.</p></a>
+      <a class="janela revela" href="#obras"><div class="moldura"><div class="vista"><img src="https://images.pexels.com/videos/6033941/pexels-photo-6033941.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Vista aérea de prédio em construção com gruas" loading="lazy"></div></div><div class="rot"><b>Obras</b><span>01</span></div><p>Construção e reforma com responsável técnico.</p></a>
+      <a class="janela revela d1" href="#gestao"><div class="moldura"><div class="vista"><img src="https://images.pexels.com/photos/8960944/pexels-photo-8960944.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Engenheira com tablet acompanhando a obra" loading="lazy"></div></div><div class="rot"><b>Planejamento e gestão</b><span>02</span></div><p>Cronograma, orçamento e gerenciamento.</p></a>
+      <a class="janela revela d2" href="#laudos"><div class="moldura"><div class="vista"><img src="https://images.pexels.com/photos/10224710/pexels-photo-10224710.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Concreto desplacado com armadura exposta" loading="lazy"></div></div><div class="rot"><b>Laudos técnicos</b><span>03</span></div><p>Diagnóstico de patologias com ART.</p></a>
+      <a class="janela revela d3" href="#vistorias"><div class="moldura"><div class="vista"><img src="https://images.pexels.com/photos/8482824/pexels-photo-8482824.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Engenheiro conferindo o prumo da parede com nível" loading="lazy"></div></div><div class="rot"><b>Vistorias técnicas</b><span>04</span></div><p>Recebimento, cautelar e inspeção predial.</p></a>
+      <a class="janela revela" href="#projetos"><div class="moldura"><div class="vista"><img src="https://images.pexels.com/photos/5584052/pexels-photo-5584052.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Equipe trabalhando sobre plantas impressas" loading="lazy"></div></div><div class="rot"><b>Projetos</b><span>05</span></div><p>Do levantamento à aprovação na prefeitura.</p></a>
     </div>
   </div>
 </section>
@@ -376,7 +376,7 @@ footer a{color:#c4cedb}
 <section class="zoom" id="obras" style="padding:0">
   <div class="palco">
     <div class="gigante" aria-hidden="true">Obras</div>
-    <div class="midia"><img src="img/obras.webp" alt="" loading="lazy"></div>
+    <div class="midia"><video muted loop playsinline preload="none" poster="https://images.pexels.com/videos/6033941/pexels-photo-6033941.jpeg?auto=compress&cs=tinysrgb&w=1920" aria-label="Vista aérea de prédio em construção"><source media="(min-width: 900px)" src="https://videos.pexels.com/video-files/6033941/6033941-hd_1920_1080_30fps.mp4" type="video/mp4"><source src="https://videos.pexels.com/video-files/6033941/6033941-hd_1280_720_60fps.mp4" type="video/mp4"></video></div>
     <div class="aro" aria-hidden="true"></div>
     <span class="num">01 / Obras</span>
     <div class="painel vidro">
@@ -424,7 +424,7 @@ footer a{color:#c4cedb}
 <section class="zoom" id="vistorias" style="padding:0">
   <div class="palco">
     <div class="gigante" aria-hidden="true">Vistorias</div>
-    <div class="midia"><img src="img/vistorias.webp" alt="" loading="lazy"></div>
+    <div class="midia"><img src="https://images.pexels.com/photos/8482824/pexels-photo-8482824.jpeg?auto=compress&cs=tinysrgb&w=1600" srcset="https://images.pexels.com/photos/8482824/pexels-photo-8482824.jpeg?auto=compress&cs=tinysrgb&w=800 800w, https://images.pexels.com/photos/8482824/pexels-photo-8482824.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w, https://images.pexels.com/photos/8482824/pexels-photo-8482824.jpeg?auto=compress&cs=tinysrgb&w=2400 2400w" sizes="100vw" alt="Engenheiro conferindo o prumo da parede com nível" loading="lazy"></div>
     <div class="aro" aria-hidden="true"></div>
     <span class="num">04 / Vistorias técnicas</span>
     <div class="painel vidro">
@@ -440,7 +440,7 @@ footer a{color:#c4cedb}
 <section class="zoom" id="projetos" style="padding:0">
   <div class="palco">
     <div class="gigante" aria-hidden="true">Projetos</div>
-    <div class="midia"><canvas id="projeto3d" aria-label="Modelo 3D em linhas de um edifício sendo desenhado"></canvas></div>
+    <div class="midia"><img src="https://images.pexels.com/photos/5584052/pexels-photo-5584052.jpeg?auto=compress&cs=tinysrgb&w=1600" srcset="https://images.pexels.com/photos/5584052/pexels-photo-5584052.jpeg?auto=compress&cs=tinysrgb&w=800 800w, https://images.pexels.com/photos/5584052/pexels-photo-5584052.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w, https://images.pexels.com/photos/5584052/pexels-photo-5584052.jpeg?auto=compress&cs=tinysrgb&w=2400 2400w" sizes="100vw" alt="Equipe trabalhando sobre plantas impressas" loading="lazy"></div>
     <div class="aro" aria-hidden="true"></div>
     <span class="num">05 / Projetos</span>
     <div class="painel vidro">
@@ -471,10 +471,10 @@ footer a{color:#c4cedb}
       <p>Do primeiro contato à entrega, você fala com o engenheiro que assina o trabalho.</p>
     </div>
     <div class="pilha">
-      <article class="folha" style="--i:0"><div class="foto"><img src="img/vistorias.webp" alt="" loading="lazy"></div><div class="txt"><span class="n">01</span><h3>Conte o caso no WhatsApp</h3><p>Mande o endereço, fotos do problema e o que você precisa: obra, gestão, laudo, vistoria ou projeto.</p></div></article>
-      <article class="folha" style="--i:1"><div class="foto"><img src="img/projetos.webp" alt="" loading="lazy"></div><div class="txt"><span class="n">02</span><h3>Receba a proposta por escrito</h3><p>Escopo, prazo e valor definidos antes de qualquer visita. Sem surpresa no meio do caminho.</p></div></article>
-      <article class="folha" style="--i:2"><div class="foto"><img src="img/laudos.webp" alt="" loading="lazy"></div><div class="txt"><span class="n">03</span><h3>Engenheiro no local</h3><p>Vistoria com registro fotográfico e medições, ou execução da obra com acompanhamento técnico.</p></div></article>
-      <article class="folha" style="--i:3"><div class="foto"><img src="img/obras.webp" alt="" loading="lazy"></div><div class="txt"><span class="n">04</span><h3>Entrega assinada, com ART</h3><p>Laudo em PDF, projeto aprovado ou obra concluída, sempre com responsável técnico registrado no CREA.</p></div></article>
+      <article class="folha" style="--i:0"><div class="foto"><img src="https://images.pexels.com/photos/8961008/pexels-photo-8961008.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy"></div><div class="txt"><span class="n">01</span><h3>Conte o caso no WhatsApp</h3><p>Mande o endereço, fotos do problema e o que você precisa: obra, gestão, laudo, vistoria ou projeto.</p></div></article>
+      <article class="folha" style="--i:1"><div class="foto"><img src="https://images.pexels.com/photos/5584052/pexels-photo-5584052.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy"></div><div class="txt"><span class="n">02</span><h3>Receba a proposta por escrito</h3><p>Escopo, prazo e valor definidos antes de qualquer visita. Sem surpresa no meio do caminho.</p></div></article>
+      <article class="folha" style="--i:2"><div class="foto"><img src="https://images.pexels.com/photos/8482824/pexels-photo-8482824.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy"></div><div class="txt"><span class="n">03</span><h3>Engenheiro no local</h3><p>Vistoria com registro fotográfico e medições, ou execução da obra com acompanhamento técnico.</p></div></article>
+      <article class="folha" style="--i:3"><div class="foto"><img src="https://images.pexels.com/videos/6033941/pexels-photo-6033941.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy"></div><div class="txt"><span class="n">04</span><h3>Entrega assinada, com ART</h3><p>Laudo em PDF, projeto aprovado ou obra concluída, sempre com responsável técnico registrado no CREA.</p></div></article>
     </div>
   </div>
 </section>
@@ -555,7 +555,7 @@ footer a{color:#c4cedb}
   <div class="miolo">
     <div>
       <span>© 2026 Mantovany Engenharia e Construção · Responsável técnico com CREA ativo</span>
-      <p class="creditos">Vídeos: Mixkit. Fotos: Unsplash e Mixkit.</p>
+      <p class="creditos">Fotos e vídeos: Pexels. Animação do pilar: renderização própria.</p>
     </div>
     <span>Criadores do <a href="https://ymobra.com.br">YMOBRA</a></span>
   </div>
@@ -674,65 +674,6 @@ const quandoVisivel = (el, fn) => { let vis = false, rodando = false; const loop
   });
 })();
 
-/* ---------- PROJETOS: edifício desenhado em linhas douradas ---------- */
-(() => {
-  const sec = document.getElementById('projetos'), canvas = document.getElementById('projeto3d');
-  const renderer = criarRenderer(canvas); if (!renderer) return;
-  const cena = new THREE.Scene(); cena.background = new THREE.Color(0x0b1522); cena.fog = new THREE.Fog(0x0b1522, 40, 95);
-  const cam = new THREE.PerspectiveCamera(34, 1, 0.1, 300);
-  const seg = []; const L = (a, b) => seg.push([a, b]);
-  const W = 14, D = 9, AND = 6, HA = 3.1;
-  for (let a = 0; a <= AND; a++) {
-    const y = a * HA;
-    const c = [[-W / 2, -D / 2], [W / 2, -D / 2], [W / 2, D / 2], [-W / 2, D / 2]];
-    for (let i = 0; i < 4; i++) L([c[i][0], y, c[i][1]], [c[(i + 1) % 4][0], y, c[(i + 1) % 4][1]]);
-    for (let x = -W / 2 + W / 4; x < W / 2; x += W / 4) L([x, y, -D / 2], [x, y, D / 2]);
-    L([-W / 2, y, 0], [W / 2, y, 0]);
-    if (a === AND) break;
-    for (let x = -W / 2; x <= W / 2 + 0.01; x += W / 4) for (let z = -D / 2; z <= D / 2 + 0.01; z += D / 2) L([x, y, z], [x, y + HA, z]);
-    for (const zf of [-D / 2, D / 2]) {                                                             // caixilhos nas 4 fachadas
-      for (let x = -W / 2 + 1; x < W / 2; x += 1) L([x, y + 0.9, zf], [x, y + HA - 0.6, zf]);
-      L([-W / 2, y + 0.9, zf], [W / 2, y + 0.9, zf]); L([-W / 2, y + HA - 0.6, zf], [W / 2, y + HA - 0.6, zf]);
-    }
-    for (const xf of [-W / 2, W / 2]) {
-      for (let z = -D / 2 + 1; z < D / 2; z += 1) L([xf, y + 0.9, z], [xf, y + HA - 0.6, z]);
-      L([xf, y + 0.9, -D / 2], [xf, y + 0.9, D / 2]); L([xf, y + HA - 0.6, -D / 2], [xf, y + HA - 0.6, D / 2]);
-    }
-    // escada
-    for (let k = 0; k < 10; k++) { const yy = y + k * HA / 10; L([2.2, yy, -1.5 + k * 0.3], [3.4, yy, -1.5 + k * 0.3]); }
-  }
-  // cobertura
-  L([-W / 2, AND * HA, -D / 2], [0, AND * HA + 2.4, -D / 2]); L([0, AND * HA + 2.4, -D / 2], [W / 2, AND * HA, -D / 2]);
-  L([-W / 2, AND * HA, D / 2], [0, AND * HA + 2.4, D / 2]); L([0, AND * HA + 2.4, D / 2], [W / 2, AND * HA, D / 2]);
-  L([0, AND * HA + 2.4, -D / 2], [0, AND * HA + 2.4, D / 2]);
-  // cotas no chão
-  L([-W / 2, 0, -D / 2 - 2], [W / 2, 0, -D / 2 - 2]); L([-W / 2, 0, -D / 2 - 2.4], [-W / 2, 0, -D / 2 - 1.6]); L([W / 2, 0, -D / 2 - 2.4], [W / 2, 0, -D / 2 - 1.6]);
-  L([-W / 2 - 2, 0, -D / 2], [-W / 2 - 2, 0, D / 2]); L([-W / 2 - 2.4, 0, -D / 2], [-W / 2 - 1.6, 0, -D / 2]); L([-W / 2 - 2.4, 0, D / 2], [-W / 2 - 1.6, 0, D / 2]);
-  seg.sort((s1, s2) => Math.min(s1[0][1], s1[1][1]) - Math.min(s2[0][1], s2[1][1]));
-  const pos = new Float32Array(seg.length * 6); seg.forEach((s, i) => pos.set([...s[0], ...s[1]], i * 6));
-  const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-  const linhas = new THREE.LineSegments(g, new THREE.LineBasicMaterial({ color: 0xe0b44a, transparent: true, opacity: 0.9, blending: THREE.AdditiveBlending, depthWrite: false }));
-  cena.add(linhas);
-  const nos = new THREE.Points(g, new THREE.PointsMaterial({ color: 0xffd27a, size: 0.16, transparent: true, opacity: 0.9, blending: THREE.AdditiveBlending, depthWrite: false }));
-  cena.add(nos);
-  const grade = new THREE.GridHelper(80, 80, 0x2a3d58, 0x172638); cena.add(grade);
-  const tam_ = () => { const w = canvas.clientWidth, h = canvas.clientHeight; renderer.setSize(w, h, false); cam.aspect = w / h;
-    if (w / h > 1.2) cam.setViewOffset(w, h, -w * 0.17, 0, w, h); else cam.setViewOffset(w, h, 0, h * 0.12, w, h); cam.updateProjectionMatrix(); };
-  addEventListener('resize', tam_); tam_();
-  let ult = performance.now(); const t0 = ult; let pS = prog(sec);
-  const desenhar = (agora) => {
-    const dt = Math.min(0.1, (agora - ult) / 1000); ult = agora; const t = (agora - t0) / 1000;
-    pS += (prog(sec) - pS) * (1 - Math.exp(-dt * 6));
-    const f = window.__projetoCheio ? 1 : suave(0.05, 0.75, pS);
-    g.setDrawRange(0, Math.max(2, Math.floor(seg.length * f) * 2));
-    const ang = 0.3 + (reduzir ? 0 : t * 0.04) + pS * 0.45, dist = cam.aspect < 1 ? 88 : 62;
-    cam.position.set(Math.sin(ang) * dist, 30, Math.cos(ang) * dist); cam.lookAt(0, 9, 0);
-    nos.geometry.setDrawRange(0, g.drawRange.count);
-    renderer.render(cena, cam);
-  };
-  quandoVisivel(sec, desenhar);
-  window.__desenharProjeto = () => desenhar(performance.now());
-})();
 </script>
 <script>
 (() => {
@@ -809,6 +750,9 @@ const quandoVisivel = (el, fn) => { let vis = false, rodando = false; const loop
       if (z.sec.id === 'gestao') desenharGantt(suave(0.1, 0.9, p));
     }
   };
+
+  // vídeo de obra: toca só quando a seção está na tela
+  document.querySelectorAll('.zoom video').forEach((v) => new IntersectionObserver(([e]) => { if (e.isIntersecting) { v.preload = 'auto'; v.play().catch(() => {}); } else v.pause(); }, { rootMargin: '100px' }).observe(v.closest('.zoom')));
 
   // ---------- Cartões que empilham ----------
   const folhas = [...document.querySelectorAll('.folha')];
