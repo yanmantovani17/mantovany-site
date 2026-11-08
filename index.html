@@ -294,6 +294,19 @@ footer a{color:#c4cedb}
 .gantt .nota{font:500 .6rem/1 var(--mono);color:#56637a;letter-spacing:.12em;text-transform:uppercase;margin-top:14px}
 @media (max-width:700px){.gantt .quadro{padding:14px;transform:translateY(-16vh) scale(.92)}.gantt .semanas,.gantt .linha{grid-template-columns:96px 1fr}.gantt .semanas{grid-template-columns:96px repeat(12,1fr)}.gantt .linha>span{font-size:.74rem}.gantt .kpis{display:none}}
 
+
+/* telas baixas (notebooks): painel mais compacto */
+@media (max-height:760px) and (min-width:701px){
+  .zoom .painel{bottom:24px;padding:22px 26px}
+  .painel h2{font-size:clamp(1.7rem,3vw,2.4rem);margin-top:10px}
+  .painel p{font-size:.95rem;margin-top:10px}
+  .painel ul{margin-top:12px;gap:6px 16px}.painel li{font-size:.86rem}
+  .painel .acoes{margin-top:14px}
+  .zoom .num{top:92px}
+  .hero .texto{bottom:90px}.hero h1{font-size:clamp(2.2rem,4.6vw,3.8rem)}.hero .lead{margin-top:14px}.hero .acoes{margin-top:20px}
+  .hero-meta{display:none}.hero .base{bottom:22px}.hero .cartao{bottom:90px}
+}
+@media (max-height:620px) and (min-width:701px){.painel ul{display:none}}
 </style>
 </head>
 <body>
@@ -412,7 +425,7 @@ footer a{color:#c4cedb}
     <div class="aro" aria-hidden="true"></div>
     <span class="num">03 / Laudos técnicos</span>
     <div class="painel vidro">
-      <span class="rotulo">02 / Laudos técnicos</span>
+      <span class="rotulo">03 / Laudos técnicos</span>
       <h2>Laudo técnico <span class="destaque">que se sustenta.</span></h2>
       <p>Diagnóstico de fissuras, infiltração, corrosão de armadura e recalque, com causa provável e solução recomendada.</p>
       <ul><li>Laudo de patologia com ART</li><li>Laudo cautelar de vizinhança (NBR 13752)</li><li>Fotos datadas e classificação de risco</li><li>Para condomínio, seguradora ou Justiça</li></ul>
@@ -428,7 +441,7 @@ footer a{color:#c4cedb}
     <div class="aro" aria-hidden="true"></div>
     <span class="num">04 / Vistorias técnicas</span>
     <div class="painel vidro">
-      <span class="rotulo">03 / Vistorias técnicas</span>
+      <span class="rotulo">04 / Vistorias técnicas</span>
       <h2>Vistoria antes que <span class="destaque">vire problema.</span></h2>
       <p>Registro técnico do estado do imóvel na entrega das chaves, antes de uma obra vizinha ou na manutenção do condomínio.</p>
       <ul><li>Vistoria de recebimento de imóvel</li><li>Inspeção predial (NBR 16747)</li><li>Vistoria de entrada e saída de locação</li><li>Relatório com fotos de cada item</li></ul>
@@ -444,7 +457,7 @@ footer a{color:#c4cedb}
     <div class="aro" aria-hidden="true"></div>
     <span class="num">05 / Projetos</span>
     <div class="painel vidro">
-      <span class="rotulo">04 / Projetos</span>
+      <span class="rotulo">05 / Projetos</span>
       <h2>Projeto pensado para <span class="destaque">sair do papel.</span></h2>
       <p>Levantamento, projeto e documentação técnica para construir, reformar ou regularizar o imóvel junto à prefeitura.</p>
       <ul><li>Levantamento e as built</li><li>Projeto para aprovação na prefeitura</li><li>Regularização de imóveis</li><li>ART de projeto</li></ul>
