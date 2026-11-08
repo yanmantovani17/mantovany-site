@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mantovany Engenharia — vistorias, laudos e ART</title>
-<meta name="description" content="Laudo cautelar de vizinhança, inspeção predial, vistoria de recebimento, laudos técnicos com ART e regularização de imóveis em São Paulo e Grande SP.">
+<title>Mantovany Engenharia — obras, laudos, vistorias e projetos</title>
+<meta name="description" content="Obras, planejamento e gestão de obra, laudos técnicos, vistorias técnicas e projetos com engenheiro civil e ART em São Paulo e Grande SP.">
 <meta property="og:title" content="Mantovany Engenharia — vistorias, laudos e ART">
 <meta property="og:description" content="Laudo cautelar, inspeção predial, vistoria de recebimento e regularização de imóveis, com ART.">
 <meta property="og:image" content="https://mantovany.com.br/og.png">
@@ -63,47 +63,6 @@ p{margin:0}
 @media (max-width:1020px){.nav{display:none}}
 @media (max-width:620px){.fone{display:none}.nav-dir .btn{display:none}}
 
-/* hero 3D: pilar que se abre com a rolagem */
-.hero3d{position:relative;height:340vh;background:var(--preto)}
-.palco3d{position:sticky;top:0;height:100svh;min-height:560px;overflow:hidden}
-#cena{position:absolute;inset:0;width:100%;height:100%;display:block}
-.palco3d .reserva{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none}
-.sem-3d #cena{display:none}.sem-3d .reserva{display:block}
-.palco3d::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(130% 100% at 60% 45%,transparent 35%,rgba(11,21,34,.7) 100%),linear-gradient(180deg,rgba(11,21,34,.55) 0%,transparent 22%,transparent 62%,rgba(11,21,34,.9) 100%)}
-.fase{position:absolute;z-index:2;bottom:clamp(110px,17vh,180px);left:max(16px,calc((100% - 1240px)/2));max-width:min(560px,calc(100% - 32px));pointer-events:none}
-.fase.dir{left:auto;right:max(16px,calc((100% - 1240px)/2));text-align:right}
-.fase>*{opacity:0;transform:translateY(30px);filter:blur(8px);transition:opacity .8s,transform .8s,filter .8s}
-.fase.ativa{pointer-events:auto}
-.fase.ativa>*{opacity:1;transform:none;filter:none}
-.fase.ativa>:nth-child(2){transition-delay:.12s}
-.fase.ativa>:nth-child(3){transition-delay:.24s}
-.fase.ativa>:nth-child(4){transition-delay:.36s}
-.fase.dir .rotulo{flex-direction:row-reverse}
-.fase h1,.fase h2{font-size:clamp(2.5rem,5.8vw,5rem);font-weight:700;letter-spacing:-.04em;line-height:.98;margin-top:22px}
-.fase .lead{margin-top:20px;font-size:clamp(1rem,1.35vw,1.12rem);color:#cfd5de;max-width:30em}
-.fase.dir .lead{margin-left:auto}
-.fase .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.fase.dir .acoes{justify-content:flex-end}
-.hero-meta{position:absolute;z-index:3;top:104px;left:0;right:0}
-.hero-meta .miolo{display:flex;justify-content:space-between;font:500 .7rem/1 var(--mono);letter-spacing:.22em;color:#aab3c2;text-transform:uppercase}
-.hero-base{position:absolute;z-index:3;bottom:34px;left:0;right:0}
-.hero-base .miolo{display:flex;justify-content:space-between;align-items:center;gap:20px}
-.rolar{font:500 .7rem/1 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:#aab3c2;display:flex;align-items:center;gap:12px;text-decoration:none}
-.rolar i{width:1px;height:38px;background:linear-gradient(var(--amarelo),transparent);animation:desce 2s infinite}
-@keyframes desce{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-.etapas-hero{display:flex;gap:14px;align-items:center;font:500 .72rem/1 var(--mono);color:#6f7d93}
-.etapas-hero span{display:flex;align-items:center;gap:10px}
-.etapas-hero span i{display:block;width:34px;height:2px;background:rgba(255,255,255,.18);position:relative;overflow:hidden}
-.etapas-hero span i::after{content:"";position:absolute;inset:0;background:var(--amarelo);transform-origin:left;transform:scaleX(var(--f,0))}
-.etapas-hero span.ativa{color:#fff}
-@media (max-width:620px){
-  .fase,.fase.dir{left:16px;right:16px;text-align:left;bottom:150px}
-  .fase.dir .rotulo{flex-direction:row}.fase.dir .acoes{justify-content:flex-start}.fase.dir .lead{margin-left:0}
-  .palco3d::after{background:linear-gradient(180deg,rgba(11,21,34,.5),transparent 25%,transparent 42%,rgba(11,21,34,.96) 78%)}
-  .hero-meta{top:96px}.hero-meta .miolo span:last-child{display:none}
-  .hero-base{bottom:96px}.rolar{display:none}
-}
-
 /* faixa de números */
 .numeros{background:var(--grafite);border-block:1px solid var(--linha-esc)}
 .numeros .grade{display:grid;grid-template-columns:repeat(4,1fr)}
@@ -113,113 +72,6 @@ p{margin:0}
 .num strong em{font-style:normal;color:var(--amarelo)}
 .num>span{display:block;margin-top:10px;color:var(--suave-esc);font-size:.9rem;line-height:1.4}
 @media (max-width:860px){.numeros .grade{grid-template-columns:1fr 1fr}.num{padding:26px 18px}.num:nth-child(odd){border-left:0;padding-left:0}.num:nth-child(n+3){border-top:1px solid var(--linha-esc)}}
-
-/* sinais de risco: um por vez ao rolar */
-.sinais{background:var(--papel);color:var(--texto);position:relative}
-.sinais .trilho{height:calc(var(--n,6) * 75vh + 100vh)}
-.sinais .palco{position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
-.sinais .cab{position:absolute;top:110px;left:0;right:0}
-.sinais .cab .miolo{display:flex;justify-content:space-between;align-items:center;gap:20px}
-.contador{font:500 .78rem/1 var(--mono);color:var(--suave);letter-spacing:.12em}
-.contador b{color:var(--texto)}
-.sinal{position:absolute;left:0;right:0;opacity:0;transform:translateY(40px);filter:blur(10px);transition:opacity .6s,transform .7s,filter .6s;pointer-events:none}
-.sinal.ativo{opacity:1;transform:none;filter:none;pointer-events:auto}
-.sinal.saiu{transform:translateY(-40px)}
-.sinal .miolo{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,72px);align-items:center;max-width:1040px}
-.sinal .n{font:700 clamp(5rem,13vw,11rem)/.85 var(--mono);letter-spacing:-.06em;background:linear-gradient(180deg,var(--ouro-claro),var(--ouro) 60%,#8b6a2c);-webkit-background-clip:text;background-clip:text;color:transparent}
-.sinal small{display:block;font:500 .7rem/1 var(--mono);letter-spacing:.22em;color:var(--suave);text-transform:uppercase;margin-bottom:16px}
-.sinal h3{font-size:clamp(2rem,4.6vw,3.8rem);font-weight:400;letter-spacing:-.035em;line-height:1.04}
-.sinal p{margin-top:18px;color:var(--suave);font-size:1.08rem;max-width:32em}
-.sinais .base{position:absolute;bottom:40px;left:0;right:0}
-.sinais .base .miolo{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.sinais .base p{font-size:.95rem;color:var(--suave)}
-.progresso{flex:1;max-width:260px;height:2px;background:var(--linha);position:relative}
-.progresso i{position:absolute;inset:0;background:var(--ouro);transform-origin:left;transform:scaleX(var(--p,0))}
-@media (max-width:620px){
-  .sinal .miolo{grid-template-columns:1fr;gap:10px}
-  .sinais .cab{top:96px}
-  .sinais .base{bottom:96px}.progresso{display:none}
-}
-.sem-movimento .sinais .trilho{height:auto}
-.sem-movimento .sinais .palco{position:static;height:auto;padding:120px 0;display:block}
-.sem-movimento .sinais .cab,.sem-movimento .sinais .base{position:static;margin-bottom:40px}
-.sem-movimento .sinais .base{margin:40px 0 0}
-.sem-movimento .sinal{position:static;opacity:1;transform:none;filter:none;margin-bottom:56px}
-
-section{padding:clamp(80px,11vw,140px) 0}
-.intro{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:56px}
-.intro h2{font-size:clamp(2.2rem,4.6vw,3.8rem);margin-top:18px;max-width:14em}
-.intro p{color:var(--suave-esc);font-size:1.08rem;max-width:30em}
-.claro .intro p{color:var(--suave)}
-
-/* serviços: cards escuros */
-.servicos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.serv{position:relative;background:linear-gradient(180deg,var(--grafite-2),var(--grafite));border:1px solid var(--linha-esc);border-radius:18px;padding:30px 28px 28px;display:flex;flex-direction:column;gap:14px;overflow:hidden;transition:border-color .3s,transform .3s}
-.serv::before{content:"";position:absolute;inset:-1px;background:radial-gradient(400px 200px at var(--mx,50%) -10%,rgba(212,168,58,.13),transparent 70%);opacity:0;transition:opacity .4s;pointer-events:none}
-.serv:hover{border-color:rgba(212,168,58,.35);transform:translateY(-3px)}
-.serv:hover::before{opacity:1}
-.serv .ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:rgba(212,168,58,.1);border:1px solid rgba(212,168,58,.3);color:var(--amarelo)}
-.serv .ico svg{width:22px;height:22px}
-.serv .topo-card{display:flex;justify-content:space-between;align-items:flex-start}
-.serv .idx{font:500 .78rem/1 var(--mono);color:#5b6b82}
-.serv h3{font-size:1.35rem;letter-spacing:-.02em;margin-top:6px}
-.serv p{color:var(--suave-esc);font-size:.97rem}
-.serv ul{list-style:none;margin:6px 0 0;padding:16px 0 0;border-top:1px solid var(--linha-esc);display:grid;gap:9px;font-size:.92rem;color:#d7dce4}
-.serv li{display:grid;grid-template-columns:16px 1fr;gap:10px}
-.serv li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--amarelo);margin-top:.6em;box-shadow:0 0 10px var(--amarelo)}
-.serv li b{color:#fff;font-weight:600}
-@media (max-width:980px){.servicos{grid-template-columns:1fr 1fr}}
-@media (max-width:640px){.servicos{grid-template-columns:1fr}}
-
-/* sem achismo (claro) */
-.achismo{background:var(--branco);color:var(--texto)}
-.achismo .miolo{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,7vw,110px);align-items:start}
-.achismo h2{font-size:clamp(2.6rem,5.6vw,4.6rem);font-weight:400;letter-spacing:-.045em;line-height:1.02;margin-top:20px}
-.achismo .lead{margin-top:24px;color:var(--suave);font-size:1.1rem;max-width:30em}
-.achismo .acoes{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
-.lista-ico{list-style:none;margin:0;padding:0;display:grid;gap:0}
-.lista-ico li{display:grid;grid-template-columns:48px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--linha)}
-.lista-ico li:first-child{padding-top:6px}
-.lista-ico .bola{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--papel);border:1px solid var(--linha);color:var(--texto)}
-.lista-ico .bola svg{width:20px;height:20px}
-.lista-ico small{display:block;font:500 .68rem/1 var(--mono);letter-spacing:.2em;color:var(--suave);text-transform:uppercase;margin-bottom:8px}
-.lista-ico b{display:block;font-size:1.12rem;font-weight:600;letter-spacing:-.01em}
-.lista-ico p{color:var(--suave);font-size:.95rem;margin-top:4px}
-@media (max-width:900px){.achismo .miolo{grid-template-columns:1fr}}
-
-/* para quem */
-.publico{background:var(--papel);color:var(--texto);padding:clamp(70px,9vw,110px) 0}
-.publico .grade{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--linha)}
-.publico .item{padding:30px 26px 10px 0;border-right:1px solid var(--linha);margin-right:26px}
-.publico .item:last-child{border-right:0;margin-right:0}
-.publico .item span{font:500 .75rem/1 var(--mono);color:var(--ouro)}
-.publico .item h3{font-size:1.4rem;margin-top:14px}
-.publico .item p{color:var(--suave);margin-top:10px;font-size:.97rem}
-@media (max-width:900px){.publico .grade{grid-template-columns:1fr 1fr}.publico .item:nth-child(2){border-right:0;margin-right:0}}
-@media (max-width:520px){.publico .grade{grid-template-columns:1fr}.publico .item{border-right:0;margin-right:0;border-bottom:1px solid var(--linha);padding-bottom:26px}}
-
-/* passos */
-.passos{background:var(--preto);position:relative;overflow:hidden}
-.passos::before{content:"";position:absolute;width:900px;height:500px;left:50%;top:-200px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(212,168,58,.08),transparent);pointer-events:none}
-.etapas{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}
-.etapa{background:var(--grafite);border:1px solid var(--linha-esc);border-radius:18px;padding:26px 24px 28px;position:relative}
-.etapa .cab-e{display:flex;justify-content:space-between;align-items:center;margin-bottom:34px}
-.etapa .ico{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--amarelo);color:var(--amarelo);box-shadow:0 0 18px rgba(212,168,58,.25)}
-.etapa .ico svg{width:18px;height:18px}
-.etapa .n{font:400 1.6rem/1 var(--mono);color:#4f6079}
-.etapa h3{font-size:1.15rem;letter-spacing:-.01em}
-.etapa p{color:var(--suave-esc);margin-top:10px;font-size:.94rem}
-.etapa:not(:last-child)::after{content:"";position:absolute;right:-13px;top:44px;width:10px;height:10px;border-radius:50%;border:1.5px solid #34465e;background:var(--preto);z-index:1}
-@media (max-width:980px){.etapas{grid-template-columns:1fr 1fr}.etapa::after{display:none}}
-@media (max-width:560px){.etapas{grid-template-columns:1fr}}
-
-/* faixa com vídeo de obra */
-.faixa-video{position:relative;overflow:hidden;padding:clamp(100px,14vw,170px) 0;background:var(--preto)}
-.faixa-video .fundo-faixa{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.4}
-.faixa-video::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,21,34,.9),rgba(11,21,34,.3))}
-.faixa-video .miolo{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap}
-.faixa-video h2{font-size:clamp(2.2rem,4.8vw,4rem);max-width:13em;margin-top:18px}
-.faixa-video p{color:#cfd5de;margin-top:16px;max-width:34em;font-size:1.08rem}
 
 /* ymobra */
 .app{padding:0;background:var(--preto)}
@@ -302,6 +154,146 @@ footer a{color:#c4cedb}
   .revela{opacity:1;transform:none;filter:none}
   .slide .fundo{transform:none}
 }
+/* ===== HERO: prédio em nuvem de pontos 3D ===== */
+.hero{position:relative;height:330vh;background:radial-gradient(120% 80% at 70% 30%,#13243a 0%,var(--preto) 60%)}
+.hero .palco{position:sticky;top:0;height:100svh;min-height:600px;overflow:hidden}
+#nuvem{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero .palavra{position:absolute;left:50%;top:50%;transform:translate(-50%,-56%);font:800 clamp(5rem,19vw,18rem)/.8 var(--sans);letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.07);white-space:nowrap;pointer-events:none;user-select:none}
+.hero .palavra span{color:rgba(255,255,255,.035)}
+.hero .texto{position:absolute;z-index:2;left:max(16px,calc((100% - 1240px)/2));bottom:clamp(120px,19vh,200px);max-width:min(600px,calc(100% - 32px))}
+.hero h1{font-size:clamp(2.6rem,5.8vw,5.2rem);font-weight:700;letter-spacing:-.045em;line-height:.98;margin-top:22px}
+.hero .lead{margin-top:22px;color:#c9d2de;font-size:clamp(1rem,1.35vw,1.12rem);max-width:31em}
+.hero .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero .texto>*{transition:opacity .6s,transform .6s,filter .6s}
+.hero.saindo .texto>*{opacity:0;transform:translateY(-24px);filter:blur(6px)}
+.etiqueta{position:absolute;z-index:3;left:0;top:0;display:flex;align-items:center;gap:10px;padding:9px 14px 9px 10px;border-radius:999px;background:rgba(15,27,43,.55);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font:500 .72rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#e7ecf3;white-space:nowrap;opacity:0;transform:translate(-50%,-50%) scale(.85);transition:opacity .5s,transform .5s;pointer-events:none;will-change:left,top}
+.etiqueta i{width:8px;height:8px;border-radius:50%;background:var(--amarelo);box-shadow:0 0 12px var(--amarelo)}
+.etiqueta.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.vidro{background:rgba(15,27,43,.5);border:1px solid rgba(255,255,255,.13);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border-radius:20px}
+.hero .cartao{transition:opacity .6s,transform .6s;position:absolute;z-index:2;right:max(16px,calc((100% - 1240px)/2));bottom:clamp(120px,19vh,200px);width:300px;padding:20px 22px}
+.cartao small{display:block;font:500 .66rem/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--suave-esc)}
+.cartao .linha{display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.cartao .linha:last-child{border-bottom:0;padding-bottom:0}
+.cartao .linha b{font:600 1.02rem/1.2 var(--sans)}
+.cartao .linha span{font:500 .72rem/1 var(--mono);color:var(--amarelo)}
+.hero .base{position:absolute;z-index:3;left:0;right:0;bottom:34px}
+.hero .base .miolo{display:flex;justify-content:space-between;align-items:center}
+.medidor{display:flex;align-items:center;gap:14px;font:500 .7rem/1 var(--mono);letter-spacing:.18em;color:#8b98ab;text-transform:uppercase}
+.medidor b{display:block;width:140px;height:2px;background:rgba(255,255,255,.14);position:relative}
+.medidor b::after{content:"";position:absolute;inset:0;background:var(--amarelo);transform-origin:left;transform:scaleX(var(--p,0))}
+.rolar{font:500 .7rem/1 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:#aab3c2;display:flex;align-items:center;gap:12px;text-decoration:none}
+.rolar i{width:1px;height:38px;background:linear-gradient(var(--amarelo),transparent);animation:desce 2s infinite}
+@keyframes desce{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.hero-meta{position:absolute;z-index:3;top:104px;left:0;right:0}
+.hero-meta .miolo{display:flex;justify-content:space-between;font:500 .7rem/1 var(--mono);letter-spacing:.22em;color:#8b98ab;text-transform:uppercase}
+@media (max-width:900px){.hero .cartao{display:none}}
+.hero.montando .cartao{opacity:0;transform:translateY(16px);pointer-events:none}
+@media (max-width:620px){.etiqueta{display:none}.hero .palco::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(11,21,34,.96) 0%,rgba(11,21,34,.85) 48%,transparent 66%)}}
+@media (min-width:901px){.gantt{justify-content:flex-start;padding-left:max(16px,calc((100% - 1240px)/2))}.gantt .quadro{width:min(700px,50vw)}}
+@media (max-width:620px){
+  .hero .texto{bottom:150px}.hero .base{bottom:96px}.rolar{display:none}
+  .hero .palavra{top:34%}
+  .hero-meta{top:96px}.hero-meta .miolo span:last-child{display:none}
+}
+
+/* ===== QUATRO FRENTES: janelas ===== */
+.frentes{background:var(--preto);padding:clamp(90px,12vw,150px) 0 clamp(70px,9vw,110px);position:relative;overflow:hidden}
+.frentes .titulo{text-align:center;margin-bottom:clamp(48px,6vw,72px)}
+.frentes h2{font-size:clamp(2.4rem,5.4vw,4.6rem);margin-top:18px;letter-spacing:-.045em}
+.frentes .titulo p{color:var(--suave-esc);margin:18px auto 0;max-width:34em;font-size:1.08rem}
+.janelas{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(12px,1.6vw,24px)}
+.janela{display:block;text-decoration:none;color:#fff}
+.janela .moldura{position:relative;aspect-ratio:3/4.2;border-radius:46% / 32%;padding:12px;background:linear-gradient(160deg,#2a3a52,#0f1b2b 55%,#1b2a40);box-shadow:inset 0 2px 1px rgba(255,255,255,.15),inset 0 -6px 16px rgba(0,0,0,.5),0 30px 60px -30px rgba(0,0,0,.8);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.janela .vista{position:absolute;inset:12px;border-radius:44% / 30%;overflow:hidden;background:#0b1522;box-shadow:inset 0 0 0 2px rgba(0,0,0,.6),inset 0 18px 30px rgba(0,0,0,.45)}
+.janela .vista img,.janela .vista canvas{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.08);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.janela .vista::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.14),transparent 35%),linear-gradient(0deg,rgba(11,21,34,.5),transparent 40%);pointer-events:none}
+.janela:hover .moldura{transform:translateY(-8px)}
+.janela:hover .vista img,.janela:hover .vista canvas{transform:scale(1.16)}
+.janela .rot{display:flex;justify-content:space-between;align-items:baseline;margin-top:20px;padding:0 6px}
+.janela .rot b{font:600 1.25rem/1.2 var(--sans);letter-spacing:-.02em}
+.janela .rot span{font:500 .72rem/1 var(--mono);color:var(--amarelo)}
+.janela p{color:var(--suave-esc);font-size:.92rem;margin-top:6px;padding:0 6px}
+@media (max-width:1000px){.janelas{grid-template-columns:repeat(3,1fr);row-gap:36px}}
+@media (max-width:640px){.janelas{grid-template-columns:1fr 1fr}.janela:last-child{grid-column:1/-1;width:50%;justify-self:center}}
+.janela .rot b{font-size:1.1rem}
+
+/* ===== SEÇÕES QUE "ENTRAM NA JANELA" ===== */
+.zoom{position:relative;height:300vh;background:var(--preto)}
+.zoom .palco{position:sticky;top:0;height:100svh;min-height:560px;overflow:hidden}
+.zoom .gigante{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:800 clamp(4.5rem,17vw,16rem)/.8 var(--sans);letter-spacing:-.06em;color:rgba(255,255,255,.045);white-space:nowrap;pointer-events:none;transition:opacity .3s}
+.zoom .midia{position:absolute;inset:0;will-change:clip-path}
+.zoom .midia>img,.zoom .midia>canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;will-change:transform}
+.zoom .midia::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,21,34,.82) 0%,rgba(11,21,34,.25) 45%,transparent 70%),linear-gradient(0deg,rgba(11,21,34,.75),transparent 40%);opacity:var(--escuro,0);pointer-events:none}
+.zoom .aro{position:absolute;left:50%;top:50%;border-radius:46% / 32%;box-shadow:0 0 0 12px #1b2a40,0 0 0 13px rgba(255,255,255,.12),inset 0 18px 30px rgba(0,0,0,.45),0 40px 80px -20px rgba(0,0,0,.8);pointer-events:none;transform:translate(-50%,-50%)}
+.zoom .num{position:absolute;left:max(16px,calc((100% - 1240px)/2));top:112px;font:500 .72rem/1 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:#8b98ab;z-index:2}
+.zoom .painel{position:absolute;z-index:2;left:max(16px,calc((100% - 1240px)/2));bottom:clamp(40px,8vh,90px);width:min(560px,calc(100% - 32px));padding:clamp(24px,3vw,36px);opacity:0;transform:translateY(40px);filter:blur(8px);transition:opacity .7s,transform .7s,filter .7s;pointer-events:none}
+.zoom.aberta .painel{opacity:1;transform:none;filter:none;pointer-events:auto}
+.painel h2{font-size:clamp(2rem,4vw,3.3rem);letter-spacing:-.04em;margin-top:14px}
+.painel p{color:#cdd5e0;margin-top:14px;font-size:1.02rem}
+.painel ul{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+.painel li{display:grid;grid-template-columns:14px 1fr;gap:10px;font-size:.92rem;color:#e3e8ef;line-height:1.45}
+.painel li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--amarelo);margin-top:.55em;box-shadow:0 0 10px var(--amarelo)}
+.painel .acoes{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+.zoom.dir .painel{left:auto;right:max(16px,calc((100% - 1240px)/2))}
+.zoom.dir .midia::after{background:linear-gradient(270deg,rgba(11,21,34,.82) 0%,rgba(11,21,34,.25) 45%,transparent 70%),linear-gradient(0deg,rgba(11,21,34,.75),transparent 40%)}
+@media (max-width:700px){
+  .painel ul{grid-template-columns:1fr}
+  .zoom .painel,.zoom.dir .painel{left:16px;right:16px;width:auto;bottom:90px}
+  .zoom .midia::after,.zoom.dir .midia::after{background:linear-gradient(0deg,rgba(11,21,34,.92) 15%,rgba(11,21,34,.35) 55%,transparent 80%)}
+  .painel p{font-size:.95rem}
+}
+
+/* ===== PROCESSO: cartões que empilham ===== */
+.processo{background:var(--preto);padding:clamp(90px,12vw,150px) 0}
+.processo .intro{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:56px}
+.processo h2{font-size:clamp(2.2rem,4.6vw,3.8rem);margin-top:18px;max-width:13em}
+.processo .intro p{color:var(--suave-esc);max-width:30em;font-size:1.06rem}
+.pilha{display:grid;gap:22px}
+.folha{position:sticky;top:calc(110px + var(--i) * 26px);min-height:min(62vh,520px);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;background:var(--grafite);border:1px solid var(--linha-esc);box-shadow:0 -20px 60px -20px rgba(0,0,0,.7);transform-origin:top center}
+.folha .foto{position:relative;overflow:hidden}
+.folha .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.folha .foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,var(--grafite))}
+.folha .txt{padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;justify-content:center}
+.folha .n{font:400 clamp(3rem,6vw,5rem)/1 var(--mono);color:var(--amarelo);letter-spacing:-.05em}
+.folha h3{font-size:clamp(1.6rem,2.8vw,2.4rem);margin-top:18px;letter-spacing:-.03em}
+.folha p{color:var(--suave-esc);margin-top:14px;font-size:1.04rem;max-width:28em}
+@media (max-width:760px){.folha{grid-template-columns:1fr;min-height:0}.folha .foto{height:200px}.folha .foto::after{background:linear-gradient(0deg,var(--grafite),transparent 60%)}.folha .txt{padding:26px}}
+
+/* ===== TROCA: você manda × você recebe ===== */
+.troca{background:var(--preto);padding:0 0 clamp(110px,13vw,170px);position:relative}
+.troca .caixa{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:0;padding:0;overflow:hidden;max-width:980px;margin:0 auto;box-shadow:0 40px 100px -40px rgba(212,168,58,.25)}
+.troca .lado{padding:clamp(26px,4vw,44px)}
+.troca .lado+.x+.lado{background:rgba(212,168,58,.06)}
+.troca .x{display:grid;place-items:center;padding:0 4px;font:300 2rem/1 var(--sans);color:var(--amarelo);border-inline:1px solid rgba(255,255,255,.08);width:64px}
+.troca h3{font-size:1.5rem;margin-top:14px;letter-spacing:-.02em}
+.troca ul{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:12px}
+.troca li{display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.07);font-size:.98rem;color:#dfe5ed}
+.troca li span{font:500 .72rem/1.6 var(--mono);color:var(--suave-esc);white-space:nowrap}
+.troca .rodape{text-align:center;margin-top:34px}
+@media (max-width:760px){.troca .caixa{grid-template-columns:1fr}.troca .x{width:auto;height:56px;border-inline:0;border-block:1px solid rgba(255,255,255,.08)}}
+
+/* ===== GANTT animado (planejamento e gestão) ===== */
+.gantt{position:absolute;inset:0;background:radial-gradient(90% 70% at 70% 40%,#16283f,#0b1522 70%);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.gantt .quadro{width:min(1100px,92vw);padding:28px 30px 30px;position:relative}
+.gantt .cab{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font:500 .72rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#8b98ab}
+.gantt .cab b{color:#fff;font:600 1.05rem/1 var(--sans);letter-spacing:-.01em;text-transform:none}
+.gantt .semanas{display:grid;grid-template-columns:150px repeat(12,1fr);font:500 .62rem/1 var(--mono);color:#5e6d84;margin-bottom:10px}
+.gantt .semanas span:first-child{visibility:hidden}
+.gantt .linha{display:grid;grid-template-columns:150px 1fr;align-items:center;height:40px;border-top:1px solid rgba(255,255,255,.05)}
+.gantt .linha>span{font:500 .86rem/1 var(--sans);color:#cfd6e0}
+.gantt .trilho{position:relative;height:100%;background:repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 1px,transparent 1px calc(100%/12))}
+.gantt .barra{position:absolute;top:11px;height:18px;border-radius:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);overflow:hidden}
+.gantt .barra i{position:absolute;inset:0;background:linear-gradient(90deg,#b08a2e,var(--amarelo));transform-origin:left;transform:scaleX(var(--f,0));box-shadow:0 0 14px rgba(212,168,58,.5)}
+.gantt .hoje{position:absolute;top:58px;bottom:24px;width:1px;background:var(--amarelo);box-shadow:0 0 12px var(--amarelo)}
+.gantt .hoje::before{content:"hoje";position:absolute;top:-18px;left:-14px;font:500 .6rem/1 var(--mono);color:var(--amarelo);letter-spacing:.14em;text-transform:uppercase}
+.gantt .kpis{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
+.gantt .kpi{padding:14px 18px;min-width:170px}
+.gantt .kpi small{display:block;font:500 .62rem/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:#8b98ab}
+.gantt .kpi b{display:block;font:700 1.6rem/1 var(--sans);margin-top:8px;letter-spacing:-.03em}
+.gantt .kpi b em{font-style:normal;color:var(--amarelo)}
+.gantt .nota{font:500 .6rem/1 var(--mono);color:#56637a;letter-spacing:.12em;text-transform:uppercase;margin-top:14px}
+@media (max-width:700px){.gantt .quadro{padding:14px;transform:translateY(-16vh) scale(.92)}.gantt .semanas,.gantt .linha{grid-template-columns:96px 1fr}.gantt .semanas{grid-template-columns:96px repeat(12,1fr)}.gantt .linha>span{font-size:.74rem}.gantt .kpis{display:none}}
+
 </style>
 </head>
 <body>
@@ -313,54 +305,150 @@ footer a{color:#c4cedb}
       <span><b>MANTOVANY</b><small>ENGENHARIA E CONSTRUÇÃO</small></span>
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="#inicio">Início</a>
-      <a href="#sinais">Sinais</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#como">Como funciona</a>
-      <a href="#perguntas">Dúvidas</a>
+      <a href="#obras">Obras</a>
+      <a href="#gestao">Gestão</a>
+      <a href="#laudos">Laudos</a>
+      <a href="#vistorias">Vistorias</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
     </nav>
     <div class="nav-dir">
       <a class="fone" href="tel:+5511978667370">(11) 97866-7370</a>
-      <a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20vistoria">Pedir orçamento</a>
+      <a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento">Pedir orçamento</a>
     </div>
   </div>
 </header>
 
 <main id="inicio">
-<section class="hero3d" id="hero" aria-label="Destaques" style="padding:0">
-  <div class="palco3d">
-    <canvas id="cena" aria-hidden="true"></canvas>
-    <video class="reserva" muted loop playsinline preload="none" poster="https://assets.mixkit.co/videos/21230/21230-thumb-720-0.jpg" aria-hidden="true">
-      <source src="https://assets.mixkit.co/videos/21230/21230-720.mp4" type="video/mp4">
-    </video>
-    <div class="hero-meta" aria-hidden="true"><div class="miolo"><span>Mantovany / Engenharia</span><span>São Paulo · Grande SP</span></div></div>
+<section class="hero" id="hero" aria-label="Apresentação" style="padding:0">
+  <div class="palco">
+    <div class="palavra" aria-hidden="true">Engen<span>haria</span></div>
+    <canvas id="nuvem" aria-hidden="true"></canvas>
+    <div class="hero-meta" aria-hidden="true"><div class="miolo"><span>Mantovany / Engenharia e Construção</span><span>São Paulo · Grande SP</span></div></div>
+    <span class="etiqueta" data-ancora="0" aria-hidden="true"><i></i>01 · Projeto</span>
+    <span class="etiqueta" data-ancora="1" aria-hidden="true"><i></i>02 · Obra e gestão</span>
+    <span class="etiqueta" data-ancora="2" aria-hidden="true"><i></i>03 · Vistoria</span>
+    <span class="etiqueta" data-ancora="3" aria-hidden="true"><i></i>04 · Laudo</span>
 
-    <div class="fase ativa">
-      <span class="rotulo">01 / Estrutura</span>
-      <h1>Estrutura segura <span class="destaque">começa por dentro.</span></h1>
-      <p class="lead">O que sustenta o seu imóvel não fica à vista. A vistoria técnica mostra, com engenheiro civil e CREA ativo.</p>
+    <div class="texto">
+      <span class="rotulo">Engenharia civil · CREA ativo</span>
+      <h1>Do projeto à entrega, <span class="destaque">engenharia que se sustenta.</span></h1>
+      <p class="lead">Obras, planejamento e gestão, laudos técnicos, vistorias e projetos, com engenheiro responsável e ART. Em São Paulo e Grande SP.</p>
       <div class="acoes">
-        <a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20vistoria">Pedir orçamento no WhatsApp</a>
-        <a class="btn btn-vidro" href="#servicos">Ver serviços</a>
+        <a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento">Pedir orçamento no WhatsApp</a>
+        <a class="btn btn-vidro" href="#frentes">Conhecer os serviços</a>
       </div>
     </div>
-    <div class="fase dir">
-      <span class="rotulo">02 / Diagnóstico</span>
-      <h2>Cada camada avaliada. <span class="destaque">Nada fica escondido.</span></h2>
-      <p class="lead">Fissuras, armaduras, umidade e recalque registrados com foto datada, medição e classificação de risco.</p>
+
+    <div class="cartao vidro" aria-label="Serviços">
+      <small>Mantovany · 5 frentes</small>
+      <div class="linha"><b>Obras</b><span>execução</span></div>
+      <div class="linha"><b>Planejamento e gestão</b><span>cronograma</span></div>
+      <div class="linha"><b>Laudos técnicos</b><span>com ART</span></div>
+      <div class="linha"><b>Vistorias técnicas</b><span>NBR 16747</span></div>
+      <div class="linha"><b>Projetos</b><span>aprovação</span></div>
     </div>
-    <div class="fase">
-      <span class="rotulo">03 / Laudo com ART</span>
-      <h2>Do pilar ao laudo, <span class="destaque">documentado na medida.</span></h2>
-      <p class="lead">PDF assinado com ART, que se sustenta perante condomínio, prefeitura, seguradora ou Justiça.</p>
+
+    <div class="base"><div class="miolo">
+      <a class="rolar" href="#frentes"><i></i>Role para construir</a>
+      <div class="medidor" aria-hidden="true">Obra<b></b><span data-pct>0%</span></div>
+    </div></div>
+  </div>
+</section>
+
+<section class="frentes" id="frentes">
+  <div class="miolo">
+    <div class="titulo revela">
+      <span class="rotulo">Cinco frentes</span>
+      <h2>Engenharia <span class="destaque">sob medida.</span></h2>
+      <p>Escolha por onde começar. Em todas, você fala direto com o engenheiro e recebe tudo por escrito.</p>
+    </div>
+    <div class="janelas">
+      <a class="janela revela" href="#obras"><div class="moldura"><div class="vista"><img src="img/obras.webp" alt="Estrutura de prédio em construção à noite" loading="lazy"></div></div><div class="rot"><b>Obras</b><span>01</span></div><p>Construção e reforma com responsável técnico.</p></a>
+      <a class="janela revela d1" href="#gestao"><div class="moldura"><div class="vista"><img src="img/gestao.webp" alt="Cronograma de obra em gráfico de barras" loading="lazy"></div></div><div class="rot"><b>Planejamento e gestão</b><span>02</span></div><p>Cronograma, orçamento e gerenciamento.</p></a>
+      <a class="janela revela d2" href="#laudos"><div class="moldura"><div class="vista"><img src="img/laudos.webp" alt="Pilar com concreto desplacado e armadura corroída" loading="lazy"></div></div><div class="rot"><b>Laudos técnicos</b><span>03</span></div><p>Diagnóstico de patologias com ART.</p></a>
+      <a class="janela revela d3" href="#vistorias"><div class="moldura"><div class="vista"><img src="img/vistorias.webp" alt="Pilar de concreto em ambiente vistoriado" loading="lazy"></div></div><div class="rot"><b>Vistorias técnicas</b><span>04</span></div><p>Recebimento, cautelar e inspeção predial.</p></a>
+      <a class="janela revela" href="#projetos"><div class="moldura"><div class="vista"><img src="img/projetos.webp" alt="Modelo 3D em linhas douradas de um edifício" loading="lazy"></div></div><div class="rot"><b>Projetos</b><span>05</span></div><p>Do levantamento à aprovação na prefeitura.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="zoom" id="obras" style="padding:0">
+  <div class="palco">
+    <div class="gigante" aria-hidden="true">Obras</div>
+    <div class="midia"><img src="img/obras.webp" alt="" loading="lazy"></div>
+    <div class="aro" aria-hidden="true"></div>
+    <span class="num">01 / Obras</span>
+    <div class="painel vidro">
+      <span class="rotulo">01 / Obras</span>
+      <h2>Obra com engenheiro <span class="destaque">do começo ao fim.</span></h2>
+      <p>Construção e reforma residencial e comercial com responsável técnico, cronograma, controle de material e diário de obra no aplicativo YMOBRA.</p>
+      <ul><li>Construção e reforma</li><li>ART de execução</li><li>Orçamento e cronograma por escrito</li><li>Diário de obra e checklist no YMOBRA</li></ul>
+      <div class="acoes"><a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20obra">Orçar minha obra</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="zoom dir" id="gestao" style="padding:0">
+  <div class="palco">
+    <div class="gigante" aria-hidden="true">Gestão</div>
+    <div class="midia"><div class="gantt" id="gantt" aria-hidden="true"></div></div>
+    <div class="aro" aria-hidden="true"></div>
+    <span class="num">02 / Planejamento e gestão</span>
+    <div class="painel vidro">
+      <span class="rotulo">02 / Planejamento e gestão de obra</span>
+      <h2>Prazo e custo <span class="destaque">sob controle.</span></h2>
+      <p>Planejamento, orçamento e gerenciamento da obra com cronograma físico-financeiro, medições e relatórios acompanhados pelo aplicativo YMOBRA.</p>
+      <ul><li>Orçamento e cronograma físico-financeiro</li><li>Gerenciamento e fiscalização de obra</li><li>Medições e controle de custos</li><li>Relatórios e diário de obra no YMOBRA</li></ul>
+      <div class="acoes"><a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20planejamento%20e%20gest%C3%A3o%20de%20obra">Planejar minha obra</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="zoom dir" id="laudos" style="padding:0">
+  <div class="palco">
+    <div class="gigante" aria-hidden="true">Laudos</div>
+    <div class="midia"><canvas id="seq-pilar" aria-label="Pilar de concreto perdendo o cobrimento e mostrando a armadura corroída"></canvas></div>
+    <div class="aro" aria-hidden="true"></div>
+    <span class="num">03 / Laudos técnicos</span>
+    <div class="painel vidro">
+      <span class="rotulo">02 / Laudos técnicos</span>
+      <h2>Laudo técnico <span class="destaque">que se sustenta.</span></h2>
+      <p>Diagnóstico de fissuras, infiltração, corrosão de armadura e recalque, com causa provável e solução recomendada.</p>
+      <ul><li>Laudo de patologia com ART</li><li>Laudo cautelar de vizinhança (NBR 13752)</li><li>Fotos datadas e classificação de risco</li><li>Para condomínio, seguradora ou Justiça</li></ul>
       <div class="acoes"><a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20preciso%20de%20um%20laudo%20t%C3%A9cnico">Pedir laudo</a></div>
     </div>
+  </div>
+</section>
 
-    <div class="hero-base">
-      <div class="miolo">
-        <a class="rolar" href="#sinais"><i></i>Role para explorar</a>
-        <div class="etapas-hero" aria-hidden="true"><span class="ativa">01<i></i></span><span>02<i></i></span><span>03<i></i></span></div>
-      </div>
+<section class="zoom" id="vistorias" style="padding:0">
+  <div class="palco">
+    <div class="gigante" aria-hidden="true">Vistorias</div>
+    <div class="midia"><img src="img/vistorias.webp" alt="" loading="lazy"></div>
+    <div class="aro" aria-hidden="true"></div>
+    <span class="num">04 / Vistorias técnicas</span>
+    <div class="painel vidro">
+      <span class="rotulo">03 / Vistorias técnicas</span>
+      <h2>Vistoria antes que <span class="destaque">vire problema.</span></h2>
+      <p>Registro técnico do estado do imóvel na entrega das chaves, antes de uma obra vizinha ou na manutenção do condomínio.</p>
+      <ul><li>Vistoria de recebimento de imóvel</li><li>Inspeção predial (NBR 16747)</li><li>Vistoria de entrada e saída de locação</li><li>Relatório com fotos de cada item</li></ul>
+      <div class="acoes"><a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20vistoria">Agendar vistoria</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="zoom" id="projetos" style="padding:0">
+  <div class="palco">
+    <div class="gigante" aria-hidden="true">Projetos</div>
+    <div class="midia"><canvas id="projeto3d" aria-label="Modelo 3D em linhas de um edifício sendo desenhado"></canvas></div>
+    <div class="aro" aria-hidden="true"></div>
+    <span class="num">05 / Projetos</span>
+    <div class="painel vidro">
+      <span class="rotulo">04 / Projetos</span>
+      <h2>Projeto pensado para <span class="destaque">sair do papel.</span></h2>
+      <p>Levantamento, projeto e documentação técnica para construir, reformar ou regularizar o imóvel junto à prefeitura.</p>
+      <ul><li>Levantamento e as built</li><li>Projeto para aprovação na prefeitura</li><li>Regularização de imóveis</li><li>ART de projeto</li></ul>
+      <div class="acoes"><a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20um%20projeto">Falar do meu projeto</a></div>
     </div>
   </div>
 </section>
@@ -376,125 +464,37 @@ footer a{color:#c4cedb}
   </div>
 </div>
 
-<section class="sinais claro" id="sinais" style="padding:0">
-  <div class="trilho">
-    <div class="palco">
-      <div class="cab"><div class="miolo"><span class="rotulo">Sinais de risco</span><span class="contador"><b data-atual>01</b> / 06</span></div></div>
-
-      <div class="sinal ativo"><div class="miolo"><span class="n">01</span><div><small>Sinal de risco estrutural</small><h3>Fissuras e trincas aparecendo nas paredes</h3><p>Nem toda fissura é grave, mas só a vistoria diz qual é. Diagnóstico antes da obra de correção.</p></div></div></div>
-      <div class="sinal"><div class="miolo"><span class="n">02</span><div><small>Sinal de risco de umidade</small><h3>Infiltração ou mancha que sempre volta</h3><p>Pintar por cima não resolve. O laudo aponta a causa provável e a correção recomendada.</p></div></div></div>
-      <div class="sinal"><div class="miolo"><span class="n">03</span><div><small>Sinal de risco na vizinhança</small><h3>Obra, demolição ou escavação ao lado</h3><p>Depois que a obra começa, já não dá para provar como o imóvel estava. O laudo cautelar vem antes.</p></div></div></div>
-      <div class="sinal"><div class="miolo"><span class="n">04</span><div><small>Sinal de risco estrutural</small><h3>Portas e janelas que passaram a emperrar</h3><p>Desalinhamento repentino pode indicar recalque ou deformação. Vale medir antes que piore.</p></div></div></div>
-      <div class="sinal"><div class="miolo"><span class="n">05</span><div><small>Sinal de atenção na entrega</small><h3>Chaves do imóvel novo para receber</h3><p>Prumo, nível, acabamentos e instalações conferidos antes de assinar o termo de recebimento.</p></div></div></div>
-      <div class="sinal"><div class="miolo"><span class="n">06</span><div><small>Sinal de risco documental</small><h3>Reforma ou construção sem ART e sem regularização</h3><p>Sem responsável técnico, condomínio, prefeitura e banco podem barrar a obra, a venda ou o financiamento.</p></div></div></div>
-
-      <div class="base"><div class="miolo"><div class="progresso" aria-hidden="true"><i></i></div><p>Reconheceu algum desses sinais? <a href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20uma%20avalia%C3%A7%C3%A3o%20do%20meu%20im%C3%B3vel" style="color:var(--texto);font-weight:700">Fale com o engenheiro →</a></p></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="servicos">
+<section class="processo" id="como">
   <div class="miolo">
     <div class="intro revela">
-      <div><span class="rotulo">Serviços</span><h2>Cada serviço termina em um <span class="destaque">documento assinado.</span></h2></div>
-      <p>Laudo técnico de engenheiro, com ART, que se sustenta perante condomínio, prefeitura, seguradora ou Justiça.</p>
+      <div><span class="rotulo">Como funciona</span><h2>Quatro passos, <span class="destaque">nenhum intermediário.</span></h2></div>
+      <p>Do primeiro contato à entrega, você fala com o engenheiro que assina o trabalho.</p>
     </div>
-    <div class="servicos">
-      <article class="serv revela">
-        <div class="topo-card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></span><span class="idx">01</span></div>
-        <h3>Laudo cautelar de vizinhança</h3>
-        <p>Registro do estado dos imóveis vizinhos antes de obra, demolição ou escavação. É a prova técnica se aparecer fissura, infiltração ou recalque depois.</p>
-        <ul><li><span><b>Quando:</b> antes de começar a obra, sua ou do vizinho</span></li><li><span>Norma ABNT NBR 13752</span></li></ul>
-      </article>
-      <article class="serv revela d1">
-        <div class="topo-card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2"/></svg></span><span class="idx">02</span></div>
-        <h3>Inspeção predial</h3>
-        <p>Avaliação de estrutura, fachada, cobertura, instalações e áreas comuns, com prioridades e orientação de manutenção.</p>
-        <ul><li><span><b>Quando:</b> para planejar a manutenção do condomínio</span></li><li><span>Norma ABNT NBR 16747</span></li></ul>
-      </article>
-      <article class="serv revela d2">
-        <div class="topo-card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></svg></span><span class="idx">03</span></div>
-        <h3>Vistoria de recebimento</h3>
-        <p>Conferência do imóvel novo ou reformado antes de assinar a entrega: acabamentos, prumo, nível, instalações e funcionamento.</p>
-        <ul><li><span><b>Quando:</b> na entrega das chaves</span></li><li><span>Relatório com fotos de cada item</span></li></ul>
-      </article>
-      <article class="serv revela">
-        <div class="topo-card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span class="idx">04</span></div>
-        <h3>Laudo técnico com ART</h3>
-        <p>Parecer sobre uma patologia específica, como fissura, infiltração ou deformação, com causa provável e solução recomendada.</p>
-        <ul><li><span><b>Quando:</b> em disputa com construtora, seguradora ou vizinho</span></li><li><span>Causa provável e correção indicada</span></li></ul>
-      </article>
-      <article class="serv revela d1">
-        <div class="topo-card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg></span><span class="idx">05</span></div>
-        <h3>Regularização de imóveis</h3>
-        <p>Levantamento, documentação técnica e acompanhamento para regularizar construção e reforma junto à prefeitura.</p>
-        <ul><li><span><b>Quando:</b> para vender, financiar ou averbar</span></li><li><span>Documentação técnica para a prefeitura</span></li></ul>
-      </article>
-      <article class="serv revela d2">
-        <div class="topo-card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="idx">06</span></div>
-        <h3>Emissão de ART</h3>
-        <p>Responsabilidade técnica para reformas, laudos e serviços que exigem engenheiro responsável perante o CREA.</p>
-        <ul><li><span><b>Quando:</b> sempre que o condomínio ou a prefeitura exigir</span></li><li><span>Registro no CREA-SP</span></li></ul>
-      </article>
+    <div class="pilha">
+      <article class="folha" style="--i:0"><div class="foto"><img src="img/vistorias.webp" alt="" loading="lazy"></div><div class="txt"><span class="n">01</span><h3>Conte o caso no WhatsApp</h3><p>Mande o endereço, fotos do problema e o que você precisa: obra, gestão, laudo, vistoria ou projeto.</p></div></article>
+      <article class="folha" style="--i:1"><div class="foto"><img src="img/projetos.webp" alt="" loading="lazy"></div><div class="txt"><span class="n">02</span><h3>Receba a proposta por escrito</h3><p>Escopo, prazo e valor definidos antes de qualquer visita. Sem surpresa no meio do caminho.</p></div></article>
+      <article class="folha" style="--i:2"><div class="foto"><img src="img/laudos.webp" alt="" loading="lazy"></div><div class="txt"><span class="n">03</span><h3>Engenheiro no local</h3><p>Vistoria com registro fotográfico e medições, ou execução da obra com acompanhamento técnico.</p></div></article>
+      <article class="folha" style="--i:3"><div class="foto"><img src="img/obras.webp" alt="" loading="lazy"></div><div class="txt"><span class="n">04</span><h3>Entrega assinada, com ART</h3><p>Laudo em PDF, projeto aprovado ou obra concluída, sempre com responsável técnico registrado no CREA.</p></div></article>
     </div>
   </div>
 </section>
 
-<section class="achismo claro">
+<section class="troca">
   <div class="miolo">
-    <div class="revela">
-      <span class="rotulo">Garantia de qualidade</span>
-      <h2>Laudo técnico não aceita <span class="destaque">achismo.</span></h2>
-      <p class="lead">Um laudo é tão bom quanto a sua capacidade de ser defendido. Por isso cada entrega segue o mesmo padrão, do primeiro registro à assinatura.</p>
-      <div class="acoes">
-        <a class="btn btn-escuro" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20vistoria">Solicitar avaliação <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div class="caixa vidro revela">
+      <div class="lado">
+        <small class="rotulo">Você manda</small>
+        <h3>O seu caso</h3>
+        <ul><li>Endereço do imóvel<span>01</span></li><li>Fotos do que está acontecendo<span>02</span></li><li>O serviço que precisa<span>03</span></li></ul>
+      </div>
+      <div class="x" aria-hidden="true">×</div>
+      <div class="lado">
+        <small class="rotulo">Você recebe</small>
+        <h3>A resposta técnica</h3>
+        <ul><li>Proposta por escrito<span>antes da visita</span></li><li>Engenheiro responsável<span>CREA ativo</span></li><li>Documento assinado<span>com ART</span></li></ul>
       </div>
     </div>
-    <ul class="lista-ico">
-      <li class="revela"><span class="bola"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span><div><small>Diagnóstico</small><b>Vistoria feita pelo engenheiro responsável</b><p>Não por terceiros. Quem assina é quem esteve no imóvel.</p></div></li>
-      <li class="revela d1"><span class="bola"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg></span><div><small>Registro</small><b>Fotos datadas de cada ponto avaliado</b><p>Com mapa de fissuras e medições quando necessário.</p></div></li>
-      <li class="revela d2"><span class="bola"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg></span><div><small>Prioridade</small><b>Classificação de risco de cada item</b><p>Com recomendações práticas de correção ou manutenção.</p></div></li>
-      <li class="revela d3"><span class="bola"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><div><small>Entrega</small><b>PDF assinado, com ART registrada</b><p>E explicado em linguagem clara, sem jargão.</p></div></li>
-    </ul>
-  </div>
-</section>
-
-<section class="publico claro">
-  <div class="miolo">
-    <div class="intro revela"><div><span class="rotulo">Para quem atendemos</span></div></div>
-    <div class="grade">
-      <div class="item revela"><span>01</span><h3>Condomínios</h3><p>Inspeção predial, plano de manutenção e acompanhamento de reformas nas unidades.</p></div>
-      <div class="item revela d1"><span>02</span><h3>Imobiliárias</h3><p>Vistoria de entrada e saída com laudo, para evitar discussão no fim do contrato.</p></div>
-      <div class="item revela d2"><span>03</span><h3>Proprietários</h3><p>Vistoria de recebimento, laudo de patologia e regularização do imóvel.</p></div>
-      <div class="item revela d3"><span>04</span><h3>Construtoras</h3><p>Laudo cautelar da vizinhança antes da obra, para se proteger de reclamações futuras.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="passos" id="como">
-  <div class="miolo">
-    <div class="intro revela">
-      <div><span class="rotulo">Como funciona</span><h2>Quatro passos <span class="destaque">até o laudo.</span></h2></div>
-      <p>Contato direto com o engenheiro, proposta por escrito e laudo assinado. Sem call center e sem intermediário.</p>
-    </div>
-    <ol class="etapas">
-      <li class="etapa revela"><div class="cab-e"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span><span class="n">01</span></div><h3>Chame no WhatsApp</h3><p>Conte o caso e envie fotos, se tiver. Você fala direto com o engenheiro.</p></li>
-      <li class="etapa revela d1"><div class="cab-e"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6v18h12V7z"/><path d="M9 12h6M9 16h4"/></svg></span><span class="n">02</span></div><h3>Receba a proposta</h3><p>Escopo, prazo e valor por escrito, antes de qualquer visita.</p></li>
-      <li class="etapa revela d2"><div class="cab-e"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span><span class="n">03</span></div><h3>Vistoria técnica</h3><p>Visita com registro fotográfico, medições e ensaios quando necessários.</p></li>
-      <li class="etapa revela d3"><div class="cab-e"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><span class="n">04</span></div><h3>Laudo com ART</h3><p>PDF assinado, com ART, e explicado em linguagem clara.</p></li>
-    </ol>
-  </div>
-</section>
-
-<section class="faixa-video">
-  <img class="fundo-faixa" loading="lazy" src="https://images.unsplash.com/photo-1638746733241-f266516b4b0e?w=1920&q=70&auto=format&fit=crop" alt="">
-  <div class="miolo revela">
-    <div>
-      <span class="rotulo">Laudo cautelar</span>
-      <h2>Vai começar uma obra ao lado de casa ou do condomínio?</h2>
-      <p>O laudo cautelar precisa ser feito antes do primeiro dia de obra. Depois, já não dá para provar como estava.</p>
-    </div>
-    <a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20preciso%20de%20um%20laudo%20cautelar">Agendar laudo cautelar</a>
+    <div class="rodape revela"><a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento">Começar pelo WhatsApp</a></div>
   </div>
 </section>
 
@@ -564,239 +564,279 @@ footer a{color:#c4cedb}
 <a class="flutuante" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20vistoria" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 10.5c.3 1.6 1.9 3.2 3.5 3.5l1.2-1 1.8.8-.4 1.6c-3 .2-6.4-3.2-6.2-6.2l1.6-.4.8 1.8z" fill="currentColor" stroke="none"/></svg></a>
 <a class="barra-wpp" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20vistoria"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Pedir orçamento pelo WhatsApp</a>
 
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+<script type="module">
+// Cenas 3D: prédio em nuvem de pontos no topo e projeto em linhas douradas.
+import * as THREE from 'three';
+const reduzir = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const prog = (el) => { const r = el.getBoundingClientRect(), t = r.height - innerHeight; return Math.min(1, Math.max(0, -r.top / t)); };
+const suave = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+const criarRenderer = (canvas) => { try { const r = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, preserveDrawingBuffer: true }); r.setPixelRatio(Math.min(devicePixelRatio, innerWidth < 700 ? 1.5 : 2)); return r; } catch (e) { return null; } };
+const quandoVisivel = (el, fn) => { let vis = false, rodando = false; const loop = (t) => { if (!vis) { rodando = false; return; } fn(t); requestAnimationFrame(loop); };
+  new IntersectionObserver(([e]) => { vis = e.isIntersecting; if (vis && !rodando) { rodando = true; requestAnimationFrame(loop); } }, { rootMargin: '200px' }).observe(el); };
+
+/* ---------- TOPO: prédio que se monta a partir de pontos ---------- */
+(() => {
+  const hero = document.getElementById('hero'), canvas = document.getElementById('nuvem');
+  const renderer = criarRenderer(canvas); if (!renderer) return;
+  const cena = new THREE.Scene(), cam = new THREE.PerspectiveCamera(36, 1, 0.1, 400);
+  const W = 12, D = 8, AND = 7, HA = 3.2, ALT = AND * HA;
+  const alvos = [], tipo = [];
+  const add = (x, y, z, t) => { alvos.push(x, y, z); tipo.push(t); };
+  // 3 = projeto (malha no chão), 1 = lajes, 0 = pilares, 2 = grua
+  for (let x = -W / 2 - 3; x <= W / 2 + 3; x += 0.5) for (let z = -D / 2 - 3; z <= D / 2 + 3; z += 0.5) if (Math.random() < 0.45) add(x, 0, z, 3);
+  for (let a = 0; a <= AND; a++) {
+    const y = a * HA;
+    for (let x = -W / 2; x <= W / 2 + 0.01; x += 0.4) for (let z = -D / 2; z <= D / 2 + 0.01; z += 0.4) {
+      const borda = Math.abs(x) > W / 2 - 0.3 || Math.abs(z) > D / 2 - 0.3;
+      if (borda || Math.random() < 0.22) add(x, y, z, 1);
+    }
+  }
+  for (let x = -W / 2; x <= W / 2 + 0.01; x += W / 4) for (let z = -D / 2; z <= D / 2 + 0.01; z += D / 2)
+    for (let y = 0; y < ALT; y += 0.16) add(x + (Math.random() - 0.5) * 0.1, y, z + (Math.random() - 0.5) * 0.1, 0);
+  const gx = W / 2 + 3.5, gz = -1, gh = ALT + 7;
+  for (let y = 0; y < gh; y += 0.22) for (const [dx, dz] of [[-0.5, -0.5], [0.5, -0.5], [-0.5, 0.5], [0.5, 0.5]]) add(gx + dx, y, gz + dz, 2);
+  for (let x = gx - 22; x <= gx + 6; x += 0.2) { add(x, gh, gz - 0.4, 2); add(x, gh, gz + 0.4, 2); if (x < gx) add(x, gh + 1.6 * (1 - (gx - x) / 22), gz, 2); }
+  for (let y = gh - 11; y < gh; y += 0.25) add(gx - 12, y, gz, 2);
+  const N = alvos.length / 3;
+  const inicio = new Float32Array(N * 3), atraso = new Float32Array(N), tam = new Float32Array(N);
+  for (let i = 0; i < N; i++) {
+    const r = 35 + Math.random() * 35, th = Math.random() * 6.283, ph = Math.acos(2 * Math.random() - 1);
+    inicio[i * 3] = r * Math.sin(ph) * Math.cos(th); inicio[i * 3 + 1] = r * Math.cos(ph) * 0.6 + 10; inicio[i * 3 + 2] = r * Math.sin(ph) * Math.sin(th);
+    const y = alvos[i * 3 + 1], t = tipo[i];
+    atraso[i] = t === 3 ? Math.random() * 0.1 : t === 2 ? 0.32 + Math.random() * 0.15 : 0.1 + (y / ALT) * 0.55 + Math.random() * 0.07;
+    tam[i] = t === 3 ? 0.75 : 1.0;
+  }
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(alvos), 3));
+  geo.setAttribute('inicio', new THREE.BufferAttribute(inicio, 3));
+  geo.setAttribute('atraso', new THREE.BufferAttribute(atraso, 1));
+  geo.setAttribute('tipo', new THREE.BufferAttribute(new Float32Array(tipo), 1));
+  geo.setAttribute('tam', new THREE.BufferAttribute(tam, 1));
+  const mat = new THREE.ShaderMaterial({
+    transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
+    uniforms: { uP: { value: 0 }, uT: { value: 0 }, uPx: { value: renderer.getPixelRatio() } },
+    vertexShader: `
+      attribute vec3 inicio; attribute float atraso; attribute float tipo; attribute float tam;
+      uniform float uP; uniform float uT; uniform float uPx;
+      varying float vF; varying float vTipo;
+      void main(){
+        float f = clamp((uP*1.25 - atraso)/0.22, 0.0, 1.0); f = f*f*(3.0-2.0*f);
+        vec3 flut = vec3(sin(uT*.6+inicio.x), cos(uT*.5+inicio.y), sin(uT*.4+inicio.z))*0.7*(1.0-f);
+        vec3 p = mix(inicio, position, f) + flut;
+        vF = f; vTipo = tipo;
+        vec4 mv = modelViewMatrix*vec4(p,1.0);
+        gl_PointSize = tam*uPx*mix(1.5,2.8,f)*(80.0/-mv.z);
+        gl_Position = projectionMatrix*mv;
+      }`,
+    fragmentShader: `
+      uniform float uP; varying float vF; varying float vTipo;
+      void main(){
+        float d = length(gl_PointCoord-.5); if(d>.5) discard;
+        float a = smoothstep(.5,.08,d);
+        vec3 branco = vec3(.78,.84,.94), ouro = vec3(.96,.74,.32);
+        float m = vTipo>2.5 ? .55 : (vTipo>1.5 ? .9 : .1);
+        vec3 cor = mix(branco, ouro, m);
+        float acende = smoothstep(.72,1.0,uP)*step(.5,vTipo)*step(vTipo,1.5);
+        cor = mix(cor, ouro, acende*.65);
+        gl_FragColor = vec4(cor, a*mix(.4,1.0,vF));
+      }`
+  });
+  cena.add(new THREE.Points(geo, mat));
+
+  const ancoras = [new THREE.Vector3(-W / 2 - 1.5, 0, D / 2 + 1.5), new THREE.Vector3(gx - 12, gh - 11, gz), new THREE.Vector3(W / 2, ALT * 0.55, D / 2), new THREE.Vector3(-W / 2, ALT, -D / 2)];
+  const limiares = [0.06, 0.34, 0.58, 0.82];
+  const tags = [...hero.querySelectorAll('.etiqueta')];
+  const pct = hero.querySelector('[data-pct]'), med = hero.querySelector('.medidor');
+  const tam_ = () => { const w = canvas.clientWidth, h = canvas.clientHeight; renderer.setSize(w, h, false); cam.aspect = w / h;
+    if (w / h > 1.2) cam.setViewOffset(w, h, -w * 0.17, 0, w, h); else cam.setViewOffset(w, h, 0, h * 0.3, w, h);
+    cam.updateProjectionMatrix(); };
+  addEventListener('resize', tam_); tam_();
+  let pS = prog(hero), ult = performance.now(); const t0 = ult;
+  const centro = new THREE.Vector3(0, ALT * 0.45, 0), v = new THREE.Vector3();
+  quandoVisivel(hero, (agora) => {
+    const dt = Math.min(0.1, (agora - ult) / 1000); ult = agora; const t = (agora - t0) / 1000;
+    pS += (prog(hero) - pS) * (1 - Math.exp(-dt * 6));
+    mat.uniforms.uP.value = pS; mat.uniforms.uT.value = reduzir ? 0 : t;
+    const ang = -0.75 + pS * 1.25 + (reduzir ? 0 : t * 0.025);
+    const dist = (cam.aspect < 1 ? 80 : 58) - pS * 8, alt = 20 - pS * 7;
+    cam.position.set(Math.sin(ang) * dist, alt, Math.cos(ang) * dist); cam.lookAt(centro);
+    renderer.render(cena, cam);
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    tags.forEach((el, i) => {
+      v.copy(ancoras[i]).project(cam);
+      const on = pS > limiares[i] && v.z < 1;
+      el.classList.toggle('on', on);
+      el.style.left = ((v.x + 1) / 2 * w) + 'px'; el.style.top = ((1 - v.y) / 2 * h) + 'px';
+    });
+    pct.textContent = Math.round(pS * 100) + '%'; med.style.setProperty('--p', pS);
+    hero.classList.toggle('montando', pS > 0.2);
+  });
+})();
+
+/* ---------- PROJETOS: edifício desenhado em linhas douradas ---------- */
+(() => {
+  const sec = document.getElementById('projetos'), canvas = document.getElementById('projeto3d');
+  const renderer = criarRenderer(canvas); if (!renderer) return;
+  const cena = new THREE.Scene(); cena.background = new THREE.Color(0x0b1522); cena.fog = new THREE.Fog(0x0b1522, 40, 95);
+  const cam = new THREE.PerspectiveCamera(34, 1, 0.1, 300);
+  const seg = []; const L = (a, b) => seg.push([a, b]);
+  const W = 14, D = 9, AND = 6, HA = 3.1;
+  for (let a = 0; a <= AND; a++) {
+    const y = a * HA;
+    const c = [[-W / 2, -D / 2], [W / 2, -D / 2], [W / 2, D / 2], [-W / 2, D / 2]];
+    for (let i = 0; i < 4; i++) L([c[i][0], y, c[i][1]], [c[(i + 1) % 4][0], y, c[(i + 1) % 4][1]]);
+    for (let x = -W / 2 + W / 4; x < W / 2; x += W / 4) L([x, y, -D / 2], [x, y, D / 2]);
+    L([-W / 2, y, 0], [W / 2, y, 0]);
+    if (a === AND) break;
+    for (let x = -W / 2; x <= W / 2 + 0.01; x += W / 4) for (let z = -D / 2; z <= D / 2 + 0.01; z += D / 2) L([x, y, z], [x, y + HA, z]);
+    for (const zf of [-D / 2, D / 2]) {                                                             // caixilhos nas 4 fachadas
+      for (let x = -W / 2 + 1; x < W / 2; x += 1) L([x, y + 0.9, zf], [x, y + HA - 0.6, zf]);
+      L([-W / 2, y + 0.9, zf], [W / 2, y + 0.9, zf]); L([-W / 2, y + HA - 0.6, zf], [W / 2, y + HA - 0.6, zf]);
+    }
+    for (const xf of [-W / 2, W / 2]) {
+      for (let z = -D / 2 + 1; z < D / 2; z += 1) L([xf, y + 0.9, z], [xf, y + HA - 0.6, z]);
+      L([xf, y + 0.9, -D / 2], [xf, y + 0.9, D / 2]); L([xf, y + HA - 0.6, -D / 2], [xf, y + HA - 0.6, D / 2]);
+    }
+    // escada
+    for (let k = 0; k < 10; k++) { const yy = y + k * HA / 10; L([2.2, yy, -1.5 + k * 0.3], [3.4, yy, -1.5 + k * 0.3]); }
+  }
+  // cobertura
+  L([-W / 2, AND * HA, -D / 2], [0, AND * HA + 2.4, -D / 2]); L([0, AND * HA + 2.4, -D / 2], [W / 2, AND * HA, -D / 2]);
+  L([-W / 2, AND * HA, D / 2], [0, AND * HA + 2.4, D / 2]); L([0, AND * HA + 2.4, D / 2], [W / 2, AND * HA, D / 2]);
+  L([0, AND * HA + 2.4, -D / 2], [0, AND * HA + 2.4, D / 2]);
+  // cotas no chão
+  L([-W / 2, 0, -D / 2 - 2], [W / 2, 0, -D / 2 - 2]); L([-W / 2, 0, -D / 2 - 2.4], [-W / 2, 0, -D / 2 - 1.6]); L([W / 2, 0, -D / 2 - 2.4], [W / 2, 0, -D / 2 - 1.6]);
+  L([-W / 2 - 2, 0, -D / 2], [-W / 2 - 2, 0, D / 2]); L([-W / 2 - 2.4, 0, -D / 2], [-W / 2 - 1.6, 0, -D / 2]); L([-W / 2 - 2.4, 0, D / 2], [-W / 2 - 1.6, 0, D / 2]);
+  seg.sort((s1, s2) => Math.min(s1[0][1], s1[1][1]) - Math.min(s2[0][1], s2[1][1]));
+  const pos = new Float32Array(seg.length * 6); seg.forEach((s, i) => pos.set([...s[0], ...s[1]], i * 6));
+  const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const linhas = new THREE.LineSegments(g, new THREE.LineBasicMaterial({ color: 0xe0b44a, transparent: true, opacity: 0.9, blending: THREE.AdditiveBlending, depthWrite: false }));
+  cena.add(linhas);
+  const nos = new THREE.Points(g, new THREE.PointsMaterial({ color: 0xffd27a, size: 0.16, transparent: true, opacity: 0.9, blending: THREE.AdditiveBlending, depthWrite: false }));
+  cena.add(nos);
+  const grade = new THREE.GridHelper(80, 80, 0x2a3d58, 0x172638); cena.add(grade);
+  const tam_ = () => { const w = canvas.clientWidth, h = canvas.clientHeight; renderer.setSize(w, h, false); cam.aspect = w / h;
+    if (w / h > 1.2) cam.setViewOffset(w, h, -w * 0.17, 0, w, h); else cam.setViewOffset(w, h, 0, h * 0.12, w, h); cam.updateProjectionMatrix(); };
+  addEventListener('resize', tam_); tam_();
+  let ult = performance.now(); const t0 = ult; let pS = prog(sec);
+  const desenhar = (agora) => {
+    const dt = Math.min(0.1, (agora - ult) / 1000); ult = agora; const t = (agora - t0) / 1000;
+    pS += (prog(sec) - pS) * (1 - Math.exp(-dt * 6));
+    const f = window.__projetoCheio ? 1 : suave(0.05, 0.75, pS);
+    g.setDrawRange(0, Math.max(2, Math.floor(seg.length * f) * 2));
+    const ang = 0.3 + (reduzir ? 0 : t * 0.04) + pS * 0.45, dist = cam.aspect < 1 ? 88 : 62;
+    cam.position.set(Math.sin(ang) * dist, 30, Math.cos(ang) * dist); cam.lookAt(0, 9, 0);
+    nos.geometry.setDrawRange(0, g.drawRange.count);
+    renderer.render(cena, cam);
+  };
+  quandoVisivel(sec, desenhar);
+  window.__desenharProjeto = () => desenhar(performance.now());
+})();
+</script>
 <script>
 (() => {
   const reduzir = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const prog = (el) => { const r = el.getBoundingClientRect(), t = r.height - innerHeight; return Math.min(1, Math.max(0, -r.top / t)); };
+  const suave = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
 
-  // topo fica sólido ao rolar
+  // topo sólido ao rolar
   const topo = document.getElementById('topo');
-  const ajustar = () => topo.classList.toggle('solido', scrollY > 40);
-  addEventListener('scroll', ajustar, { passive: true }); ajustar();
+  const ajTopo = () => topo.classList.toggle('solido', scrollY > 40);
+  addEventListener('scroll', ajTopo, { passive: true }); ajTopo();
 
-  // sinais de risco: um por vez conforme a rolagem
-  const sec = document.querySelector('.sinais'), trilho = sec.querySelector('.trilho');
-  const itens = [...sec.querySelectorAll('.sinal')], marca = sec.querySelector('[data-atual]'), barra = sec.querySelector('.progresso');
-  sec.style.setProperty('--n', itens.length);
-  if (reduzir) document.documentElement.classList.add('sem-movimento');
-  else {
-    let ultimo = -1;
-    const rolar = () => {
-      const r = trilho.getBoundingClientRect(), total = r.height - innerHeight;
-      const p = Math.min(1, Math.max(0, -r.top / total));
-      const i = Math.min(itens.length - 1, Math.floor(p * itens.length));
-      barra.style.setProperty('--p', p);
-      if (i === ultimo) return; ultimo = i;
-      itens.forEach((el, k) => { el.classList.toggle('ativo', k === i); el.classList.toggle('saiu', k < i); });
-      marca.textContent = String(i + 1).padStart(2, '0');
-    };
-    addEventListener('scroll', rolar, { passive: true }); addEventListener('resize', rolar); rolar();
+  // ---------- Gantt ----------
+  const gantt = document.getElementById('gantt');
+  const tarefas = [['Projeto e aprovação', 0, 2], ['Fundação', 1.8, 1.7], ['Estrutura', 3.2, 3], ['Alvenaria', 5.2, 2.4], ['Instalações', 6.2, 3], ['Revestimentos', 8, 2.3], ['Acabamento', 9.6, 1.9], ['Entrega', 11.3, 0.7]];
+  if (gantt) {
+    gantt.innerHTML = `<div class="quadro vidro"><div class="cab"><b>Cronograma da obra</b><span>Mês 1 a 12</span></div>
+      <div class="semanas">${['', ...Array.from({ length: 12 }, (_, i) => 'M' + (i + 1))].map((s) => `<span>${s}</span>`).join('')}</div>
+      ${tarefas.map(([n, a, d]) => `<div class="linha"><span>${n}</span><div class="trilho"><div class="barra" style="left:${a / 12 * 100}%;width:${d / 12 * 100}%"><i></i></div></div></div>`).join('')}
+      <div class="kpis"><div class="kpi vidro"><small>Avanço físico</small><b data-k="av">0<em>%</em></b></div><div class="kpi vidro"><small>Etapa atual</small><b data-k="et" style="font-size:1.15rem;margin-top:12px">Projeto</b></div><div class="kpi vidro"><small>Relatórios</small><b style="font-size:1.15rem;margin-top:12px">Diário no YMOBRA</b></div></div>
+      <p class="nota">Exemplo ilustrativo de cronograma</p></div>`;
   }
+  const barras = gantt ? [...gantt.querySelectorAll('.barra i')] : [];
+  let hoje; if (gantt) { hoje = document.createElement('div'); hoje.className = 'hoje'; gantt.querySelector('.quadro').appendChild(hoje); }
+  const desenharGantt = (f) => {
+    const m = f * 12;
+    barras.forEach((b, i) => { const [, a, d] = tarefas[i]; b.style.setProperty('--f', Math.min(1, Math.max(0, (m - a) / d))); });
+    const q = gantt.querySelector('.quadro'), tr = gantt.querySelector('.trilho');
+    const x0 = tr.offsetLeft + tr.parentElement.offsetLeft, w = tr.offsetWidth;
+    hoje.style.left = (x0 + w * f) + 'px';
+    const total = tarefas.reduce((s, t) => s + t[2], 0), feito = tarefas.reduce((s, [, a, d]) => s + Math.min(d, Math.max(0, m - a)), 0);
+    gantt.querySelector('[data-k="av"]').innerHTML = Math.round(feito / total * 100) + '<em>%</em>';
+    const atual = tarefas.filter(([, a]) => m >= a).pop() || tarefas[0];
+    gantt.querySelector('[data-k="et"]').textContent = atual[0];
+  };
 
-  // brilho que segue o mouse nos cards
-  document.querySelectorAll('.serv').forEach((c) => c.addEventListener('pointermove', (e) => {
-    const r = c.getBoundingClientRect(); c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-  }));
+  // ---------- Sequência do pilar (laudos) ----------
+  const seq = document.getElementById('seq-pilar'), ctx = seq && seq.getContext('2d');
+  const TOTAL = 72, pasta = `pilar/${Math.min(innerWidth * (devicePixelRatio || 1), 2400) > 1400 ? 1920 : 1280}/`;
+  const quadros = new Array(TOTAL);
+  const carregar = (i) => { const im = new Image(); im.decoding = 'async'; im.src = `${pasta}${String(i + 1).padStart(3, '0')}.webp`; quadros[i] = im; return im; };
+  let seqIniciada = false;
+  const iniciarSeq = () => { if (seqIniciada) return; seqIniciada = true; carregar(0).onload = () => { const ordem = []; for (const passo of [8, 4, 2, 1]) for (let i = 0; i < TOTAL; i += passo) if (!ordem.includes(i)) ordem.push(i); ordem.forEach((i) => { if (!quadros[i]) carregar(i); }); }; };
+  const perto = (i) => { for (let d = 0; d < TOTAL; d++) for (const k of [i - d, i + d]) { const q = quadros[k]; if (q && q.complete && q.naturalWidth) return q; } };
+  const ajSeq = () => { if (!seq) return; const d = Math.min(devicePixelRatio || 1, 2); seq.width = seq.clientWidth * d; seq.height = seq.clientHeight * d; seqDes = null; };
+  let seqDes = null;
+  const desenharSeq = (f) => {
+    const img = perto(Math.round(f * (TOTAL - 1))); if (!img || img === seqDes) return; seqDes = img;
+    const cw = seq.width, ch = seq.height, e = Math.max(cw / img.naturalWidth, ch / img.naturalHeight), w = img.naturalWidth * e, h = img.naturalHeight * e;
+    const x = Math.min(0, Math.max(cw - w, cw / 2 - w * 0.55));
+    ctx.drawImage(img, x, (ch - h) / 2, w, h);
+  };
+  addEventListener('resize', ajSeq); ajSeq();
+  new IntersectionObserver(([e]) => { if (e.isIntersecting) iniciarSeq(); }, { rootMargin: '150% 0px' }).observe(document.getElementById('laudos'));
 
-  // aparecer ao rolar + números que contam
+  // ---------- Seções que entram na janela ----------
+  const zooms = [...document.querySelectorAll('.zoom')].map((sec) => ({ sec, midia: sec.querySelector('.midia'), interno: sec.querySelector('.midia > *'), aro: sec.querySelector('.aro'), gig: sec.querySelector('.gigante'), pS: 0 }));
+  const atualizarZooms = (dt) => {
+    const vw = innerWidth, vh = Math.max(innerHeight, 560), cel = vw < 700;
+    for (const z of zooms) {
+      const r = z.sec.getBoundingClientRect(); if (r.bottom < -50 || r.top > vh + 50) continue;
+      const alvo = prog(z.sec); z.pS += (alvo - z.pS) * (reduzir ? 1 : 1 - Math.exp(-dt * 8));
+      const p = z.pS, e = suave(0.04, 0.46, p);
+      let w0 = cel ? vw * 0.66 : Math.min(vw * 0.26, 380), h0 = w0 * 1.4; if (h0 > vh * 0.64) { h0 = vh * 0.64; w0 = h0 / 1.4; }
+      const w = w0 + (vw - w0) * e, h = h0 + (vh - h0) * e, rx = w0 * 0.46 * (1 - e), ry = h0 * 0.32 * (1 - e);
+      const ix = (vw - w) / 2, iy = (vh - h) / 2;
+      z.midia.style.clipPath = `inset(${iy}px ${ix}px ${iy}px ${ix}px round ${rx}px / ${ry}px)`;
+      z.midia.style.setProperty('--escuro', suave(0.35, 0.6, p));
+      z.interno.style.transform = `scale(${1.22 - 0.22 * e})`;
+      z.aro.style.width = w + 'px'; z.aro.style.height = h + 'px'; z.aro.style.borderRadius = `${rx}px / ${ry}px`; z.aro.style.opacity = 1 - suave(0.25, 0.42, p);
+      z.gig.style.opacity = 1 - e * 1.6;
+      z.sec.classList.toggle('aberta', p > 0.52);
+      if (z.sec.id === 'laudos') desenharSeq(suave(0.12, 0.95, p));
+      if (z.sec.id === 'gestao') desenharGantt(suave(0.1, 0.9, p));
+    }
+  };
+
+  // ---------- Cartões que empilham ----------
+  const folhas = [...document.querySelectorAll('.folha')];
+  const atualizarFolhas = () => folhas.forEach((f, i) => {
+    const prox = folhas[i + 1]; if (!prox) return;
+    const r = f.getBoundingClientRect(), k = Math.min(1, Math.max(0, (r.bottom - prox.getBoundingClientRect().top) / r.height));
+    f.style.transform = `scale(${1 - 0.05 * k})`; f.style.filter = `brightness(${1 - 0.4 * k})`;
+  });
+
+  let ult = performance.now();
+  const loop = (agora) => { const dt = Math.min(0.1, (agora - ult) / 1000); ult = agora; atualizarZooms(dt); atualizarFolhas(); requestAnimationFrame(loop); };
+  requestAnimationFrame(loop);
+
+  // aparecer ao rolar + números
   if (!reduzir && 'IntersectionObserver' in window) {
-    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('visivel'); io.unobserve(e.target); } }), { threshold: .15, rootMargin: '0px 0px -40px 0px' });
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('visivel'); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.revela').forEach((el) => io.observe(el));
     const io2 = new IntersectionObserver((es) => es.forEach((e) => {
       if (!e.isIntersecting) return; io2.unobserve(e.target);
       const fim = +e.target.dataset.contar, t0 = performance.now();
       const passo = (t) => { const p = Math.min(1, (t - t0) / 1200); e.target.textContent = Math.round(fim * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(passo); };
       requestAnimationFrame(passo);
-    }), { threshold: .6 });
+    }), { threshold: 0.6 });
     document.querySelectorAll('[data-contar]').forEach((el) => { el.textContent = '0'; io2.observe(el); });
   } else document.querySelectorAll('.revela').forEach((el) => el.classList.add('visivel'));
 })();
 </script>
-<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
-<script type="module">
-// Cena 3D do topo: um pilar de concreto que se abre com a rolagem e mostra a armadura,
-// depois a câmera recua e revela a estrutura do prédio.
-import * as THREE from 'three';
-import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
-const hero = document.getElementById('hero');
-const canvas = document.getElementById('cena');
-const fases = [...hero.querySelectorAll('.fase')];
-const marcas = [...hero.querySelectorAll('.etapas-hero span')];
-const reduzir = matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-let renderer;
-try {
-  renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
-} catch (e) {
-  hero.classList.add('sem-3d');
-  const v = hero.querySelector('.reserva'); if (v) { v.preload = 'metadata'; v.play().catch(() => {}); }
-}
-
-// textos e marcadores acompanham a rolagem mesmo sem 3D
-const progresso = () => {
-  const r = hero.getBoundingClientRect(), total = r.height - innerHeight;
-  return Math.min(1, Math.max(0, -r.top / total));
-};
-let faseAtual = -1;
-const atualizarTextos = (p) => {
-  const f = p < 0.34 ? 0 : p < 0.68 ? 1 : 2;
-  marcas.forEach((m, i) => m.querySelector('i').style.setProperty('--f', Math.min(1, Math.max(0, (p - i / 3) * 3))));
-  if (f === faseAtual) return; faseAtual = f;
-  fases.forEach((el, i) => { el.classList.toggle('ativa', i === f); el.toggleAttribute('aria-hidden', i !== f); });
-  marcas.forEach((m, i) => m.classList.toggle('ativa', i === f));
-};
-addEventListener('scroll', () => atualizarTextos(progresso()), { passive: true });
-atualizarTextos(progresso());
-
-if (renderer) {
-  const celular = innerWidth < 700;
-  renderer.setPixelRatio(Math.min(devicePixelRatio, celular ? 1.5 : 2));
-  renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.05;
-  renderer.outputColorSpace = THREE.SRGBColorSpace;
-
-  const AZUL = 0x0b1522, OURO = 0xd4a83a;
-  const cena = new THREE.Scene();
-  cena.background = new THREE.Color(AZUL);
-  cena.fog = new THREE.Fog(AZUL, 7, 30);
-  const pmrem = new THREE.PMREMGenerator(renderer);
-  cena.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
-
-  const camera = new THREE.PerspectiveCamera(34, 1, 0.1, 100);
-
-  // textura de concreto feita no navegador (nada para baixar)
-  const concreto = (base, linhas) => {
-    const c = document.createElement('canvas'); c.width = c.height = 512;
-    const g = c.getContext('2d'); g.fillStyle = base; g.fillRect(0, 0, 512, 512);
-    const img = g.getImageData(0, 0, 512, 512), d = img.data;
-    for (let i = 0; i < d.length; i += 4) { const n = (Math.random() - 0.5) * 34; d[i] += n; d[i + 1] += n; d[i + 2] += n; }
-    g.putImageData(img, 0, 0);
-    for (let i = 0; i < 320; i++) { g.fillStyle = `rgba(30,34,40,${Math.random() * 0.55})`; g.beginPath(); g.arc(Math.random() * 512, Math.random() * 512, Math.random() * 2.4 + 0.4, 0, 7); g.fill(); }
-    if (linhas) { g.strokeStyle = 'rgba(40,45,52,.45)'; g.lineWidth = 2; for (let y = 64; y < 512; y += 128) { g.beginPath(); g.moveTo(0, y); g.lineTo(512, y); g.stroke(); } }
-    const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.wrapS = t.wrapT = THREE.RepeatWrapping; t.anisotropy = 4; return t;
-  };
-  const texPilar = concreto('#9a9fa6', true); texPilar.repeat.set(0.5, 2.5);
-  const texCorte = concreto('#5d6168', false);
-  const texPredio = concreto('#6f747c', false); texPredio.repeat.set(2, 2);
-  const matPilar = new THREE.MeshStandardMaterial({ map: texPilar, roughness: 0.92, metalness: 0, envMapIntensity: 0.35 });
-  const matCorte = new THREE.MeshStandardMaterial({ map: texCorte, roughness: 1, envMapIntensity: 0.2, emissive: 0x3a2a08, emissiveIntensity: 0 });
-  const matPredio = new THREE.MeshStandardMaterial({ map: texPredio, roughness: 0.95, envMapIntensity: 0.25 });
-  const matAco = new THREE.MeshStandardMaterial({ color: OURO, metalness: 1, roughness: 0.3, emissive: 0x8a5a10, emissiveIntensity: 0 });
-
-  // pilar em duas metades (face interna mais escura, como um corte)
-  const H = 4.2, L = 1.2;
-  const geoMetade = new THREE.BoxGeometry(L / 2, H, L);
-  const esq = new THREE.Mesh(geoMetade, [matCorte, matPilar, matPilar, matPilar, matPilar, matPilar]);
-  const dir = new THREE.Mesh(geoMetade, [matPilar, matCorte, matPilar, matPilar, matPilar, matPilar]);
-  cena.add(esq, dir);
-
-  // armadura: barras longitudinais + estribos
-  const armadura = new THREE.Group(); cena.add(armadura);
-  const c = 0.43, barras = [[-c, -c], [c, -c], [-c, c], [c, c], [0, -c], [0, c], [-c, 0], [c, 0]];
-  const geoBarra = new THREE.CylinderGeometry(0.038, 0.038, H + 0.6, 14);
-  barras.forEach(([x, z]) => { const b = new THREE.Mesh(geoBarra, matAco); b.position.set(x, 0, z); armadura.add(b); });
-  const niveis = Math.floor(H / 0.22), estribos = new THREE.InstancedMesh(new THREE.BoxGeometry(1, 0.026, 0.026), matAco, niveis * 4);
-  const m4 = new THREE.Matrix4(), q = new THREE.Quaternion(), giro = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), Math.PI / 2), esc = new THREE.Vector3(2 * c + 0.03, 1, 1);
-  let k = 0;
-  for (let n = 0; n < niveis; n++) {
-    const y = -H / 2 + 0.15 + n * 0.22;
-    estribos.setMatrixAt(k++, m4.compose(new THREE.Vector3(0, y, -c), q, esc));
-    estribos.setMatrixAt(k++, m4.compose(new THREE.Vector3(0, y, c), q, esc));
-    estribos.setMatrixAt(k++, m4.compose(new THREE.Vector3(-c, y, 0), giro, esc));
-    estribos.setMatrixAt(k++, m4.compose(new THREE.Vector3(c, y, 0), giro, esc));
-  }
-  armadura.add(estribos);
-
-  // prédio em estrutura ao redor (pilares, lajes e contorno dourado)
-  const predio = new THREE.Group(); cena.add(predio);
-  const linhas = new THREE.LineBasicMaterial({ color: OURO, transparent: true, opacity: 0 });
-  const xs = [-9, -4.5, 0, 4.5], zs = [0, -4.5, -9], andares = 4;
-  const geoPil = new THREE.BoxGeometry(0.7, H, 0.7);
-  const geoLaje = new THREE.BoxGeometry(15.4, 0.3, 11);
-  const bordaPil = new THREE.EdgesGeometry(geoPil), bordaLaje = new THREE.EdgesGeometry(geoLaje);
-  for (let a = 0; a <= andares; a++) {
-    const yl = -H / 2 - 0.15 + a * (H + 0.3);
-    const laje = new THREE.Mesh(geoLaje, matPredio); laje.position.set(-2.25, yl, -4.3);
-    const bl = new THREE.LineSegments(bordaLaje, linhas); bl.position.copy(laje.position);
-    predio.add(laje, bl);
-    if (a === andares) break;
-    xs.forEach((x) => zs.forEach((z) => {
-      if (a === 0 && x === 0 && z === 0) return; // esse é o pilar que se abre
-      const p = new THREE.Mesh(geoPil, matPredio); p.position.set(x, yl + 0.15 + H / 2, z);
-      const bp = new THREE.LineSegments(bordaPil, linhas); bp.position.copy(p.position);
-      predio.add(p, bp);
-    }));
-  }
-
-  // luzes
-  cena.add(new THREE.HemisphereLight(0x3a5580, 0x0b1522, 0.6));
-  const chave = new THREE.DirectionalLight(0xffd9a0, 2.4); chave.position.set(5, 6, 5); cena.add(chave);
-  const contra = new THREE.SpotLight(OURO, 90, 22, 0.55, 0.7, 2); contra.position.set(-4, 3.5, -3); cena.add(contra, contra.target);
-  const brilho = new THREE.PointLight(0xffb44a, 0, 5, 2); brilho.position.set(0, 0, 0.4); cena.add(brilho);
-  [[-4.5, 2.2, -4.5], [-9, 6.4, -4.5], [4.5, 10.6, -6]].forEach(([x, y, z]) => { const l = new THREE.PointLight(0xffb44a, 26, 11, 2); l.position.set(x, y, z); cena.add(l); });
-
-  // poeira dourada
-  const N = celular ? 260 : 520, pos = new Float32Array(N * 3), vel = new Float32Array(N);
-  for (let i = 0; i < N; i++) { pos[i * 3] = (Math.random() - 0.5) * 9; pos[i * 3 + 1] = (Math.random() - 0.5) * 7; pos[i * 3 + 2] = (Math.random() - 0.5) * 7; vel[i] = 0.05 + Math.random() * 0.15; }
-  const geoPo = new THREE.BufferGeometry(); geoPo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-  const po = new THREE.Points(geoPo, new THREE.PointsMaterial({ color: 0xffd27a, size: 0.028, transparent: true, opacity: 0.75, blending: THREE.AdditiveBlending, depthWrite: false }));
-  cena.add(po);
-
-  // trajetória da câmera
-  const kf = (a) => a.map(([p, alvo]) => ({ p: new THREE.Vector3(...p), a: new THREE.Vector3(...alvo) }));
-  const K_LARGO = kf([[[3.4, 1.1, 8.2], [-1.5, 0.3, 0]], [[1.9, 0.35, 3.9], [0.95, 0.05, 0]], [[11, 8, 15.5], [-2.5, 3, -4]]]);
-  const K_ALTO = kf([[[0.8, 1.2, 11], [0, -2.3, 0]], [[1.1, 0.6, 6.2], [0, -1.6, 0]], [[13, 10, 20], [-2.5, 0.8, -4]]]);
-  const suave = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
-  const camPos = new THREE.Vector3(), alvo = new THREE.Vector3();
-
-  const redimensionar = () => {
-    const w = canvas.clientWidth, h = canvas.clientHeight;
-    renderer.setSize(w, h, false); camera.aspect = w / h; camera.fov = camera.aspect < 1 ? 52 : 34; camera.updateProjectionMatrix();
-  };
-  addEventListener('resize', redimensionar); redimensionar();
-
-  let pSuave = progresso(), visivel = true, t0 = performance.now(), ultimo = t0;
-  new IntersectionObserver(([e]) => { visivel = e.isIntersecting; if (visivel) requestAnimationFrame(quadro); }, { rootMargin: '100px' }).observe(hero);
-
-  function quadro(agora) {
-    if (!visivel) return;
-    const dt = Math.min(0.25, (agora - ultimo) / 1000); ultimo = agora;
-    const t = (agora - t0) / 1000;
-    pSuave += (progresso() - pSuave) * (reduzir ? 1 : 1 - Math.exp(-dt * 5));
-    const p = pSuave;
-
-    // abertura do pilar
-    const abre = suave(0.1, 0.48, p);
-    esq.position.set(-L / 4 - abre * 0.95, 0, 0); esq.rotation.y = -abre * 0.5;
-    dir.position.set(L / 4 + abre * 0.95, 0, 0); dir.rotation.y = abre * 0.5;
-    matAco.emissiveIntensity = 0.15 + abre * 0.9;
-    matCorte.emissiveIntensity = abre * 0.5;
-    brilho.intensity = abre * 9;
-    armadura.rotation.y = abre * 0.12;
-
-    // contorno do prédio aparece no fim
-    linhas.opacity = suave(0.55, 0.95, p) * 0.75;
-
-    // câmera
-    const K = camera.aspect < 1 ? K_ALTO : K_LARGO;
-    if (p < 0.5) { const s = suave(0, 0.5, p); camPos.lerpVectors(K[0].p, K[1].p, s); alvo.lerpVectors(K[0].a, K[1].a, s); }
-    else { const s = suave(0.5, 1, p); camPos.lerpVectors(K[1].p, K[2].p, s); alvo.lerpVectors(K[1].a, K[2].a, s); }
-    if (!reduzir) { camPos.x += Math.sin(t * 0.3) * 0.08; camPos.y += Math.sin(t * 0.42) * 0.05; }
-    camera.position.copy(camPos); camera.lookAt(alvo);
-
-    // poeira subindo
-    if (!reduzir) {
-      for (let i = 0; i < N; i++) { pos[i * 3 + 1] += vel[i] * dt * (1 + abre); pos[i * 3] += Math.sin(t + i) * 0.0015; if (pos[i * 3 + 1] > 3.5) pos[i * 3 + 1] = -3.5; }
-      geoPo.attributes.position.needsUpdate = true;
-    }
-
-    renderer.render(cena, camera);
-    atualizarTextos(progresso());
-    requestAnimationFrame(quadro);
-  }
-  requestAnimationFrame(quadro);
-}
-</script>
 <script>
   // Contador de acessos sem cookie (só números por dia, sem IP nem identificação): vai para a Central do YMOBRA
   (() => { try {
