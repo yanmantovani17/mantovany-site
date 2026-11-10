@@ -3,529 +3,300 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mantovany Engenharia — obras, laudos, vistorias e projetos</title>
-<meta name="description" content="Obras, planejamento e gestão de obra, laudos técnicos, vistorias técnicas e projetos com engenheiro civil e ART em São Paulo e Grande SP.">
-<meta property="og:title" content="Mantovany Engenharia — vistorias, laudos e ART">
-<meta property="og:description" content="Laudo cautelar, inspeção predial, vistoria de recebimento e regularização de imóveis, com ART.">
+<title>Mantovany Engenharia — do terreno à chave</title>
+<meta name="description" content="Projetos, planejamento e gestão de obra, obras, vistorias e laudos técnicos com engenheiro civil e ART em São Paulo e Grande SP.">
+<meta property="og:title" content="Mantovany Engenharia — do terreno à chave">
+<meta property="og:description" content="Projetos, gestão de obra, obras, vistorias e laudos técnicos com engenheiro responsável e ART.">
 <meta property="og:image" content="https://mantovany.com.br/og.png">
 <meta name="theme-color" content="#0b1522">
 <link rel="icon" href="favicon-64.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --preto:#0b1522; --grafite:#0f1b2b; --grafite-2:#18283d; --linha-esc:rgba(255,255,255,.09);
-  --branco:#fff; --papel:#f4f3ef; --linha:#e3e1da; --texto:#0f1b2b; --suave:#6b6f78; --suave-esc:#9fabbd;
-  --amarelo:#d4a83a; --amarelo-2:#ecc964; --ouro:#b08a2e; --ouro-claro:#d4a83a;
-  --sans:"Manrope",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  --azul:#0b1522; --azul-2:#0f1b2b; --azul-3:#18283d; --linha-esc:rgba(255,255,255,.1);
+  --creme:#f5f1ea; --papel:#fbf9f5; --tinta:#14202f; --suave:#6a7280; --linha:#e2ddd3;
+  --ouro:#d4a83a; --ouro-esc:#a8822a; --ouro-claro:#ecc964;
+  --serif:"Fraunces",Georgia,serif; --sans:"Manrope",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--preto);color:var(--branco);font:400 1.0625rem/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img,video,svg{display:block;max-width:100%}
+body{margin:0;background:var(--azul);color:#fff;font:400 1.0625rem/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,canvas,svg,video{display:block;max-width:100%}
 a{color:inherit}
-a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px;border-radius:6px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--ouro);outline-offset:3px;border-radius:6px}
 .miolo{width:min(1240px,100% - 32px);margin-inline:auto}
-h1,h2,h3{margin:0;font-weight:600;line-height:1.05;letter-spacing:-.025em;text-wrap:balance}
+h1,h2,h3{margin:0;font-weight:400;line-height:1.02;letter-spacing:-.02em;text-wrap:balance}
 p{margin:0}
-.rotulo{font:500 .72rem/1 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--suave-esc);display:inline-flex;align-items:center;gap:12px}
-.rotulo::before{content:"";width:28px;height:1px;background:currentColor;opacity:.6}
+.serif{font-family:var(--serif)}
+em{font-style:italic;font-family:var(--serif);font-weight:300}
+.rotulo{display:inline-flex;align-items:center;gap:12px;font:500 .7rem/1 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:#9aa6b8}
+.rotulo::before{content:"";width:26px;height:1px;background:currentColor;opacity:.6}
 .claro .rotulo{color:var(--suave)}
-.destaque{color:var(--amarelo)}
-.claro .destaque{color:var(--ouro)}
-
-/* botões */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;font:700 .95rem/1 var(--sans);text-decoration:none;border:1.5px solid transparent;white-space:nowrap;transition:transform .2s,box-shadow .25s,background .2s,border-color .2s}
-.btn svg{width:18px;height:18px;flex:none}
-.btn-amarelo{background:var(--amarelo);color:#0b1522;box-shadow:0 0 0 0 rgba(212,168,58,.0)}
-.btn-amarelo:hover{background:var(--amarelo-2);box-shadow:0 0 32px rgba(212,168,58,.45);transform:translateY(-1px)}
-.btn-vidro{border-color:rgba(255,255,255,.35);color:#fff;background:rgba(255,255,255,.06);backdrop-filter:blur(6px)}
-.btn-vidro:hover{border-color:#fff}
-.btn-escuro{background:var(--grafite);color:#fff}
-.btn-escuro:hover{background:var(--grafite-2);transform:translateY(-1px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;font:700 .94rem/1 var(--sans);text-decoration:none;border:1.5px solid transparent;white-space:nowrap;transition:transform .2s,box-shadow .25s,background .2s,border-color .2s,color .2s}
+.btn-ouro{background:var(--ouro);color:var(--azul)}
+.btn-ouro:hover{background:var(--ouro-claro);box-shadow:0 0 30px rgba(212,168,58,.45);transform:translateY(-1px)}
+.btn-linha{border-color:rgba(255,255,255,.35);color:#fff;background:rgba(255,255,255,.05);backdrop-filter:blur(6px)}
+.btn-linha:hover{border-color:#fff}
+.claro .btn-linha{border-color:var(--tinta);color:var(--tinta);background:transparent}
+.claro .btn-linha:hover{background:var(--tinta);color:#fff}
 
 /* topo */
-.topo{position:fixed;inset:0 0 auto;z-index:30;transition:background .3s,box-shadow .3s}
-.topo.solido{background:rgba(11,21,34,.88);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--linha-esc)}
-.topo .miolo{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
-.marca{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
-.marca img{width:42px;height:auto}
-.marca b{display:block;font:800 1rem/1 var(--sans);letter-spacing:.18em;color:var(--ouro-claro)}
-.marca small{display:block;font:500 .62rem/1 var(--mono);letter-spacing:.2em;color:#aab3c2;margin-top:6px}
-.nav{display:flex;align-items:center;gap:30px;font-weight:500;font-size:.92rem}
-.nav a{text-decoration:none;color:#c9d0db;transition:color .2s}
-.nav a:hover{color:#fff}
-.nav-dir{display:flex;align-items:center;gap:22px}
-.fone{font:500 .85rem/1 var(--mono);color:#dfe4ec;text-decoration:none;letter-spacing:.02em}
-.nav-dir .btn{min-height:42px;padding:0 20px;font-size:.88rem}
-@media (max-width:1020px){.nav{display:none}}
-@media (max-width:620px){.fone{display:none}.nav-dir .btn{display:none}}
+.topo{position:fixed;inset:0 0 auto;z-index:30;transition:background .35s,color .35s,box-shadow .35s}
+.topo.solido{background:rgba(11,21,34,.86);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--linha-esc)}
+.topo.claro-topo{background:rgba(251,249,245,.9);color:var(--tinta);box-shadow:0 1px 0 var(--linha)}
+.topo .miolo{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+.marca img{width:40px;height:auto}
+.marca b{display:block;font:800 .98rem/1 var(--sans);letter-spacing:.18em;color:var(--ouro)}
+.marca small{display:block;font:500 .6rem/1 var(--mono);letter-spacing:.2em;opacity:.7;margin-top:6px}
+.nav{display:flex;gap:30px;font-size:.92rem;font-weight:500}
+.nav a{text-decoration:none;opacity:.8;transition:opacity .2s}
+.nav a:hover{opacity:1}
+.topo .btn{min-height:42px;padding:0 20px;font-size:.86rem}
+@media (max-width:1000px){.nav{display:none}}
+@media (max-width:560px){.topo .btn{display:none}}
 
-/* faixa de números */
-.numeros{background:var(--grafite);border-block:1px solid var(--linha-esc)}
-.numeros .grade{display:grid;grid-template-columns:repeat(4,1fr)}
-.num{padding:34px 26px;border-left:1px solid var(--linha-esc)}
-.num:first-child{border-left:0;padding-left:0}
-.num strong{display:block;font:700 clamp(2rem,3.6vw,3rem)/1 var(--sans);letter-spacing:-.04em}
-.num strong em{font-style:normal;color:var(--amarelo)}
-.num>span{display:block;margin-top:10px;color:var(--suave-esc);font-size:.9rem;line-height:1.4}
-@media (max-width:860px){.numeros .grade{grid-template-columns:1fr 1fr}.num{padding:26px 18px}.num:nth-child(odd){border-left:0;padding-left:0}.num:nth-child(n+3){border-top:1px solid var(--linha-esc)}}
+/* ===== HERO: do terreno à chave (sequência renderizada) ===== */
+.ciclo{position:relative;height:620vh;background:var(--azul)}
+.ciclo .palco{position:sticky;top:0;height:100svh;min-height:560px;overflow:hidden}
+#seq{position:absolute;inset:0;width:100%;height:100%;background:#1a2433}
+.ciclo .palco::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(11,21,34,.78) 0%,rgba(11,21,34,.25) 42%,transparent 62%),linear-gradient(0deg,rgba(11,21,34,.85) 0%,transparent 30%),linear-gradient(180deg,rgba(11,21,34,.55) 0%,transparent 20%)}
+.fase{position:absolute;z-index:2;left:max(16px,calc((100% - 1240px)/2));bottom:clamp(140px,22vh,230px);max-width:min(560px,calc(100% - 32px));pointer-events:none}
+.fase>*{opacity:0;transform:translateY(26px);filter:blur(8px);transition:opacity .7s,transform .7s,filter .7s}
+.fase.on{pointer-events:auto}
+.fase.on>*{opacity:1;transform:none;filter:none}
+.fase.on>:nth-child(2){transition-delay:.1s}.fase.on>:nth-child(3){transition-delay:.2s}.fase.on>:nth-child(4){transition-delay:.3s}
+.fase h1,.fase h2{font-family:var(--serif);font-weight:300;font-size:clamp(2.6rem,5.6vw,5rem);line-height:1;margin-top:20px}
+.fase h1 em,.fase h2 em{color:var(--ouro-claro)}
+.fase p{margin-top:18px;color:#d3d9e2;font-size:clamp(1rem,1.3vw,1.1rem);max-width:30em}
+.fase .acoes{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.contador-andar{position:absolute;z-index:2;right:max(16px,calc((100% - 1240px)/2));top:120px;text-align:right;opacity:0;transition:opacity .5s}
+.contador-andar.on{opacity:1}
+.contador-andar small{display:block;font:500 .66rem/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:#9aa6b8}
+.contador-andar b{display:block;font:300 clamp(3rem,6vw,5rem)/1 var(--serif);margin-top:8px}
+.contador-andar b span{color:var(--ouro)}
+.linha-tempo{position:absolute;z-index:3;left:0;right:0;bottom:30px}
+.linha-tempo ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.linha-tempo li{font:500 .68rem/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#7e8ba0;padding-top:14px;position:relative;cursor:pointer;transition:color .3s}
+.linha-tempo li::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:rgba(255,255,255,.15)}
+.linha-tempo li::after{content:"";position:absolute;left:0;top:0;height:2px;width:calc(var(--f,0) * 100%);background:var(--ouro);box-shadow:0 0 10px rgba(212,168,58,.6)}
+.linha-tempo li.on{color:#fff}
+.linha-tempo li b{display:block;font-weight:500;color:var(--ouro);margin-bottom:4px}
+@media (max-width:700px){
+  .ciclo .palco::after{background:linear-gradient(0deg,rgba(11,21,34,.95) 0%,rgba(11,21,34,.7) 34%,transparent 58%),linear-gradient(180deg,rgba(11,21,34,.6) 0%,transparent 18%)}
+  .fase{bottom:110px}
+  .linha-tempo li{font-size:0;padding-top:10px}.linha-tempo li b{font-size:.62rem;margin:0}
+  .contador-andar{top:96px}
+}
 
-/* ymobra */
-.app{padding:0;background:var(--preto)}
-.app .caixa{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;background:var(--grafite);border:1px solid var(--linha-esc);padding:34px 38px;border-radius:18px;transform:translateY(-50%);position:relative;z-index:2}
-.app h3{font-size:1.4rem}
-.app p{color:var(--suave-esc);margin-top:6px;max-width:38em}
-.app .btn{border-color:rgba(255,255,255,.3);color:#fff}
-.app .btn:hover{border-color:var(--amarelo);color:var(--amarelo)}
-@media (max-width:620px){.app .caixa{transform:translateY(-30%);padding:26px 22px}}
+/* ===== seções claras ===== */
+.claro{background:var(--papel);color:var(--tinta)}
+.creme{background:var(--creme);color:var(--tinta)}
+section{padding:clamp(90px,12vw,150px) 0}
+.titulo-sec{font-family:var(--serif);font-weight:300;font-size:clamp(2.6rem,5.4vw,4.8rem);line-height:1;margin-top:20px}
+.titulo-sec em{color:var(--ouro-esc)}
+.lead{color:var(--suave);font-size:1.1rem;max-width:34em;margin-top:22px}
+
+/* ===== planta 3D ===== */
+.planta .grade{display:grid;grid-template-columns:.8fr 1.2fr;grid-template-areas:'txt mq' 'lst mq';column-gap:clamp(28px,4vw,64px);row-gap:0;align-items:start}
+.planta .txt{grid-area:txt}.planta .mq{grid-area:mq;align-self:center}.planta .lst{grid-area:lst}
+.planta .lista{list-style:none;margin:30px 0 0;padding:0;border-top:1px solid var(--linha)}
+.planta .lista button{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 4px;border-bottom:1px solid var(--linha);cursor:pointer;font-size:1rem;transition:background .2s,padding .2s}
+.planta .lista button span{font:500 .78rem/1 var(--mono);color:var(--suave)}
+.planta .lista button:hover{padding-left:10px}
+.planta .lista button.on{padding-left:14px;font-weight:700}
+.planta .lista button.on span{color:var(--ouro-esc)}
+.planta .total{display:flex;justify-content:space-between;margin-top:18px;font:500 .78rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--suave)}
+.planta .total b{color:var(--tinta)}
+.maquete{position:relative;aspect-ratio:1.25;border-radius:28px;overflow:hidden;background:radial-gradient(90% 80% at 50% 40%,#fffdf8,#ece6da 70%,#e2dccf);box-shadow:inset 0 0 0 1px var(--linha),0 50px 100px -60px rgba(20,32,47,.45)}
+.maquete canvas{width:100%;height:100%;cursor:grab;touch-action:pan-y}
+.maquete canvas:active{cursor:grabbing}
+.balao{position:absolute;left:0;top:0;padding:8px 14px;border-radius:999px;background:var(--tinta);color:#fff;font:600 .8rem/1 var(--sans);white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .25s;box-shadow:0 10px 24px -10px rgba(0,0,0,.5)}
+.balao.on{opacity:1}
+.ficha{position:absolute;left:18px;bottom:18px;right:18px;max-width:380px;padding:18px 20px;border-radius:18px;background:rgba(251,249,245,.86);backdrop-filter:blur(12px);box-shadow:0 20px 40px -24px rgba(0,0,0,.35);transition:opacity .4s,transform .4s}
+.ficha.vazia{opacity:0;transform:translateY(10px);pointer-events:none}
+.ficha small{font:500 .66rem/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--ouro-esc)}
+.ficha h3{font:400 1.6rem/1.1 var(--serif);margin-top:8px}
+.ficha p{color:var(--suave);font-size:.94rem;margin-top:8px}
+.dica{position:absolute;right:18px;top:16px;font:500 .66rem/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--suave);display:flex;align-items:center;gap:8px}
+.dica i{width:16px;height:16px;border:1.5px solid currentColor;border-radius:50%;position:relative}
+.dica i::after{content:"";position:absolute;inset:3px;border-radius:50%;background:currentColor;animation:pulsa 1.6s infinite}
+@keyframes pulsa{50%{transform:scale(.5);opacity:.4}}
+.nota{font-size:.82rem;color:var(--suave);margin-top:14px}
+@media (max-width:900px){.planta .grade{grid-template-columns:1fr;grid-template-areas:'txt' 'mq' 'lst';row-gap:28px}.maquete{aspect-ratio:.95;border-radius:22px}.planta .lista{display:grid;grid-template-columns:1fr 1fr;column-gap:16px}}
+
+/* ===== serviços (editorial) ===== */
+.servicos .cab{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:56px}
+.serv{display:grid;grid-template-columns:90px 1.1fr 1fr 300px;gap:clamp(18px,3vw,40px);align-items:center;padding:34px 0;border-top:1px solid var(--linha);position:relative}
+.serv:last-child{border-bottom:1px solid var(--linha)}
+.serv .n{font:500 .8rem/1 var(--mono);color:var(--ouro-esc);letter-spacing:.12em}
+.serv h3{font:300 clamp(2rem,3.4vw,3rem)/1 var(--serif)}
+.serv h3 em{color:var(--ouro-esc)}
+.serv p{color:var(--suave);font-size:1rem}
+.serv .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.serv .tags span{font:500 .7rem/1 var(--sans);padding:7px 11px;border-radius:999px;border:1px solid var(--linha);color:var(--tinta)}
+.serv figure{margin:0;aspect-ratio:16/10;border-radius:16px;overflow:hidden;background:#ddd}
+.serv figure img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.serv:hover figure img{transform:scale(1.12)}
+@media (max-width:1000px){.serv{grid-template-columns:60px 1fr;row-gap:14px}.serv>div:nth-child(3){grid-column:2}.serv figure{grid-column:2;max-width:420px}}
+
+/* ===== números ===== */
+.numeros .grade{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--linha);margin-top:50px}
+.numeros .num{padding:30px 22px 0 0}
+.numeros .num+.num{border-left:1px solid var(--linha);padding-left:22px}
+.numeros .num strong{display:block;font:300 clamp(3rem,6vw,5.4rem)/1 var(--serif);letter-spacing:-.03em}
+.numeros .num strong em{color:var(--ouro-esc);font-style:normal}
+.numeros .num span{display:block;color:var(--suave);margin-top:12px;font-size:.95rem}
+@media (max-width:760px){.numeros .grade{grid-template-columns:1fr 1fr}.numeros .num:nth-child(3){border-left:0;padding-left:0}.numeros .num:nth-child(n+3){border-top:1px solid var(--linha);margin-top:24px}}
 
 /* parceiros */
-.parceiros{background:var(--papel);color:var(--texto)}
-.logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.logo-parceiro{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-height:220px;padding:28px;border:1px solid var(--linha);border-radius:18px;background:var(--branco);text-decoration:none;transition:border-color .2s,transform .2s,box-shadow .2s}
-.logo-parceiro:hover{border-color:var(--ouro);transform:translateY(-3px);box-shadow:0 20px 40px -24px rgba(0,0,0,.25)}
-.logo-parceiro .img{height:110px;display:flex;align-items:center}
+.logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:44px}
+.logo-parceiro{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-height:210px;padding:28px;border:1px solid var(--linha);border-radius:20px;background:#fff;text-decoration:none;transition:border-color .2s,transform .2s}
+.logo-parceiro:hover{border-color:var(--ouro);transform:translateY(-3px)}
+.logo-parceiro .img{height:100px;display:flex;align-items:center}
 .logo-parceiro svg{height:100%;width:auto;max-width:230px}
-.logo-parceiro.beltrhan .img{height:64px;color:#1c1c1c}
+.logo-parceiro.beltrhan .img{height:60px;color:#1c1c1c}
 .logo-parceiro.zavie .img{color:#9b4e30}
-.logo-parceiro.erivan .img{height:70px}
+.logo-parceiro.erivan .img{height:66px}
 .logo-parceiro span{font-size:.9rem;color:var(--suave)}
-.logo-parceiro small{font:500 .7rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--texto)}
+.logo-parceiro small{font:500 .68rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase}
 
-/* faq */
-.faq-sec{background:var(--branco);color:var(--texto)}
-.faq-sec .miolo{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,90px);align-items:start}
-.faq-sec .intro{display:block;margin:0;position:sticky;top:120px}
-.faq-sec .intro p{margin-top:18px}
-details{border-bottom:1px solid var(--linha);padding:24px 0}
-details:first-child{border-top:1px solid var(--linha)}
-summary{cursor:pointer;font:600 1.2rem/1.35 var(--sans);letter-spacing:-.01em;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--linha);display:grid;place-items:center;font:400 1.2rem/1 var(--mono);color:var(--ouro);transition:transform .3s,background .3s}
-details[open] summary::after{transform:rotate(45deg);background:var(--papel)}
-details p{margin-top:12px;color:var(--suave);max-width:40em}
-@media (max-width:860px){.faq-sec .miolo{grid-template-columns:1fr}.faq-sec .intro{position:static}}
-
-/* contato */
-.contato{background:var(--preto);position:relative;overflow:hidden}
-.contato::before{content:"";position:absolute;width:700px;height:700px;right:-200px;bottom:-300px;background:radial-gradient(closest-side,rgba(212,168,58,.08),transparent);pointer-events:none}
-.contato .miolo{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative}
-.contato .logo{width:200px;height:auto;margin-bottom:34px}
-.contato h2{font-size:clamp(2.4rem,5vw,4rem);margin-top:18px}
-.contato p{color:var(--suave-esc);margin-top:16px;font-size:1.08rem;max-width:32em}
+/* contato + assinatura */
+.contato{background:var(--azul);color:#fff;padding-bottom:0;overflow:hidden}
+.contato .grade{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:end}
+.contato h2{font:300 clamp(2.6rem,5.6vw,5rem)/1 var(--serif)}
+.contato h2 em{color:var(--ouro-claro)}
+.contato p{color:#b7c1cf;margin-top:20px;max-width:30em;font-size:1.08rem}
 .canais{display:grid;gap:12px}
-.canal{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 22px;border:1px solid var(--linha-esc);border-radius:16px;text-decoration:none;background:var(--grafite);transition:border-color .2s,transform .2s}
+.canal{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 22px;border:1px solid var(--linha-esc);border-radius:16px;text-decoration:none;background:var(--azul-2);transition:border-color .2s,transform .2s}
 .canal>span:first-child{min-width:0}
-.canal:hover{border-color:rgba(212,168,58,.5);transform:translateX(4px)}
-.canal small{display:block;font:500 .68rem/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--suave-esc);margin-bottom:8px}
-.canal b{font-weight:600;font-size:1.08rem;overflow-wrap:anywhere}
-.canal .seta{font:500 .8rem/1 var(--mono);color:var(--suave-esc);white-space:nowrap}
-.canal.wpp{background:var(--amarelo);color:#0b1522;border-color:var(--amarelo);box-shadow:0 0 40px rgba(212,168,58,.2)}
-.canal.wpp small,.canal.wpp .seta{color:#18283d}
-@media (max-width:860px){.contato .miolo{grid-template-columns:1fr;gap:32px}}
-
-footer{background:#081019;border-top:1px solid var(--linha-esc);color:#8695ab;padding:34px 0 40px;font-size:.88rem}
+.canal:hover{border-color:rgba(212,168,58,.6);transform:translateX(4px)}
+.canal small{display:block;font:500 .66rem/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:#9aa6b8;margin-bottom:8px}
+.canal b{font-weight:600;overflow-wrap:anywhere}
+.canal .seta{font:500 .78rem/1 var(--mono);color:#9aa6b8;white-space:nowrap}
+.canal.wpp{background:var(--ouro);color:var(--azul);border-color:var(--ouro)}
+.canal.wpp small,.canal.wpp .seta{color:#3b3218}
+.assinatura{font:300 clamp(5rem,21vw,20rem)/.78 var(--serif);letter-spacing:-.05em;color:var(--ouro);text-align:center;margin-top:clamp(70px,10vw,130px);white-space:nowrap;user-select:none;opacity:.95}
+.assinatura em{font-weight:300}
+@media (max-width:860px){.contato .grade{grid-template-columns:1fr}}
+footer{background:var(--azul);color:#7f8ca0;border-top:1px solid var(--linha-esc);padding:28px 0 36px;font-size:.86rem}
 footer .miolo{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer a{color:#c4cedb}
-.creditos{font-size:.76rem;color:#64738a;margin-top:6px}
 
-/* WhatsApp flutuante + barra no celular */
-.flutuante{position:fixed;right:22px;bottom:22px;z-index:40;width:60px;height:60px;border-radius:50%;background:var(--amarelo);color:#0b1522;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.4),0 0 0 0 rgba(212,168,58,.6);animation:pulso 2.6s infinite;text-decoration:none}
-.flutuante svg{width:28px;height:28px}
-@keyframes pulso{0%{box-shadow:0 10px 30px rgba(0,0,0,.4),0 0 0 0 rgba(212,168,58,.55)}70%{box-shadow:0 10px 30px rgba(0,0,0,.4),0 0 0 18px rgba(212,168,58,0)}100%{box-shadow:0 10px 30px rgba(0,0,0,.4),0 0 0 0 rgba(212,168,58,0)}}
+/* WhatsApp */
+.flutuante{position:fixed;right:22px;bottom:22px;z-index:40;width:58px;height:58px;border-radius:50%;background:var(--ouro);color:var(--azul);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35);text-decoration:none}
+.flutuante svg{width:26px;height:26px}
 .barra-wpp{display:none}
-@media (max-width:620px){
-  .flutuante{display:none}
-  .barra-wpp{display:flex;position:fixed;left:14px;right:14px;bottom:14px;z-index:40;min-height:56px;border-radius:999px;background:var(--amarelo);color:#0b1522;font:700 .95rem/1 var(--sans);text-decoration:none;align-items:center;justify-content:center;gap:10px;box-shadow:0 0 0 1px rgba(255,255,255,.2),0 0 34px rgba(212,168,58,.55),0 12px 30px rgba(0,0,0,.45)}
-  .barra-wpp svg{width:20px;height:20px}
-  footer{padding-bottom:100px}
-}
+@media (max-width:620px){.flutuante{display:none}.barra-wpp{display:flex;position:fixed;left:14px;right:14px;bottom:14px;z-index:40;min-height:54px;border-radius:999px;background:var(--ouro);color:var(--azul);font:700 .94rem/1 var(--sans);text-decoration:none;align-items:center;justify-content:center;gap:10px;box-shadow:0 0 30px rgba(212,168,58,.45),0 12px 30px rgba(0,0,0,.4)}footer{padding-bottom:96px}}
 
-/* aparecer ao rolar */
-.revela{opacity:0;transform:translateY(34px);filter:blur(6px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1),filter .9s}
-.revela.visivel{opacity:1;transform:none;filter:none}
-.revela.d1{transition-delay:.1s}.revela.d2{transition-delay:.2s}.revela.d3{transition-delay:.3s}
-
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .revela{opacity:1;transform:none;filter:none}
-  .slide .fundo{transform:none}
-}
-/* ===== HERO: prédio em nuvem de pontos 3D ===== */
-.hero{position:relative;height:330vh;background:radial-gradient(120% 80% at 70% 30%,#13243a 0%,var(--preto) 60%)}
-.hero .palco{position:sticky;top:0;height:100svh;min-height:600px;overflow:hidden}
-#nuvem{position:absolute;inset:0;width:100%;height:100%;display:block}
-.hero .palavra{position:absolute;left:50%;top:50%;transform:translate(-50%,-56%);font:800 clamp(5rem,19vw,18rem)/.8 var(--sans);letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.07);white-space:nowrap;pointer-events:none;user-select:none}
-.hero .palavra span{color:rgba(255,255,255,.035)}
-.hero .texto{position:absolute;z-index:2;left:max(16px,calc((100% - 1240px)/2));bottom:clamp(120px,19vh,200px);max-width:min(600px,calc(100% - 32px))}
-.hero h1{font-size:clamp(2.6rem,5.8vw,5.2rem);font-weight:700;letter-spacing:-.045em;line-height:.98;margin-top:22px}
-.hero .lead{margin-top:22px;color:#c9d2de;font-size:clamp(1rem,1.35vw,1.12rem);max-width:31em}
-.hero .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.hero .texto>*{transition:opacity .6s,transform .6s,filter .6s}
-.hero.saindo .texto>*{opacity:0;transform:translateY(-24px);filter:blur(6px)}
-.etiqueta{position:absolute;z-index:3;left:0;top:0;display:flex;align-items:center;gap:10px;padding:9px 14px 9px 10px;border-radius:999px;background:rgba(15,27,43,.55);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font:500 .72rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#e7ecf3;white-space:nowrap;opacity:0;transform:translate(-50%,-50%) scale(.85);transition:opacity .5s,transform .5s;pointer-events:none;will-change:left,top}
-.etiqueta i{width:8px;height:8px;border-radius:50%;background:var(--amarelo);box-shadow:0 0 12px var(--amarelo)}
-.etiqueta.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
-.vidro{background:rgba(15,27,43,.5);border:1px solid rgba(255,255,255,.13);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border-radius:20px}
-.hero .cartao{transition:opacity .6s,transform .6s;position:absolute;z-index:2;right:max(16px,calc((100% - 1240px)/2));bottom:clamp(120px,19vh,200px);width:300px;padding:20px 22px}
-.cartao small{display:block;font:500 .66rem/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--suave-esc)}
-.cartao .linha{display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
-.cartao .linha:last-child{border-bottom:0;padding-bottom:0}
-.cartao .linha b{font:600 1.02rem/1.2 var(--sans)}
-.cartao .linha span{font:500 .72rem/1 var(--mono);color:var(--amarelo)}
-.hero .base{position:absolute;z-index:3;left:0;right:0;bottom:34px}
-.hero .base .miolo{display:flex;justify-content:space-between;align-items:center}
-.medidor{display:flex;align-items:center;gap:14px;font:500 .7rem/1 var(--mono);letter-spacing:.18em;color:#8b98ab;text-transform:uppercase}
-.medidor b{display:block;width:140px;height:2px;background:rgba(255,255,255,.14);position:relative}
-.medidor b::after{content:"";position:absolute;inset:0;background:var(--amarelo);transform-origin:left;transform:scaleX(var(--p,0))}
-.rolar{font:500 .7rem/1 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:#aab3c2;display:flex;align-items:center;gap:12px;text-decoration:none}
-.rolar i{width:1px;height:38px;background:linear-gradient(var(--amarelo),transparent);animation:desce 2s infinite}
-@keyframes desce{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-.hero-meta{position:absolute;z-index:3;top:104px;left:0;right:0}
-.hero-meta .miolo{display:flex;justify-content:space-between;font:500 .7rem/1 var(--mono);letter-spacing:.22em;color:#8b98ab;text-transform:uppercase}
-@media (max-width:900px){.hero .cartao{display:none}}
-.hero.montando .cartao{opacity:0;transform:translateY(16px);pointer-events:none}
-@media (max-width:620px){.etiqueta{display:none}.hero .palco::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(11,21,34,.96) 0%,rgba(11,21,34,.85) 48%,transparent 66%)}}
-@media (min-width:901px){.gantt{justify-content:flex-start;padding-left:max(16px,calc((100% - 1240px)/2))}.gantt .quadro{width:min(700px,50vw)}}
-@media (max-width:620px){
-  .hero .texto{bottom:150px}.hero .base{bottom:96px}.rolar{display:none}
-  .hero .palavra{top:34%}
-  .hero-meta{top:96px}.hero-meta .miolo span:last-child{display:none}
-}
-
-/* ===== QUATRO FRENTES: janelas ===== */
-.frentes{background:var(--preto);padding:clamp(90px,12vw,150px) 0 clamp(70px,9vw,110px);position:relative;overflow:hidden}
-.frentes .titulo{text-align:center;margin-bottom:clamp(48px,6vw,72px)}
-.frentes h2{font-size:clamp(2.4rem,5.4vw,4.6rem);margin-top:18px;letter-spacing:-.045em}
-.frentes .titulo p{color:var(--suave-esc);margin:18px auto 0;max-width:34em;font-size:1.08rem}
-.janelas{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(12px,1.6vw,24px)}
-.janela{display:block;text-decoration:none;color:#fff}
-.janela .moldura{position:relative;aspect-ratio:3/4.2;border-radius:46% / 32%;padding:12px;background:linear-gradient(160deg,#2a3a52,#0f1b2b 55%,#1b2a40);box-shadow:inset 0 2px 1px rgba(255,255,255,.15),inset 0 -6px 16px rgba(0,0,0,.5),0 30px 60px -30px rgba(0,0,0,.8);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
-.janela .vista{position:absolute;inset:12px;border-radius:44% / 30%;overflow:hidden;background:#0b1522;box-shadow:inset 0 0 0 2px rgba(0,0,0,.6),inset 0 18px 30px rgba(0,0,0,.45)}
-.janela .vista img,.janela .vista canvas{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.08);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
-.janela .vista::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.14),transparent 35%),linear-gradient(0deg,rgba(11,21,34,.5),transparent 40%);pointer-events:none}
-.janela:hover .moldura{transform:translateY(-8px)}
-.janela:hover .vista img,.janela:hover .vista canvas{transform:scale(1.16)}
-.janela .rot{display:flex;justify-content:space-between;align-items:baseline;margin-top:20px;padding:0 6px}
-.janela .rot b{font:600 1.25rem/1.2 var(--sans);letter-spacing:-.02em}
-.janela .rot span{font:500 .72rem/1 var(--mono);color:var(--amarelo)}
-.janela p{color:var(--suave-esc);font-size:.92rem;margin-top:6px;padding:0 6px}
-@media (max-width:1000px){.janelas{grid-template-columns:repeat(3,1fr);row-gap:36px}}
-@media (max-width:640px){.janelas{grid-template-columns:1fr 1fr}.janela:last-child{grid-column:1/-1;width:50%;justify-self:center}}
-.janela .rot b{font-size:1.1rem}
-
-/* ===== SEÇÕES QUE "ENTRAM NA JANELA" ===== */
-.zoom{position:relative;height:300vh;background:var(--preto)}
-.zoom .palco{position:sticky;top:0;height:100svh;min-height:560px;overflow:hidden}
-.zoom .gigante{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:800 clamp(4.5rem,17vw,16rem)/.8 var(--sans);letter-spacing:-.06em;color:rgba(255,255,255,.045);white-space:nowrap;pointer-events:none;transition:opacity .3s}
-.zoom .midia{position:absolute;inset:0;will-change:clip-path}
-.zoom .midia>img,.zoom .midia>canvas,.zoom .midia>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;will-change:transform}
-.zoom .midia::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,21,34,.82) 0%,rgba(11,21,34,.25) 45%,transparent 70%),linear-gradient(0deg,rgba(11,21,34,.75),transparent 40%);opacity:var(--escuro,0);pointer-events:none}
-.zoom .aro{position:absolute;left:50%;top:50%;border-radius:46% / 32%;box-shadow:0 0 0 12px #1b2a40,0 0 0 13px rgba(255,255,255,.12),inset 0 18px 30px rgba(0,0,0,.45),0 40px 80px -20px rgba(0,0,0,.8);pointer-events:none;transform:translate(-50%,-50%)}
-.zoom .num{position:absolute;left:max(16px,calc((100% - 1240px)/2));top:112px;font:500 .72rem/1 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:#8b98ab;z-index:2}
-.zoom .painel{position:absolute;z-index:2;left:max(16px,calc((100% - 1240px)/2));bottom:clamp(40px,8vh,90px);width:min(560px,calc(100% - 32px));padding:clamp(24px,3vw,36px);opacity:0;transform:translateY(40px);filter:blur(8px);transition:opacity .7s,transform .7s,filter .7s;pointer-events:none}
-.zoom.aberta .painel{opacity:1;transform:none;filter:none;pointer-events:auto}
-.painel h2{font-size:clamp(2rem,4vw,3.3rem);letter-spacing:-.04em;margin-top:14px}
-.painel p{color:#cdd5e0;margin-top:14px;font-size:1.02rem}
-.painel ul{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
-.painel li{display:grid;grid-template-columns:14px 1fr;gap:10px;font-size:.92rem;color:#e3e8ef;line-height:1.45}
-.painel li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--amarelo);margin-top:.55em;box-shadow:0 0 10px var(--amarelo)}
-.painel .acoes{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
-.zoom.dir .painel{left:auto;right:max(16px,calc((100% - 1240px)/2))}
-.zoom.dir .midia::after{background:linear-gradient(270deg,rgba(11,21,34,.82) 0%,rgba(11,21,34,.25) 45%,transparent 70%),linear-gradient(0deg,rgba(11,21,34,.75),transparent 40%)}
-@media (max-width:700px){
-  .painel ul{grid-template-columns:1fr}
-  .zoom .painel,.zoom.dir .painel{left:16px;right:16px;width:auto;bottom:90px}
-  .zoom .midia::after,.zoom.dir .midia::after{background:linear-gradient(0deg,rgba(11,21,34,.92) 15%,rgba(11,21,34,.35) 55%,transparent 80%)}
-  .painel p{font-size:.95rem}
-}
-
-/* ===== PROCESSO: cartões que empilham ===== */
-.processo{background:var(--preto);padding:clamp(90px,12vw,150px) 0}
-.processo .intro{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:56px}
-.processo h2{font-size:clamp(2.2rem,4.6vw,3.8rem);margin-top:18px;max-width:13em}
-.processo .intro p{color:var(--suave-esc);max-width:30em;font-size:1.06rem}
-.pilha{display:grid;gap:22px}
-.folha{position:sticky;top:calc(110px + var(--i) * 26px);min-height:min(62vh,520px);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;background:var(--grafite);border:1px solid var(--linha-esc);box-shadow:0 -20px 60px -20px rgba(0,0,0,.7);transform-origin:top center}
-.folha .foto{position:relative;overflow:hidden}
-.folha .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.folha .foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,var(--grafite))}
-.folha .txt{padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;justify-content:center}
-.folha .n{font:400 clamp(3rem,6vw,5rem)/1 var(--mono);color:var(--amarelo);letter-spacing:-.05em}
-.folha h3{font-size:clamp(1.6rem,2.8vw,2.4rem);margin-top:18px;letter-spacing:-.03em}
-.folha p{color:var(--suave-esc);margin-top:14px;font-size:1.04rem;max-width:28em}
-@media (max-width:760px){.folha{grid-template-columns:1fr;min-height:0}.folha .foto{height:200px}.folha .foto::after{background:linear-gradient(0deg,var(--grafite),transparent 60%)}.folha .txt{padding:26px}}
-
-/* ===== TROCA: você manda × você recebe ===== */
-.troca{background:var(--preto);padding:0 0 clamp(110px,13vw,170px);position:relative}
-.troca .caixa{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:0;padding:0;overflow:hidden;max-width:980px;margin:0 auto;box-shadow:0 40px 100px -40px rgba(212,168,58,.25)}
-.troca .lado{padding:clamp(26px,4vw,44px)}
-.troca .lado+.x+.lado{background:rgba(212,168,58,.06)}
-.troca .x{display:grid;place-items:center;padding:0 4px;font:300 2rem/1 var(--sans);color:var(--amarelo);border-inline:1px solid rgba(255,255,255,.08);width:64px}
-.troca h3{font-size:1.5rem;margin-top:14px;letter-spacing:-.02em}
-.troca ul{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:12px}
-.troca li{display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.07);font-size:.98rem;color:#dfe5ed}
-.troca li span{font:500 .72rem/1.6 var(--mono);color:var(--suave-esc);white-space:nowrap}
-.troca .rodape{text-align:center;margin-top:34px}
-@media (max-width:760px){.troca .caixa{grid-template-columns:1fr}.troca .x{width:auto;height:56px;border-inline:0;border-block:1px solid rgba(255,255,255,.08)}}
-
-/* ===== GANTT animado (planejamento e gestão) ===== */
-.gantt{position:absolute;inset:0;background:linear-gradient(rgba(11,21,34,.78),rgba(11,21,34,.9)),url("https://images.pexels.com/photos/8960944/pexels-photo-8960944.jpeg?auto=compress&cs=tinysrgb&w=1920") center/cover;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.gantt .quadro{width:min(1100px,92vw);padding:28px 30px 30px;position:relative}
-.gantt .cab{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font:500 .72rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#8b98ab}
-.gantt .cab b{color:#fff;font:600 1.05rem/1 var(--sans);letter-spacing:-.01em;text-transform:none}
-.gantt .semanas{display:grid;grid-template-columns:150px repeat(12,1fr);font:500 .62rem/1 var(--mono);color:#5e6d84;margin-bottom:10px}
-.gantt .semanas span:first-child{visibility:hidden}
-.gantt .linha{display:grid;grid-template-columns:150px 1fr;align-items:center;height:40px;border-top:1px solid rgba(255,255,255,.05)}
-.gantt .linha>span{font:500 .86rem/1 var(--sans);color:#cfd6e0}
-.gantt .trilho{position:relative;height:100%;background:repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 1px,transparent 1px calc(100%/12))}
-.gantt .barra{position:absolute;top:11px;height:18px;border-radius:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);overflow:hidden}
-.gantt .barra i{position:absolute;inset:0;background:linear-gradient(90deg,#b08a2e,var(--amarelo));transform-origin:left;transform:scaleX(var(--f,0));box-shadow:0 0 14px rgba(212,168,58,.5)}
-.gantt .hoje{position:absolute;top:58px;bottom:24px;width:1px;background:var(--amarelo);box-shadow:0 0 12px var(--amarelo)}
-.gantt .hoje::before{content:"hoje";position:absolute;top:-18px;left:-14px;font:500 .6rem/1 var(--mono);color:var(--amarelo);letter-spacing:.14em;text-transform:uppercase}
-.gantt .kpis{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
-.gantt .kpi{padding:14px 18px;min-width:170px}
-.gantt .kpi small{display:block;font:500 .62rem/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:#8b98ab}
-.gantt .kpi b{display:block;font:700 1.6rem/1 var(--sans);margin-top:8px;letter-spacing:-.03em}
-.gantt .kpi b em{font-style:normal;color:var(--amarelo)}
-.gantt .nota{font:500 .6rem/1 var(--mono);color:#56637a;letter-spacing:.12em;text-transform:uppercase;margin-top:14px}
-@media (max-width:700px){.gantt .quadro{padding:14px;transform:translateY(-16vh) scale(.92)}.gantt .semanas,.gantt .linha{grid-template-columns:96px 1fr}.gantt .semanas{grid-template-columns:96px repeat(12,1fr)}.gantt .linha>span{font-size:.74rem}.gantt .kpis{display:none}}
-
-
-/* telas baixas (notebooks): painel mais compacto */
-@media (max-height:760px) and (min-width:701px){
-  .zoom .painel{bottom:24px;padding:22px 26px}
-  .painel h2{font-size:clamp(1.7rem,3vw,2.4rem);margin-top:10px}
-  .painel p{font-size:.95rem;margin-top:10px}
-  .painel ul{margin-top:12px;gap:6px 16px}.painel li{font-size:.86rem}
-  .painel .acoes{margin-top:14px}
-  .zoom .num{top:92px}
-  .hero .texto{bottom:90px}.hero h1{font-size:clamp(2.2rem,4.6vw,3.8rem)}.hero .lead{margin-top:14px}.hero .acoes{margin-top:20px}
-  .hero-meta{display:none}.hero .base{bottom:22px}.hero .cartao{bottom:90px}
-}
-@media (max-height:620px) and (min-width:701px){.painel ul{display:none}}
+.revela{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.revela.visivel{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.revela{opacity:1;transform:none}}
+@media (max-height:700px) and (min-width:701px){.fase{bottom:110px}.fase h1,.fase h2{font-size:clamp(2.2rem,4.4vw,3.8rem)}.contador-andar{top:96px}}
 </style>
 </head>
 <body>
 
 <header class="topo" id="topo">
   <div class="miolo">
-    <a class="marca" href="#inicio" aria-label="Mantovany Engenharia, início">
-      <img src="marca.png" alt="" width="42" height="32">
-      <span><b>MANTOVANY</b><small>ENGENHARIA E CONSTRUÇÃO</small></span>
-    </a>
-    <nav class="nav" aria-label="Principal">
-      <a href="#obras">Obras</a>
-      <a href="#gestao">Gestão</a>
-      <a href="#laudos">Laudos</a>
-      <a href="#vistorias">Vistorias</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#contato">Contato</a>
-    </nav>
-    <div class="nav-dir">
-      <a class="fone" href="tel:+5511978667370">(11) 97866-7370</a>
-      <a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento">Pedir orçamento</a>
-    </div>
+    <a class="marca" href="#inicio" aria-label="Mantovany Engenharia, início"><img src="marca.png" alt="" width="40" height="30"><span><b>MANTOVANY</b><small>ENGENHARIA E CONSTRUÇÃO</small></span></a>
+    <nav class="nav" aria-label="Principal"><a href="#ciclo">A obra</a><a href="#planta">O projeto</a><a href="#servicos">Serviços</a><a href="#contato">Contato</a></nav>
+    <a class="btn btn-ouro" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento">Pedir orçamento</a>
   </div>
 </header>
 
 <main id="inicio">
-<section class="hero" id="hero" aria-label="Apresentação" style="padding:0">
+<section class="ciclo" id="ciclo" aria-label="Do terreno à chave" style="padding:0">
   <div class="palco">
-    <div class="palavra" aria-hidden="true">Engen<span>haria</span></div>
-    <canvas id="nuvem" aria-hidden="true"></canvas>
-    <div class="hero-meta" aria-hidden="true"><div class="miolo"><span>Mantovany / Engenharia e Construção</span><span>São Paulo · Grande SP</span></div></div>
-    <span class="etiqueta" data-ancora="0" aria-hidden="true"><i></i>01 · Projeto</span>
-    <span class="etiqueta" data-ancora="1" aria-hidden="true"><i></i>02 · Obra e gestão</span>
-    <span class="etiqueta" data-ancora="2" aria-hidden="true"><i></i>03 · Vistoria</span>
-    <span class="etiqueta" data-ancora="3" aria-hidden="true"><i></i>04 · Laudo</span>
+    <canvas id="seq" role="img" aria-label="Animação de um prédio: projeto em linhas douradas sobre o terreno, fundação, estrutura de concreto subindo com grua, fachada e o prédio pronto ao entardecer"></canvas>
+    <div class="contador-andar" aria-hidden="true"><small>Estrutura</small><b><span data-andar>1</span> / 8</b><small style="margin-top:6px">pavimentos</small></div>
 
-    <div class="texto">
-      <span class="rotulo">Engenharia civil · CREA ativo</span>
-      <h1>Do projeto à entrega, <span class="destaque">engenharia que se sustenta.</span></h1>
-      <p class="lead">Obras, planejamento e gestão, laudos técnicos, vistorias e projetos, com engenheiro responsável e ART. Em São Paulo e Grande SP.</p>
-      <div class="acoes">
-        <a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento">Pedir orçamento no WhatsApp</a>
-        <a class="btn btn-vidro" href="#frentes">Conhecer os serviços</a>
+    <div class="fase on" data-ate="0.12">
+      <span class="rotulo">Mantovany · Engenharia civil</span>
+      <h1>Do terreno <em>à chave.</em></h1>
+      <p>Projeto, gestão, obra, vistoria e laudo com o mesmo engenheiro responsável. Role para ver um prédio sair do papel.</p>
+      <div class="acoes"><a class="btn btn-ouro" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento">Pedir orçamento</a><a class="btn btn-linha" href="#planta">Ver o projeto em 3D</a></div>
+    </div>
+    <div class="fase" data-ate="0.2">
+      <span class="rotulo">01 · O projeto</span>
+      <h2>Cada linha pensada <em>antes da primeira estaca.</em></h2>
+      <p>Levantamento, projeto e aprovação na prefeitura. A obra começa certa quando começa no papel.</p>
+    </div>
+    <div class="fase" data-ate="0.6">
+      <span class="rotulo">02 · A estrutura</span>
+      <h2>Fundação, pilares e lajes <em>com controle técnico.</em></h2>
+      <p>Planejamento, cronograma e acompanhamento de cada concretagem, com diário de obra no YMOBRA.</p>
+    </div>
+    <div class="fase" data-ate="0.8">
+      <span class="rotulo">03 · O fechamento</span>
+      <h2>Fachada e acabamento <em>no prazo combinado.</em></h2>
+      <p>Gestão de equipes, medições e controle de custos até a última esquadria.</p>
+    </div>
+    <div class="fase" data-ate="1.01">
+      <span class="rotulo">04 · A entrega</span>
+      <h2>Prédio pronto, <em>documentado e com ART.</em></h2>
+      <p>Vistoria de entrega, laudos e toda a documentação técnica para você receber as chaves com segurança.</p>
+      <div class="acoes"><a class="btn btn-ouro" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20minha%20obra">Falar sobre a minha obra</a></div>
+    </div>
+
+    <div class="linha-tempo"><div class="miolo"><ol>
+      <li data-ir="0.0" class="on"><b>00</b>Terreno</li><li data-ir="0.13"><b>01</b>Projeto</li><li data-ir="0.3"><b>02</b>Estrutura</li><li data-ir="0.68"><b>03</b>Fechamento</li><li data-ir="0.9"><b>04</b>Entrega</li>
+    </ol></div></div>
+  </div>
+</section>
+
+<section class="planta creme" id="planta">
+  <div class="miolo grade">
+    <div class="txt revela">
+      <span class="rotulo">O projeto, por dentro</span>
+      <h2 class="titulo-sec">Apartamento <em>tipo.</em></h2>
+      <p class="lead">Gire a maquete e toque em cada ambiente. É assim que apresentamos um projeto: claro, medido e pensado para quem vai morar.</p>
+    </div>
+    <div class="mq revela">
+      <div class="maquete">
+        <canvas id="maquete" aria-label="Maquete 3D interativa do apartamento"></canvas>
+        <span class="balao" id="balao" aria-hidden="true"></span>
+        <span class="dica" aria-hidden="true"><i></i>Arraste para girar</span>
+        <div class="ficha vazia" id="ficha" aria-live="polite"><small data-f="area"></small><h3 data-f="nome"></h3><p data-f="desc"></p></div>
       </div>
+      <p class="nota">Planta ilustrativa, para mostrar como apresentamos os projetos.</p>
     </div>
-
-    <div class="cartao vidro" aria-label="Serviços">
-      <small>Mantovany · 5 frentes</small>
-      <div class="linha"><b>Obras</b><span>execução</span></div>
-      <div class="linha"><b>Planejamento e gestão</b><span>cronograma</span></div>
-      <div class="linha"><b>Laudos técnicos</b><span>com ART</span></div>
-      <div class="linha"><b>Vistorias técnicas</b><span>NBR 16747</span></div>
-      <div class="linha"><b>Projetos</b><span>aprovação</span></div>
+    <div class="lst revela">
+      <ul class="lista" id="lista-amb"></ul>
+      <div class="total"><span>Área privativa</span><b data-total>—</b></div>
     </div>
-
-    <div class="base"><div class="miolo">
-      <a class="rolar" href="#frentes"><i></i>Role para construir</a>
-      <div class="medidor" aria-hidden="true">Obra<b></b><span data-pct>0%</span></div>
-    </div></div>
   </div>
 </section>
 
-<section class="frentes" id="frentes">
+<section class="servicos claro" id="servicos">
   <div class="miolo">
-    <div class="titulo revela">
-      <span class="rotulo">Cinco frentes</span>
-      <h2>Engenharia <span class="destaque">sob medida.</span></h2>
-      <p>Escolha por onde começar. Em todas, você fala direto com o engenheiro e recebe tudo por escrito.</p>
-    </div>
-    <div class="janelas">
-      <a class="janela revela" href="#obras"><div class="moldura"><div class="vista"><img src="https://images.pexels.com/videos/6033941/pexels-photo-6033941.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Vista aérea de prédio em construção com gruas" loading="lazy"></div></div><div class="rot"><b>Obras</b><span>01</span></div><p>Construção e reforma com responsável técnico.</p></a>
-      <a class="janela revela d1" href="#gestao"><div class="moldura"><div class="vista"><img src="https://images.pexels.com/photos/8960944/pexels-photo-8960944.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Engenheira com tablet acompanhando a obra" loading="lazy"></div></div><div class="rot"><b>Planejamento e gestão</b><span>02</span></div><p>Cronograma, orçamento e gerenciamento.</p></a>
-      <a class="janela revela d2" href="#laudos"><div class="moldura"><div class="vista"><img src="https://images.pexels.com/photos/10224710/pexels-photo-10224710.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Concreto desplacado com armadura exposta" loading="lazy"></div></div><div class="rot"><b>Laudos técnicos</b><span>03</span></div><p>Diagnóstico de patologias com ART.</p></a>
-      <a class="janela revela d3" href="#vistorias"><div class="moldura"><div class="vista"><img src="https://images.pexels.com/photos/8482824/pexels-photo-8482824.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Engenheiro conferindo o prumo da parede com nível" loading="lazy"></div></div><div class="rot"><b>Vistorias técnicas</b><span>04</span></div><p>Recebimento, cautelar e inspeção predial.</p></a>
-      <a class="janela revela" href="#projetos"><div class="moldura"><div class="vista"><img src="https://images.pexels.com/photos/5584052/pexels-photo-5584052.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Equipe trabalhando sobre plantas impressas" loading="lazy"></div></div><div class="rot"><b>Projetos</b><span>05</span></div><p>Do levantamento à aprovação na prefeitura.</p></a>
-    </div>
+    <div class="cab revela"><div><span class="rotulo">O que fazemos</span><h2 class="titulo-sec">Engenharia <em>de ponta a ponta.</em></h2></div><p class="lead" style="margin:0">Cinco frentes, um responsável técnico. Você fala direto com o engenheiro que assina.</p></div>
+    <article class="serv revela"><span class="n">01</span><div><h3>Projetos</h3></div><div><p>Levantamento, projeto e documentação para construir, reformar ou regularizar o imóvel junto à prefeitura.</p><div class="tags"><span>As built</span><span>Aprovação</span><span>Regularização</span><span>ART de projeto</span></div></div><figure><img src="ciclo/img/projeto.webp" alt="Projeto do prédio em linhas douradas sobre o terreno" loading="lazy"></figure></article>
+    <article class="serv revela"><span class="n">02</span><div><h3>Planejamento <em>e gestão</em></h3></div><div><p>Orçamento, cronograma físico-financeiro, medições e gerenciamento da obra, com relatórios no YMOBRA.</p><div class="tags"><span>Cronograma</span><span>Orçamento</span><span>Medições</span><span>Fiscalização</span></div></div><figure><img src="ciclo/img/gestao.webp" alt="Obra em andamento com grua" loading="lazy"></figure></article>
+    <article class="serv revela"><span class="n">03</span><div><h3>Obras</h3></div><div><p>Construção e reforma residencial e comercial com responsável técnico do começo ao fim.</p><div class="tags"><span>Construção</span><span>Reforma</span><span>ART de execução</span></div></div><figure><img src="ciclo/img/obra.webp" alt="Estrutura de concreto do prédio" loading="lazy"></figure></article>
+    <article class="serv revela"><span class="n">04</span><div><h3>Vistorias <em>técnicas</em></h3></div><div><p>Registro técnico do imóvel na entrega das chaves, antes de obra vizinha ou na manutenção do condomínio.</p><div class="tags"><span>Recebimento</span><span>Cautelar</span><span>Inspeção predial · NBR 16747</span></div></div><figure><img src="ciclo/img/vistoria.webp" alt="Fachada do prédio sendo concluída" loading="lazy"></figure></article>
+    <article class="serv revela"><span class="n">05</span><div><h3>Laudos <em>técnicos</em></h3></div><div><p>Diagnóstico de fissuras, infiltração, corrosão e recalque, com causa provável, solução e ART.</p><div class="tags"><span>Patologias</span><span>Laudo cautelar · NBR 13752</span><span>Seguradora e Justiça</span></div></div><figure><img src="ciclo/img/laudo.webp" alt="Prédio pronto ao entardecer" loading="lazy"></figure></article>
   </div>
 </section>
 
-<section class="zoom" id="obras" style="padding:0">
-  <div class="palco">
-    <div class="gigante" aria-hidden="true">Obras</div>
-    <div class="midia"><video muted loop playsinline preload="none" poster="https://images.pexels.com/videos/6033941/pexels-photo-6033941.jpeg?auto=compress&cs=tinysrgb&w=1920" aria-label="Vista aérea de prédio em construção"><source media="(min-width: 900px)" src="https://videos.pexels.com/video-files/6033941/6033941-hd_1920_1080_30fps.mp4" type="video/mp4"><source src="https://videos.pexels.com/video-files/6033941/6033941-hd_1280_720_60fps.mp4" type="video/mp4"></video></div>
-    <div class="aro" aria-hidden="true"></div>
-    <span class="num">01 / Obras</span>
-    <div class="painel vidro">
-      <span class="rotulo">01 / Obras</span>
-      <h2>Obra com engenheiro <span class="destaque">do começo ao fim.</span></h2>
-      <p>Construção e reforma residencial e comercial com responsável técnico, cronograma, controle de material e diário de obra no aplicativo YMOBRA.</p>
-      <ul><li>Construção e reforma</li><li>ART de execução</li><li>Orçamento e cronograma por escrito</li><li>Diário de obra e checklist no YMOBRA</li></ul>
-      <div class="acoes"><a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20obra">Orçar minha obra</a></div>
-    </div>
-  </div>
-</section>
-
-<section class="zoom dir" id="gestao" style="padding:0">
-  <div class="palco">
-    <div class="gigante" aria-hidden="true">Gestão</div>
-    <div class="midia"><div class="gantt" id="gantt" aria-hidden="true"></div></div>
-    <div class="aro" aria-hidden="true"></div>
-    <span class="num">02 / Planejamento e gestão</span>
-    <div class="painel vidro">
-      <span class="rotulo">02 / Planejamento e gestão de obra</span>
-      <h2>Prazo e custo <span class="destaque">sob controle.</span></h2>
-      <p>Planejamento, orçamento e gerenciamento da obra com cronograma físico-financeiro, medições e relatórios acompanhados pelo aplicativo YMOBRA.</p>
-      <ul><li>Orçamento e cronograma físico-financeiro</li><li>Gerenciamento e fiscalização de obra</li><li>Medições e controle de custos</li><li>Relatórios e diário de obra no YMOBRA</li></ul>
-      <div class="acoes"><a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20planejamento%20e%20gest%C3%A3o%20de%20obra">Planejar minha obra</a></div>
-    </div>
-  </div>
-</section>
-
-<section class="zoom dir" id="laudos" style="padding:0">
-  <div class="palco">
-    <div class="gigante" aria-hidden="true">Laudos</div>
-    <div class="midia"><canvas id="seq-pilar" aria-label="Pilar de concreto perdendo o cobrimento e mostrando a armadura corroída"></canvas></div>
-    <div class="aro" aria-hidden="true"></div>
-    <span class="num">03 / Laudos técnicos</span>
-    <div class="painel vidro">
-      <span class="rotulo">03 / Laudos técnicos</span>
-      <h2>Laudo técnico <span class="destaque">que se sustenta.</span></h2>
-      <p>Diagnóstico de fissuras, infiltração, corrosão de armadura e recalque, com causa provável e solução recomendada.</p>
-      <ul><li>Laudo de patologia com ART</li><li>Laudo cautelar de vizinhança (NBR 13752)</li><li>Fotos datadas e classificação de risco</li><li>Para condomínio, seguradora ou Justiça</li></ul>
-      <div class="acoes"><a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20preciso%20de%20um%20laudo%20t%C3%A9cnico">Pedir laudo</a></div>
-    </div>
-  </div>
-</section>
-
-<section class="zoom" id="vistorias" style="padding:0">
-  <div class="palco">
-    <div class="gigante" aria-hidden="true">Vistorias</div>
-    <div class="midia"><img src="https://images.pexels.com/photos/8482824/pexels-photo-8482824.jpeg?auto=compress&cs=tinysrgb&w=1600" srcset="https://images.pexels.com/photos/8482824/pexels-photo-8482824.jpeg?auto=compress&cs=tinysrgb&w=800 800w, https://images.pexels.com/photos/8482824/pexels-photo-8482824.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w, https://images.pexels.com/photos/8482824/pexels-photo-8482824.jpeg?auto=compress&cs=tinysrgb&w=2400 2400w" sizes="100vw" alt="Engenheiro conferindo o prumo da parede com nível" loading="lazy"></div>
-    <div class="aro" aria-hidden="true"></div>
-    <span class="num">04 / Vistorias técnicas</span>
-    <div class="painel vidro">
-      <span class="rotulo">04 / Vistorias técnicas</span>
-      <h2>Vistoria antes que <span class="destaque">vire problema.</span></h2>
-      <p>Registro técnico do estado do imóvel na entrega das chaves, antes de uma obra vizinha ou na manutenção do condomínio.</p>
-      <ul><li>Vistoria de recebimento de imóvel</li><li>Inspeção predial (NBR 16747)</li><li>Vistoria de entrada e saída de locação</li><li>Relatório com fotos de cada item</li></ul>
-      <div class="acoes"><a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20vistoria">Agendar vistoria</a></div>
-    </div>
-  </div>
-</section>
-
-<section class="zoom" id="projetos" style="padding:0">
-  <div class="palco">
-    <div class="gigante" aria-hidden="true">Projetos</div>
-    <div class="midia"><img src="https://images.pexels.com/photos/5584052/pexels-photo-5584052.jpeg?auto=compress&cs=tinysrgb&w=1600" srcset="https://images.pexels.com/photos/5584052/pexels-photo-5584052.jpeg?auto=compress&cs=tinysrgb&w=800 800w, https://images.pexels.com/photos/5584052/pexels-photo-5584052.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w, https://images.pexels.com/photos/5584052/pexels-photo-5584052.jpeg?auto=compress&cs=tinysrgb&w=2400 2400w" sizes="100vw" alt="Equipe trabalhando sobre plantas impressas" loading="lazy"></div>
-    <div class="aro" aria-hidden="true"></div>
-    <span class="num">05 / Projetos</span>
-    <div class="painel vidro">
-      <span class="rotulo">05 / Projetos</span>
-      <h2>Projeto pensado para <span class="destaque">sair do papel.</span></h2>
-      <p>Levantamento, projeto e documentação técnica para construir, reformar ou regularizar o imóvel junto à prefeitura.</p>
-      <ul><li>Levantamento e as built</li><li>Projeto para aprovação na prefeitura</li><li>Regularização de imóveis</li><li>ART de projeto</li></ul>
-      <div class="acoes"><a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20um%20projeto">Falar do meu projeto</a></div>
-    </div>
-  </div>
-</section>
-
-<div class="numeros">
+<section class="numeros creme">
   <div class="miolo">
-    <div class="grade">
-      <div class="num"><strong><span data-contar="9">9</span> <em>anos</em></strong><span>de experiência em engenharia civil</span></div>
+    <div class="revela"><span class="rotulo">Em números</span><h2 class="titulo-sec">A Mantovany <em>em números.</em></h2></div>
+    <div class="grade revela">
+      <div class="num"><strong><span data-contar="9">9</span></strong><span>anos de experiência em engenharia civil</span></div>
       <div class="num"><strong><em>+</em><span data-contar="100">100</span></strong><span>vistorias técnicas realizadas</span></div>
       <div class="num"><strong><em>+</em><span data-contar="500">500</span></strong><span>clientes atendidos em engenharia e construção</span></div>
       <div class="num"><strong><span data-contar="100">100</span><em>%</em></strong><span>dos laudos com ART e CREA ativo</span></div>
     </div>
   </div>
-</div>
-
-<section class="processo" id="como">
-  <div class="miolo">
-    <div class="intro revela">
-      <div><span class="rotulo">Como funciona</span><h2>Quatro passos, <span class="destaque">nenhum intermediário.</span></h2></div>
-      <p>Do primeiro contato à entrega, você fala com o engenheiro que assina o trabalho.</p>
-    </div>
-    <div class="pilha">
-      <article class="folha" style="--i:0"><div class="foto"><img src="https://images.pexels.com/photos/8961008/pexels-photo-8961008.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy"></div><div class="txt"><span class="n">01</span><h3>Conte o caso no WhatsApp</h3><p>Mande o endereço, fotos do problema e o que você precisa: obra, gestão, laudo, vistoria ou projeto.</p></div></article>
-      <article class="folha" style="--i:1"><div class="foto"><img src="https://images.pexels.com/photos/5584052/pexels-photo-5584052.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy"></div><div class="txt"><span class="n">02</span><h3>Receba a proposta por escrito</h3><p>Escopo, prazo e valor definidos antes de qualquer visita. Sem surpresa no meio do caminho.</p></div></article>
-      <article class="folha" style="--i:2"><div class="foto"><img src="https://images.pexels.com/photos/8482824/pexels-photo-8482824.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy"></div><div class="txt"><span class="n">03</span><h3>Engenheiro no local</h3><p>Vistoria com registro fotográfico e medições, ou execução da obra com acompanhamento técnico.</p></div></article>
-      <article class="folha" style="--i:3"><div class="foto"><img src="https://images.pexels.com/videos/6033941/pexels-photo-6033941.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" loading="lazy"></div><div class="txt"><span class="n">04</span><h3>Entrega assinada, com ART</h3><p>Laudo em PDF, projeto aprovado ou obra concluída, sempre com responsável técnico registrado no CREA.</p></div></article>
-    </div>
-  </div>
 </section>
-
-<section class="troca">
-  <div class="miolo">
-    <div class="caixa vidro revela">
-      <div class="lado">
-        <small class="rotulo">Você manda</small>
-        <h3>O seu caso</h3>
-        <ul><li>Endereço do imóvel<span>01</span></li><li>Fotos do que está acontecendo<span>02</span></li><li>O serviço que precisa<span>03</span></li></ul>
-      </div>
-      <div class="x" aria-hidden="true">×</div>
-      <div class="lado">
-        <small class="rotulo">Você recebe</small>
-        <h3>A resposta técnica</h3>
-        <ul><li>Proposta por escrito<span>antes da visita</span></li><li>Engenheiro responsável<span>CREA ativo</span></li><li>Documento assinado<span>com ART</span></li></ul>
-      </div>
-    </div>
-    <div class="rodape revela"><a class="btn btn-amarelo" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento">Começar pelo WhatsApp</a></div>
-  </div>
-</section>
-
-<div class="app">
-  <div class="miolo">
-    <div class="caixa">
-      <div>
-        <h3>Tem obra em andamento?</h3>
-        <p>Conheça o YMOBRA, o aplicativo de gestão de obra desenvolvido pela Mantovany: RDO, FVS, EPI, checklist e material no celular.</p>
-      </div>
-      <a class="btn" href="https://ymobra.com.br">Conhecer o YMOBRA →</a>
-    </div>
-  </div>
-</div>
 
 <section class="parceiros claro" id="parceiros">
   <div class="miolo">
-    <div class="intro revela"><div><span class="rotulo">Parceiros</span><h2>Quem trabalha lado a lado com a gente.</h2></div><p>Escritórios com quem dividimos projetos, obras e laudos.</p></div>
+    <div class="revela"><span class="rotulo">Parceiros</span><h2 class="titulo-sec">Quem constrói <em>com a gente.</em></h2></div>
     <div class="logos revela">
       <a class="logo-parceiro beltrhan" href="https://beltrhan.com.br/" target="_blank" rel="noopener"><div class="img"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="2 2 146 35" ><path fill="currentColor" fill-rule="evenodd" d="M143.61,22.97C143.13,22.81 142.17,21.94 141.87,21.40C141.74,21.15 141.55,20.84 141.44,20.69C141.33,20.55 141.13,20.15 141.00,19.80C140.86,19.45 140.63,18.98 140.47,18.75C140.31,18.52 140.10,18.10 140.01,17.81C139.91,17.53 139.68,17.07 139.50,16.79C139.32,16.52 139.09,16.06 138.99,15.77C138.90,15.48 138.69,15.06 138.53,14.83C138.37,14.60 138.14,14.14 138.01,13.81C137.88,13.48 137.63,12.95 137.44,12.64C137.25,12.32 137.03,11.87 136.95,11.64C136.87,11.40 136.68,11.01 136.52,10.77C136.36,10.53 136.13,10.06 136.01,9.73C135.88,9.40 135.65,8.92 135.49,8.67C135.32,8.41 135.12,8.03 135.04,7.81C134.84,7.27 134.56,7.05 134.13,7.11C133.94,7.14 133.72,7.24 133.60,7.36L133.40,7.57L133.41,14.90C133.43,23.17 133.47,22.62 132.80,22.88C132.25,23.09 131.48,23.02 131.20,22.74L130.99,22.53L131.00,14.59C131.00,10.01 131.04,6.49 131.08,6.25C131.19,5.67 131.33,5.45 131.93,4.86C132.59,4.21 132.89,4.08 133.75,4.08C134.66,4.08 135.09,4.21 135.52,4.58C136.04,5.04 136.79,6.06 137.00,6.58C137.10,6.84 137.32,7.27 137.50,7.55C137.68,7.82 137.91,8.27 138.00,8.54C138.09,8.81 138.30,9.22 138.46,9.45C138.62,9.69 138.87,10.18 139.03,10.55C139.18,10.92 139.42,11.39 139.56,11.59C139.69,11.79 139.91,12.22 140.03,12.54C140.15,12.86 140.38,13.31 140.54,13.53C140.69,13.75 140.90,14.16 140.99,14.44C141.09,14.72 141.31,15.17 141.49,15.45C141.67,15.73 141.92,16.22 142.04,16.53C142.15,16.84 142.38,17.28 142.54,17.50C142.71,17.72 142.91,18.12 143.00,18.38C143.23,19.04 143.51,19.50 143.91,19.86C144.30,20.21 144.57,20.25 144.80,19.99C144.95,19.82 144.96,19.54 145.00,12.18C145.03,6.31 145.07,4.50 145.15,4.36C145.39,3.93 146.46,3.89 146.81,4.29L147.00,4.51L147.00,13.04C147.00,20.49 146.98,21.61 146.87,21.92C146.59,22.71 146.06,23.00 144.80,23.05C144.23,23.07 143.85,23.05 143.61,22.97ZM5.69,22.90C5.44,22.85 5.18,22.69 4.83,22.36C3.96,21.55 4.04,22.46 4.04,13.50C4.04,6.24 4.05,5.60 4.18,5.37C4.39,4.99 5.20,4.28 5.56,4.15C5.81,4.07 6.82,4.04 10.21,4.04C14.88,4.04 14.87,4.04 15.53,4.49C15.71,4.61 16.10,4.84 16.38,5.00C16.71,5.18 17.09,5.50 17.41,5.85C17.86,6.35 17.93,6.50 18.21,7.35C18.59,8.51 18.62,9.23 18.33,10.12C18.00,11.18 17.79,11.55 17.36,11.89C16.78,12.34 16.64,12.55 16.60,13.04C16.56,13.53 16.59,13.58 17.36,13.96C18.05,14.30 18.77,15.16 18.96,15.88C19.26,17.00 19.20,19.07 18.84,19.87C18.54,20.54 17.55,21.61 16.72,22.16C15.40,23.03 15.93,22.96 10.67,22.97C7.90,22.98 5.90,22.95 5.69,22.90ZM25.31,22.88C24.58,22.68 24.08,22.16 23.88,21.38C23.78,20.99 23.75,20.40 23.75,18.74C23.75,16.63 23.75,16.59 23.94,16.38C24.14,16.15 24.84,15.97 25.22,16.04C25.33,16.06 25.51,16.10 25.63,16.13C25.75,16.15 25.91,16.29 26.00,16.44C26.15,16.68 26.17,16.86 26.17,18.17L26.17,19.63L26.41,20.01C26.54,20.22 26.79,20.48 26.97,20.59L27.29,20.79L31.62,20.83C35.54,20.87 35.98,20.89 36.22,21.02C36.61,21.23 36.75,21.48 36.75,21.94C36.75,22.44 36.66,22.62 36.31,22.81C36.06,22.95 35.63,22.96 30.88,22.98C26.82,22.99 25.62,22.97 25.31,22.88ZM42.73,22.88C42.51,22.82 42.25,22.70 42.15,22.62C41.62,22.16 41.24,21.75 41.16,21.53C41.10,21.37 41.07,18.73 41.07,12.89L41.07,4.47L41.29,4.26C41.49,4.06 41.56,4.04 42.23,4.05C42.95,4.05 43.39,4.18 43.56,4.44C43.59,4.49 43.64,7.95 43.67,12.12C43.71,19.69 43.71,19.71 43.89,20.04C43.99,20.22 44.17,20.47 44.29,20.58L44.51,20.79L48.49,20.83C52.86,20.88 52.66,20.85 52.89,21.39C53.14,21.99 52.97,22.70 52.53,22.88C52.15,23.05 43.33,23.04 42.73,22.88ZM58.53,22.88C58.38,22.82 58.22,22.69 58.17,22.60C58.11,22.48 58.08,20.16 58.08,15.03C58.08,9.95 58.05,7.52 57.99,7.30C57.94,7.12 57.79,6.87 57.67,6.74L57.43,6.50L54.96,6.50C52.25,6.50 52.13,6.48 51.73,6.01C51.21,5.39 51.26,4.55 51.83,4.21C52.12,4.04 52.24,4.04 59.21,4.02C64.09,4.00 66.39,4.02 66.60,4.08C67.05,4.21 67.25,4.51 67.25,5.06C67.25,5.59 67.11,5.96 66.80,6.25L66.57,6.46L64.01,6.50C61.18,6.55 61.16,6.55 60.86,7.10C60.72,7.36 60.71,7.87 60.69,14.90L60.68,22.43L60.50,22.63C60.17,22.98 59.07,23.12 58.53,22.88ZM71.15,22.90C70.97,22.86 70.74,22.70 70.62,22.56L70.40,22.30L70.43,20.25C70.46,18.27 70.46,18.20 70.67,17.79C70.92,17.28 71.31,17.06 71.98,17.05C72.87,17.04 73.00,17.45 73.00,20.42C73.00,22.48 73.00,22.49 72.80,22.72C72.63,22.93 72.54,22.95 72.03,22.97C71.72,22.98 71.32,22.95 71.15,22.90ZM82.88,22.85C82.53,22.73 82.41,22.64 82.19,22.29C82.04,22.06 81.82,21.73 81.69,21.55C81.56,21.37 81.34,21.05 81.19,20.84C81.05,20.63 80.81,20.31 80.67,20.12C80.53,19.94 80.22,19.49 79.97,19.11C79.72,18.74 79.48,18.41 79.43,18.38C79.38,18.35 79.19,18.07 79.01,17.77C78.71,17.25 77.85,16.37 77.51,16.24C77.44,16.20 75.46,16.18 73.12,16.17C70.23,16.17 68.77,16.14 68.59,16.07C68.24,15.95 68.05,15.58 68.05,15.00C68.05,14.42 68.24,14.05 68.59,13.93C68.78,13.86 70.55,13.83 74.37,13.83C77.40,13.83 80.02,13.80 80.19,13.76C80.49,13.69 81.55,13.02 81.78,12.76C81.85,12.68 82.10,12.24 82.34,11.76C82.78,10.92 82.79,10.89 82.78,10.22C82.77,9.38 82.56,8.78 82.01,8.06C81.41,7.27 81.08,7.06 79.99,6.78C79.05,6.54 79.03,6.54 76.50,6.54C72.83,6.54 73.06,6.34 73.00,9.54C72.96,11.68 72.95,11.81 72.77,12.09C72.37,12.75 71.55,12.73 70.85,12.06C70.46,11.68 70.42,11.41 70.42,9.33C70.42,6.19 70.54,5.53 71.26,4.72C71.86,4.04 71.81,4.04 76.33,4.04C78.51,4.04 80.42,4.07 80.59,4.10C80.75,4.14 81.08,4.30 81.33,4.46C81.58,4.62 82.04,4.85 82.36,4.97C82.98,5.20 83.57,5.66 83.95,6.20C84.09,6.39 84.33,6.73 84.50,6.96C84.87,7.45 84.95,7.70 85.12,8.75C85.28,9.75 85.28,10.43 85.12,11.38C84.93,12.47 84.87,12.63 84.25,13.46C83.52,14.44 82.99,14.90 82.27,15.19C81.52,15.49 81.21,15.81 81.21,16.28C81.21,16.56 81.26,16.70 81.48,16.94C81.62,17.11 81.88,17.47 82.05,17.73C82.21,17.99 82.44,18.30 82.54,18.42C82.64,18.53 82.83,18.81 82.96,19.04C83.09,19.27 83.34,19.63 83.50,19.83C83.67,20.04 83.91,20.38 84.04,20.58C84.17,20.79 84.43,21.13 84.61,21.33C85.06,21.84 85.29,22.36 85.16,22.59C84.94,23.00 83.72,23.14 82.88,22.85ZM90.36,22.88C90.22,22.82 90.06,22.69 90.01,22.60C89.88,22.36 89.88,4.64 90.01,4.40C90.29,3.88 91.75,3.87 92.16,4.39C92.33,4.60 92.33,4.71 92.33,7.99C92.34,10.51 92.36,11.43 92.44,11.58C92.50,11.70 92.71,11.88 92.91,11.98L93.29,12.17L97.95,12.17C102.55,12.17 102.62,12.16 102.98,11.99C103.61,11.69 103.60,11.71 103.57,7.91L103.54,4.59L103.75,4.38C104.16,3.93 105.40,3.86 105.80,4.26L106.01,4.47L106.01,13.50L106.01,22.53L105.80,22.74C105.40,23.14 104.16,23.07 103.75,22.62L103.54,22.41L103.57,19.09C103.60,15.30 103.61,15.31 102.97,15.00C102.62,14.84 102.48,14.83 97.95,14.83L93.29,14.83L92.91,15.02C92.71,15.12 92.50,15.30 92.44,15.42C92.36,15.57 92.34,16.49 92.33,19.01C92.33,22.29 92.33,22.40 92.16,22.61C91.87,22.98 90.92,23.12 90.36,22.88ZM110.19,22.91C110.04,22.86 109.86,22.74 109.79,22.63C109.67,22.45 109.68,22.37 109.92,21.57C110.07,21.10 110.35,20.39 110.54,20.00C110.74,19.61 110.96,19.03 111.04,18.71C111.12,18.39 111.32,17.86 111.50,17.54C111.67,17.22 111.90,16.67 111.99,16.31C112.09,15.95 112.33,15.33 112.53,14.93C112.73,14.53 112.96,13.95 113.04,13.62C113.11,13.30 113.32,12.78 113.50,12.46C113.67,12.14 113.91,11.54 114.03,11.12C114.14,10.71 114.39,10.09 114.57,9.75C114.75,9.40 114.96,8.86 115.04,8.54C115.12,8.22 115.32,7.70 115.50,7.38C115.67,7.05 115.90,6.49 116.00,6.11C116.16,5.52 116.25,5.35 116.65,4.88C116.92,4.58 117.22,4.27 117.32,4.20C117.56,4.03 118.39,3.96 119.05,4.04C119.52,4.09 119.56,4.12 120.11,4.69C120.77,5.39 120.86,5.53 121.04,6.25C121.12,6.55 121.32,7.05 121.50,7.38C121.68,7.70 121.89,8.22 121.96,8.54C122.04,8.86 122.27,9.45 122.47,9.85C122.67,10.25 122.91,10.86 123.00,11.22C123.10,11.58 123.32,12.14 123.50,12.47C123.68,12.79 123.90,13.37 124.00,13.76C124.10,14.14 124.32,14.72 124.50,15.04C124.67,15.36 124.91,15.98 125.04,16.42C125.16,16.85 125.37,17.38 125.50,17.58C125.63,17.79 125.84,18.31 125.96,18.75C126.09,19.19 126.34,19.82 126.51,20.17C126.88,20.88 127.33,22.28 127.27,22.53C127.16,22.94 125.85,23.15 125.26,22.85C124.87,22.66 124.24,21.56 124.00,20.64C123.90,20.27 123.69,19.71 123.54,19.41C123.39,19.11 123.15,18.46 123.01,17.98C122.87,17.49 122.64,16.91 122.50,16.69C122.37,16.46 122.16,15.91 122.04,15.45C121.92,15.00 121.66,14.29 121.46,13.88C121.26,13.46 121.03,12.88 120.96,12.59C120.88,12.29 120.68,11.79 120.50,11.46C120.32,11.14 120.10,10.56 120.00,10.18C119.90,9.79 119.71,9.25 119.57,8.97C119.42,8.69 119.22,8.18 119.12,7.85C119.02,7.51 118.87,7.16 118.79,7.08C118.61,6.88 118.32,6.87 118.15,7.06C117.92,7.31 117.18,8.98 117.00,9.65C116.90,10.00 116.68,10.56 116.50,10.89C116.30,11.25 116.10,11.79 116.00,12.22C115.90,12.65 115.69,13.20 115.51,13.54C115.33,13.86 115.09,14.47 114.97,14.89C114.85,15.31 114.63,15.91 114.47,16.22C114.31,16.54 114.12,17.05 114.04,17.38C113.96,17.70 113.74,18.28 113.54,18.68C113.34,19.08 113.09,19.75 112.97,20.18C112.86,20.61 112.57,21.36 112.33,21.86C111.96,22.64 111.87,22.78 111.62,22.88C111.31,23.01 110.60,23.03 110.19,22.91ZM14.81,20.38C15.81,19.90 15.87,19.84 16.32,18.95C16.62,18.36 16.67,18.20 16.67,17.73C16.67,17.43 16.62,17.04 16.55,16.86C16.39,16.40 15.71,15.31 15.50,15.18C15.40,15.12 14.90,14.96 14.39,14.81L13.46,14.55L10.52,14.52C7.27,14.48 7.19,14.49 6.81,15.03C6.63,15.28 6.62,15.37 6.60,17.38L6.58,19.47L6.85,20.01C7.30,20.87 7.15,20.84 10.83,20.82L13.96,20.79L14.81,20.38ZM24.61,14.75C23.99,14.62 23.67,14.10 23.79,13.45C23.84,13.15 24.16,12.72 24.44,12.57C24.68,12.44 33.26,12.47 33.55,12.60C33.87,12.75 34.11,13.35 34.06,13.85C34.00,14.35 33.82,14.64 33.52,14.76C33.27,14.85 25.06,14.84 24.61,14.75ZM14.00,11.98C14.51,11.86 14.57,11.82 15.15,11.20C15.86,10.43 15.96,10.19 15.96,9.25C15.96,8.44 15.85,8.17 15.30,7.60C14.86,7.13 14.56,6.99 13.49,6.72C12.61,6.49 12.59,6.49 10.02,6.52L7.43,6.54L7.12,6.83C6.59,7.35 6.58,7.37 6.58,9.53C6.58,12.37 6.30,12.18 10.46,12.14C12.76,12.11 13.58,12.08 14.00,11.98ZM24.37,11.05C24.23,10.99 24.03,10.83 23.92,10.70C23.74,10.47 23.74,10.44 23.77,8.08L23.79,5.70L24.04,5.21C24.35,4.61 24.83,4.22 25.42,4.09C26.00,3.97 35.42,3.97 35.86,4.09C36.37,4.23 36.58,4.50 36.58,5.00C36.58,5.56 36.42,5.93 36.04,6.22L35.72,6.46L31.51,6.50L27.29,6.54L26.88,6.75C26.19,7.10 26.12,7.29 26.15,8.89C26.18,10.33 26.12,10.63 25.76,10.95C25.53,11.16 24.73,11.22 24.37,11.05Z"/><path fill="currentColor" d="M5.768000000000001 32.016000000000005H8.648V32.696000000000005H5.768000000000001ZM5.84 34.504000000000005H9.104V35.2H5.04V29.6H8.992V30.296000000000003H5.84ZM13.245333333333335 35.2V29.6H13.901333333333335L17.605333333333334 34.2H17.261333333333333V29.6H18.061333333333334V35.2H17.405333333333335L13.701333333333334 30.6H14.045333333333335V35.2ZM25.11466666666667 35.264Q24.46666666666667 35.264 23.92266666666667 35.05200000000001Q23.37866666666667 34.84 22.97866666666667 34.452Q22.57866666666667 34.064 22.35466666666667 33.544Q22.13066666666667 33.024 22.13066666666667 32.400000000000006Q22.13066666666667 31.776000000000003 22.35466666666667 31.256000000000004Q22.57866666666667 30.736000000000004 22.98266666666667 30.348000000000003Q23.38666666666667 29.96 23.93066666666667 29.748Q24.47466666666667 29.536 25.13066666666667 29.536Q25.79466666666667 29.536 26.34666666666667 29.752000000000002Q26.89866666666667 29.968000000000004 27.28266666666667 30.400000000000002L26.78666666666667 30.896Q26.442666666666668 30.560000000000002 26.038666666666668 30.404000000000003Q25.634666666666668 30.248000000000005 25.16266666666667 30.248000000000005Q24.68266666666667 30.248000000000005 24.27066666666667 30.408000000000005Q23.85866666666667 30.568000000000005 23.55866666666667 30.856Q23.25866666666667 31.144000000000002 23.09466666666667 31.540000000000003Q22.93066666666667 31.936000000000003 22.93066666666667 32.400000000000006Q22.93066666666667 32.856 23.09466666666667 33.252Q23.25866666666667 33.648 23.55866666666667 33.94Q23.85866666666667 34.232 24.266666666666673 34.391999999999996Q24.67466666666667 34.552 25.15466666666667 34.552Q25.60266666666667 34.552 26.01466666666667 34.412000000000006Q26.42666666666667 34.272000000000006 26.77866666666667 33.944L27.23466666666667 34.552Q26.81866666666667 34.904 26.262666666666668 35.084Q25.70666666666667 35.264 25.11466666666667 35.264ZM26.46666666666667 34.448V32.368H27.23466666666667V34.552ZM32.336 32.016000000000005H35.216V32.696000000000005H32.336ZM32.408 34.504000000000005H35.672V35.2H31.608V29.6H35.56V30.296000000000003H32.408ZM39.81333333333334 35.2V29.6H40.46933333333334L44.17333333333334 34.2H43.82933333333334V29.6H44.629333333333335V35.2H43.973333333333336L40.269333333333336 30.6H40.61333333333334V35.2ZM53.17066666666667 29.6H53.970666666666666V35.2H53.17066666666667ZM49.95466666666667 35.2H49.15466666666667V29.6H49.95466666666667ZM53.242666666666665 32.704H49.87466666666667V32.008H53.242666666666665ZM57.647999999999996 35.2 60.184 29.6H60.976L63.519999999999996 35.2H62.68L60.416 30.048000000000002H60.736L58.472 35.2ZM58.728 33.800000000000004 58.943999999999996 33.160000000000004H62.096L62.327999999999996 33.800000000000004ZM67.19733333333333 35.2V29.6H69.38133333333333Q70.11733333333333 29.6 70.63733333333333 29.832Q71.15733333333333 30.064000000000004 71.43733333333333 30.504000000000005Q71.71733333333333 30.944000000000003 71.71733333333333 31.552000000000003Q71.71733333333333 32.160000000000004 71.43733333333333 32.596000000000004Q71.15733333333333 33.032000000000004 70.63733333333333 33.264Q70.11733333333333 33.496 69.38133333333333 33.496H67.63733333333333L67.99733333333333 33.128V35.2ZM70.94133333333333 35.2 69.51733333333333 33.168000000000006H70.37333333333333L71.81333333333333 35.2ZM67.99733333333333 33.208000000000006 67.63733333333333 32.816H69.35733333333333Q70.12533333333333 32.816 70.52133333333333 32.484Q70.91733333333333 32.152 70.91733333333333 31.552000000000003Q70.91733333333333 30.952 70.52133333333333 30.624000000000002Q70.12533333333333 30.296000000000003 69.35733333333333 30.296000000000003H67.63733333333333L67.99733333333333 29.896ZM75.85866666666666 35.2V29.6H76.65866666666666V35.2ZM80.336 35.2 82.872 29.6H83.66399999999999L86.208 35.2H85.368L83.104 30.048000000000002H83.42399999999999L81.16 35.2ZM81.416 33.800000000000004 81.63199999999999 33.160000000000004H84.78399999999999L85.01599999999999 33.800000000000004Z"/></svg></div><span>Beltrhan Engenharia</span><small>Ver site</small></a>
       <a class="logo-parceiro zavie" href="https://www.instagram.com/_zaviearquitetura/" target="_blank" rel="noopener"><div class="img"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="2 2 70 102" ><path fill="currentColor" fill-rule="evenodd" d="M13.23,92.28C13.21,92.25 12.20,92.22 10.99,92.21C9.77,92.19 8.68,92.17 8.56,92.17C8.44,92.17 7.69,92.18 6.89,92.21C5.59,92.25 5.42,92.25 5.22,92.15C4.89,92.00 4.78,91.79 4.78,91.35C4.79,90.92 4.87,90.73 5.32,90.12C5.50,89.87 5.71,89.48 5.83,89.15C5.95,88.84 6.17,88.41 6.32,88.18C6.48,87.95 6.68,87.57 6.78,87.32C6.87,87.07 7.09,86.66 7.26,86.40C7.43,86.14 7.66,85.74 7.77,85.51C7.89,85.28 8.11,84.90 8.26,84.66C8.41,84.42 8.64,83.99 8.75,83.72C8.87,83.44 9.06,83.05 9.18,82.84C9.29,82.64 9.52,82.20 9.68,81.88C9.85,81.55 10.10,81.10 10.26,80.87C10.41,80.65 10.64,80.22 10.76,79.93C10.89,79.63 11.11,79.22 11.27,79.01C11.46,78.75 11.62,78.43 11.75,78.04C11.90,77.58 12.01,77.38 12.25,77.09C12.66,76.61 13.02,75.90 12.99,75.63C12.95,75.20 12.78,75.15 11.42,75.17C9.86,75.20 9.12,75.28 8.72,75.47C8.15,75.75 7.51,76.24 7.16,76.68C6.69,77.27 5.94,77.92 5.66,77.97C5.22,78.05 4.94,77.77 4.94,77.23C4.94,76.87 5.03,76.65 5.39,76.12C5.58,75.83 5.71,75.55 5.81,75.18C6.05,74.29 6.22,74.06 6.78,73.87C7.08,73.77 15.06,73.78 15.45,73.88C16.10,74.05 16.17,74.64 15.62,75.39C15.53,75.52 15.37,75.83 15.28,76.07C15.19,76.31 15.02,76.64 14.90,76.80C14.78,76.96 14.55,77.38 14.37,77.74C14.20,78.09 13.93,78.56 13.79,78.78C13.64,78.99 13.47,79.31 13.41,79.48C13.12,80.26 13.01,80.49 12.77,80.81C12.63,81.00 12.40,81.41 12.26,81.73C12.13,82.04 11.89,82.48 11.74,82.70C11.58,82.92 11.31,83.40 11.14,83.77C10.96,84.14 10.76,84.52 10.69,84.62C10.62,84.71 10.37,85.17 10.14,85.63C9.68,86.51 8.94,87.90 8.67,88.38C8.58,88.53 8.44,88.84 8.35,89.07C8.25,89.30 8.05,89.64 7.87,89.85C7.38,90.42 7.48,90.89 8.07,90.88C8.19,90.87 9.11,90.86 10.12,90.85C11.27,90.84 12.05,90.80 12.18,90.76C12.64,90.61 13.49,89.92 13.86,89.41C15.03,87.77 15.26,87.54 15.62,87.66C15.96,87.78 16.21,88.65 16.07,89.23C16.03,89.39 15.88,89.70 15.74,89.93C15.61,90.16 15.41,90.61 15.31,90.93C15.09,91.64 14.90,91.94 14.60,92.09C14.25,92.25 13.34,92.38 13.23,92.28ZM28.09,92.25C27.85,92.23 27.30,92.22 26.88,92.24C25.98,92.27 25.63,92.20 25.44,91.96C25.18,91.63 25.28,91.32 25.78,90.84C26.20,90.45 26.24,90.30 26.07,89.73C26.00,89.48 25.93,89.14 25.90,88.97C25.88,88.80 25.83,88.45 25.78,88.19C25.73,87.93 25.65,87.43 25.60,87.07C25.40,85.74 24.89,85.41 23.53,85.75C22.88,85.91 22.70,85.91 22.24,85.71C21.62,85.45 21.42,85.64 20.93,86.92C20.40,88.28 20.37,88.38 20.27,89.29C20.14,90.35 20.19,90.51 20.74,90.88C21.23,91.20 21.35,91.49 21.16,91.88C20.99,92.19 20.90,92.21 19.28,92.23C17.59,92.25 17.37,92.21 17.18,91.92C16.93,91.51 17.05,91.30 17.98,90.52C18.41,90.16 18.62,89.72 18.69,89.01C18.93,86.72 18.91,86.83 19.25,86.16C19.61,85.42 19.65,85.23 20.00,82.82C20.04,82.52 20.11,82.35 20.25,82.16C20.61,81.69 20.67,81.47 20.74,80.50C20.83,79.37 20.93,78.89 21.22,78.27C21.53,77.61 21.72,77.05 21.85,76.42C21.97,75.83 22.34,74.64 22.50,74.30C22.75,73.81 23.20,73.60 23.88,73.64C24.72,73.68 24.82,73.89 25.44,77.03C25.51,77.41 25.66,77.94 25.75,78.21C25.99,78.86 26.16,79.55 26.31,80.53C26.39,80.99 26.56,81.72 26.72,82.22C26.89,82.75 27.10,83.63 27.25,84.47C27.45,85.51 27.59,86.08 27.85,86.84C28.14,87.70 28.20,87.95 28.25,88.56C28.33,89.42 28.38,89.63 28.63,90.03C28.88,90.43 29.08,90.64 29.49,90.95C30.47,91.68 29.68,92.42 28.09,92.25ZM64.19,92.25C63.90,92.22 62.45,92.21 60.97,92.23C58.16,92.26 58.05,92.25 57.77,91.99C57.41,91.66 57.56,91.24 58.13,90.93C58.86,90.53 58.78,91.45 58.79,83.03C58.80,74.67 58.86,75.48 58.22,75.12C57.64,74.80 57.50,74.49 57.75,74.17C58.07,73.76 58.41,73.74 62.69,73.81C63.67,73.83 65.02,73.82 65.69,73.79C67.03,73.73 67.46,73.78 67.81,74.02C68.02,74.16 68.06,74.23 68.49,75.09C68.63,75.37 68.83,75.76 68.93,75.97C69.44,76.94 69.26,77.94 68.57,77.94C68.27,77.94 68.10,77.81 67.84,77.40C67.72,77.21 67.40,76.84 67.14,76.58C66.87,76.31 66.56,75.97 66.45,75.83C66.02,75.28 65.65,75.20 63.34,75.18C61.52,75.16 61.45,75.17 61.29,75.49C61.16,75.74 61.12,81.08 61.24,81.31C61.48,81.74 61.69,81.84 62.11,81.72C62.50,81.60 62.81,81.60 63.32,81.73C63.58,81.79 63.83,81.81 63.97,81.78C64.41,81.70 65.14,80.80 65.46,79.96C65.66,79.45 65.82,79.33 66.26,79.39C66.95,79.49 67.14,80.20 66.84,81.53C66.72,82.06 66.73,82.69 66.88,83.40C67.13,84.59 66.83,85.38 66.14,85.38C65.71,85.38 65.37,85.01 65.22,84.38C65.09,83.85 64.80,83.46 64.35,83.24C64.12,83.12 64.03,83.11 63.36,83.15C62.90,83.17 62.46,83.16 62.20,83.11C61.68,83.02 61.49,83.07 61.31,83.32C61.16,83.52 61.16,83.52 61.18,86.90C61.20,90.65 61.19,90.54 61.61,90.76C61.79,90.85 62.03,90.86 63.64,90.83C65.85,90.80 65.96,90.78 66.52,90.26C66.73,90.06 67.04,89.81 67.20,89.69C67.52,89.47 67.69,89.17 67.84,88.62C68.09,87.72 69.00,87.38 69.33,88.08C69.47,88.37 69.47,88.46 69.28,89.41C69.09,90.34 69.06,90.44 68.60,91.21C68.22,91.85 68.00,92.08 67.64,92.19C67.36,92.28 64.93,92.32 64.19,92.25ZM46.62,92.17C46.34,92.10 46.13,91.95 46.02,91.74C45.72,91.14 46.61,90.67 47.74,90.82C48.35,90.90 48.65,90.82 48.86,90.50C49.00,90.29 49.00,90.29 49.00,83.13C48.99,78.44 48.97,75.88 48.93,75.72C48.89,75.59 48.78,75.39 48.67,75.29C48.47,75.11 48.47,75.11 47.91,75.16C46.70,75.27 46.22,75.18 46.03,74.81C45.90,74.55 45.92,74.35 46.10,74.13C46.33,73.85 46.56,73.82 48.09,73.81C48.85,73.81 49.74,73.81 50.06,73.81C52.85,73.79 53.77,73.84 54.06,74.00C54.45,74.22 54.56,74.45 54.40,74.75C54.21,75.10 53.85,75.20 52.88,75.16C51.99,75.13 51.75,75.19 51.60,75.49C51.37,75.93 51.36,76.16 51.37,83.14C51.37,89.81 51.37,90.01 51.49,90.28C51.69,90.72 51.83,90.77 52.84,90.82C53.77,90.86 54.02,90.93 54.21,91.20C54.43,91.51 54.25,91.92 53.82,92.11C53.57,92.22 47.01,92.27 46.62,92.17ZM36.28,92.07C35.90,91.90 35.72,91.46 35.47,90.16C35.38,89.67 35.21,88.99 35.09,88.62C34.97,88.26 34.77,87.42 34.63,86.74C34.50,86.06 34.26,85.12 34.10,84.64C33.93,84.11 33.81,83.60 33.78,83.31C33.73,82.73 33.64,82.30 33.49,81.94C33.42,81.78 33.31,81.40 33.25,81.09C33.18,80.78 33.07,80.35 33.00,80.12C32.93,79.90 32.80,79.34 32.71,78.88C32.55,78.06 31.98,76.14 31.79,75.76C31.73,75.65 31.52,75.44 31.32,75.29C30.71,74.82 30.59,74.47 30.93,74.13C31.21,73.84 31.51,73.80 32.94,73.81C34.55,73.82 34.72,73.84 35.05,74.14C35.30,74.38 35.24,74.68 34.84,75.14C34.30,75.75 34.27,76.23 34.71,77.20C35.01,77.85 35.05,78.00 35.16,78.90C35.21,79.34 35.26,79.72 35.28,79.75C35.29,79.77 35.37,80.13 35.46,80.55C35.56,81.01 35.71,81.52 35.85,81.82C36.01,82.19 36.11,82.53 36.19,83.06C36.61,85.69 36.76,86.13 37.19,85.92C37.54,85.74 37.70,85.22 37.85,83.70C37.95,82.61 37.98,82.48 38.31,81.94C38.48,81.66 38.58,81.40 38.62,81.12C38.66,80.90 38.76,80.28 38.84,79.75C38.98,78.89 39.03,78.71 39.31,78.13C39.64,77.41 39.71,77.21 39.81,76.49C39.90,75.88 39.83,75.61 39.50,75.23C38.59,74.20 39.25,73.67 41.31,73.77C42.19,73.81 42.50,73.89 42.76,74.13C43.08,74.43 43.02,74.57 42.31,75.24C41.53,75.98 41.34,76.33 41.24,77.19C41.10,78.46 41.06,78.62 40.74,79.23C40.39,79.90 40.28,80.28 40.22,81.01C40.14,81.89 40.02,82.40 39.66,83.29C39.35,84.07 39.31,84.24 39.22,85.01C39.10,86.07 39.01,86.37 38.66,86.91C38.28,87.48 38.14,87.87 37.99,88.78C37.92,89.19 37.77,89.81 37.66,90.16C37.54,90.50 37.42,90.94 37.37,91.12C37.20,91.88 36.75,92.27 36.28,92.07ZM24.37,84.15C24.83,83.82 24.77,83.00 24.15,81.11C23.94,80.47 23.86,80.08 23.81,79.58C23.68,78.24 23.59,77.88 23.36,77.88C23.17,77.88 23.02,78.17 22.88,78.86C22.80,79.23 22.64,79.85 22.53,80.25C22.42,80.65 22.29,81.25 22.25,81.59C22.21,81.94 22.09,82.46 21.99,82.74C21.79,83.35 21.77,83.49 21.91,83.76C22.04,84.00 22.22,84.06 22.86,84.06C23.16,84.06 23.55,84.10 23.72,84.15C24.14,84.27 24.20,84.27 24.37,84.15ZM16.21,69.94C15.33,69.81 14.96,69.17 15.31,68.40C15.41,68.17 16.65,66.32 17.38,65.28C17.55,65.04 18.00,64.38 18.37,63.81C18.75,63.24 19.18,62.64 19.33,62.47C19.48,62.30 19.73,61.96 19.87,61.72C20.02,61.48 20.29,61.11 20.47,60.91C20.65,60.70 21.01,60.22 21.27,59.84C21.54,59.46 21.89,58.99 22.05,58.81C22.22,58.62 22.60,58.16 22.90,57.78C23.20,57.40 23.63,56.85 23.87,56.56C24.11,56.27 24.48,55.78 24.69,55.48C24.90,55.18 25.18,54.81 25.31,54.66C25.45,54.50 25.66,54.19 25.78,53.95C25.90,53.72 26.13,53.38 26.29,53.19C26.44,53.00 26.69,52.67 26.83,52.47C27.18,51.95 27.65,51.36 28.10,50.87C28.30,50.64 28.58,50.26 28.72,50.03C28.86,49.79 29.28,49.21 29.66,48.73C30.04,48.26 30.47,47.69 30.62,47.48C30.77,47.27 31.03,46.90 31.20,46.67C31.38,46.43 31.63,46.07 31.77,45.86C31.90,45.64 32.14,45.34 32.28,45.18C32.43,45.02 32.68,44.69 32.84,44.45C32.99,44.21 33.26,43.85 33.43,43.66C33.61,43.47 33.85,43.11 33.97,42.87C34.10,42.62 34.33,42.27 34.49,42.10C34.65,41.92 34.87,41.67 34.97,41.53C35.06,41.39 35.25,41.17 35.38,41.03C35.51,40.89 35.98,40.26 36.42,39.62C36.86,38.98 37.51,38.08 37.88,37.63C38.72,36.56 39.11,36.03 39.55,35.38C39.74,35.08 40.05,34.68 40.23,34.48C40.41,34.28 40.68,33.94 40.82,33.73C40.97,33.52 41.20,33.20 41.35,33.03C41.49,32.86 41.71,32.54 41.84,32.31C41.97,32.09 42.19,31.75 42.34,31.56C42.49,31.37 42.71,31.05 42.84,30.84C42.97,30.64 43.23,30.31 43.41,30.12C43.59,29.94 43.91,29.54 44.12,29.23C45.03,27.92 45.26,27.60 45.58,27.23C46.38,26.25 47.28,25.08 48.02,24.02C48.18,23.79 48.43,23.45 48.58,23.27C48.72,23.10 48.98,22.76 49.16,22.53C49.33,22.30 49.66,21.85 49.89,21.54C50.12,21.22 50.47,20.73 50.66,20.44C50.86,20.15 51.15,19.76 51.31,19.57C51.48,19.37 51.74,19.02 51.89,18.78C52.04,18.54 52.28,18.21 52.43,18.05C52.57,17.88 52.77,17.61 52.88,17.45C52.99,17.29 53.21,17.02 53.36,16.84C53.52,16.67 53.74,16.38 53.86,16.19C53.98,16.00 54.24,15.63 54.44,15.38C55.06,14.54 55.53,13.92 55.74,13.63C55.86,13.47 56.09,13.19 56.25,13.00C56.41,12.81 56.66,12.47 56.81,12.25C56.96,12.03 57.17,11.73 57.29,11.59C57.40,11.45 57.60,11.15 57.73,10.93C57.85,10.71 58.15,10.34 58.38,10.11C58.90,9.59 58.99,9.33 58.73,9.08C58.53,8.88 59.38,8.90 51.78,8.95C39.64,9.04 16.13,9.01 15.78,8.91C15.15,8.72 14.99,8.41 14.95,7.25C14.90,5.68 15.15,5.16 16.03,5.04C16.17,5.02 27.37,5.00 40.93,4.99C65.58,4.98 65.58,4.98 65.76,5.18C65.91,5.35 65.94,5.43 65.94,5.72C65.94,6.21 65.66,6.70 64.68,7.91C64.49,8.15 64.21,8.51 64.07,8.72C63.37,9.73 62.87,10.41 62.33,11.06C62.01,11.45 61.63,12.00 61.48,12.28C61.31,12.61 61.09,12.91 60.84,13.16C60.59,13.40 60.37,13.70 60.23,13.98C60.10,14.23 59.86,14.60 59.67,14.82C59.49,15.03 59.19,15.46 59.00,15.76C58.41,16.70 57.80,17.58 57.57,17.84C57.44,17.98 57.21,18.28 57.06,18.50C56.77,18.94 56.30,19.54 55.74,20.20C55.55,20.43 55.29,20.81 55.16,21.04C55.04,21.28 54.77,21.67 54.57,21.92C54.36,22.17 53.95,22.73 53.65,23.17C53.35,23.61 53.00,24.10 52.87,24.25C52.75,24.40 52.50,24.74 52.31,25.00C52.13,25.26 51.82,25.64 51.62,25.84C51.42,26.05 51.16,26.40 51.03,26.62C50.91,26.84 50.68,27.18 50.53,27.37C50.04,27.99 49.51,28.70 49.12,29.27C48.91,29.57 48.65,29.87 48.56,29.94C48.46,30.01 48.06,30.54 47.68,31.11C46.98,32.15 46.09,33.34 45.60,33.88C45.46,34.03 45.27,34.27 45.19,34.41C45.11,34.54 44.91,34.83 44.75,35.03C44.59,35.24 44.36,35.58 44.25,35.78C44.13,35.99 43.88,36.33 43.69,36.53C43.50,36.74 43.24,37.05 43.13,37.22C43.01,37.39 42.79,37.69 42.63,37.88C42.34,38.21 41.56,39.26 41.09,39.95C40.95,40.14 40.57,40.64 40.24,41.05C39.90,41.46 39.46,42.05 39.26,42.35C39.06,42.66 38.80,42.99 38.69,43.09C38.58,43.20 38.37,43.45 38.23,43.66C38.09,43.86 37.86,44.17 37.72,44.34C37.57,44.52 37.33,44.85 37.19,45.09C37.04,45.33 36.83,45.63 36.72,45.75C36.61,45.88 36.40,46.14 36.25,46.35C36.10,46.55 35.82,46.89 35.63,47.10C35.44,47.30 35.19,47.65 35.07,47.87C34.96,48.08 34.74,48.40 34.59,48.57C34.44,48.74 34.18,49.08 34.01,49.33C33.84,49.58 33.65,49.83 33.59,49.88C33.48,49.96 32.97,50.63 32.29,51.55C31.56,52.54 31.02,53.24 30.75,53.56C30.59,53.75 30.28,54.16 30.07,54.47C29.86,54.78 29.54,55.23 29.36,55.48C29.18,55.72 28.86,56.17 28.64,56.48C28.43,56.78 28.08,57.23 27.87,57.46C27.66,57.70 27.34,58.12 27.16,58.40C26.98,58.68 26.75,59.01 26.64,59.13C26.54,59.25 26.32,59.55 26.17,59.80C26.01,60.05 25.70,60.48 25.48,60.77C25.27,61.05 25.00,61.41 24.89,61.57C24.78,61.72 24.42,62.18 24.09,62.59C23.77,63.01 23.42,63.48 23.33,63.65C23.05,64.13 22.75,64.58 22.34,65.08C21.85,65.70 21.31,66.44 20.98,66.95C19.84,68.76 19.02,69.62 18.18,69.88C17.78,70.01 16.86,70.03 16.21,69.94ZM25.45,69.91C24.83,69.64 24.85,68.79 25.48,68.06C25.84,67.65 26.56,66.66 26.85,66.19C27.15,65.68 27.72,64.88 28.23,64.25C28.44,63.99 28.73,63.57 28.87,63.32C29.01,63.06 29.32,62.61 29.56,62.32C30.03,61.71 31.13,60.26 31.57,59.65C31.74,59.42 32.02,59.08 32.20,58.88C32.39,58.69 32.65,58.33 32.78,58.09C32.91,57.85 33.13,57.52 33.26,57.36C33.51,57.06 34.00,56.37 34.66,55.38C34.86,55.08 35.14,54.71 35.29,54.54C35.44,54.38 35.66,54.07 35.79,53.85C35.92,53.64 36.16,53.31 36.32,53.12C36.61,52.79 36.97,52.29 37.74,51.19C37.95,50.90 38.41,50.29 38.78,49.84C39.15,49.40 39.56,48.85 39.69,48.62C39.82,48.40 40.09,48.06 40.28,47.86C40.47,47.66 40.75,47.30 40.90,47.07C41.06,46.84 41.30,46.50 41.45,46.30C41.60,46.11 41.89,45.71 42.11,45.43C42.33,45.14 42.66,44.71 42.85,44.47C43.04,44.23 43.35,43.79 43.55,43.50C43.74,43.21 44.03,42.80 44.20,42.60C44.37,42.40 44.62,42.04 44.77,41.79C44.91,41.55 45.24,41.12 45.50,40.84C46.15,40.15 46.38,39.85 46.69,39.31C46.83,39.05 47.10,38.66 47.27,38.44C47.45,38.21 47.69,37.90 47.79,37.75C47.90,37.59 48.11,37.33 48.27,37.16C48.42,36.98 48.64,36.69 48.77,36.50C48.89,36.30 49.13,35.98 49.30,35.78C49.48,35.58 49.73,35.21 49.86,34.98C49.99,34.74 50.19,34.43 50.32,34.29C50.44,34.15 50.70,33.82 50.90,33.56C51.09,33.30 51.52,32.76 51.84,32.34C52.17,31.93 52.60,31.35 52.79,31.06C52.99,30.77 53.46,30.14 53.84,29.66C54.23,29.18 54.66,28.60 54.81,28.38C55.43,27.45 55.99,26.70 56.35,26.31C56.56,26.09 56.90,25.65 57.12,25.33C57.33,25.01 57.68,24.53 57.90,24.27C58.11,24.00 58.44,23.57 58.62,23.31C58.81,23.05 59.07,22.70 59.22,22.53C59.36,22.36 59.60,22.04 59.75,21.81C59.90,21.59 60.15,21.25 60.31,21.06C60.47,20.87 60.70,20.58 60.81,20.41C60.93,20.23 61.12,19.97 61.25,19.81C61.38,19.66 61.60,19.35 61.75,19.12C61.90,18.90 62.14,18.59 62.28,18.44C62.43,18.28 62.66,17.97 62.81,17.75C62.96,17.53 63.20,17.19 63.35,17.00C63.50,16.81 63.75,16.42 63.91,16.12C64.41,15.20 65.13,14.60 65.70,14.61C67.09,14.63 68.42,14.73 68.61,14.83C69.06,15.07 69.14,15.55 68.80,16.02C68.69,16.18 68.44,16.53 68.25,16.79C68.07,17.06 67.63,17.64 67.29,18.08C66.94,18.52 66.50,19.10 66.31,19.37C66.12,19.64 65.85,20.00 65.71,20.16C65.57,20.33 65.38,20.60 65.28,20.75C65.19,20.90 64.94,21.24 64.74,21.49C64.54,21.74 64.28,22.10 64.16,22.27C64.05,22.45 63.83,22.73 63.68,22.91C63.52,23.08 63.30,23.36 63.19,23.53C63.07,23.70 62.85,24.00 62.69,24.19C62.53,24.38 62.30,24.67 62.19,24.84C62.07,25.02 61.83,25.34 61.65,25.56C61.48,25.79 61.12,26.27 60.87,26.65C60.61,27.02 60.23,27.53 60.03,27.78C59.82,28.02 59.46,28.50 59.23,28.85C59.00,29.19 58.52,29.83 58.18,30.28C57.83,30.73 57.39,31.33 57.20,31.62C57.01,31.92 56.75,32.28 56.63,32.43C56.51,32.58 56.27,32.91 56.09,33.16C55.63,33.83 54.89,34.80 54.58,35.15C54.43,35.32 54.21,35.64 54.08,35.86C53.96,36.08 53.68,36.49 53.46,36.77C51.92,38.73 51.59,39.16 51.28,39.64C51.12,39.87 50.85,40.24 50.68,40.45C50.51,40.67 50.28,41.01 50.17,41.22C50.07,41.42 49.81,41.78 49.59,42.00C49.38,42.22 49.13,42.54 49.03,42.70C48.94,42.87 48.74,43.13 48.60,43.30C48.45,43.46 48.24,43.76 48.12,43.97C48.01,44.17 47.79,44.48 47.63,44.65C46.97,45.38 45.61,47.16 45.26,47.75C45.11,48.01 44.84,48.38 44.66,48.59C44.49,48.79 44.20,49.15 44.03,49.38C43.86,49.62 43.45,50.15 43.13,50.58C42.80,51.00 42.23,51.75 41.86,52.25C41.49,52.75 41.02,53.35 40.83,53.59C40.63,53.83 40.37,54.17 40.26,54.34C40.14,54.51 39.91,54.81 39.75,55.00C39.59,55.19 39.33,55.55 39.18,55.79C38.91,56.24 38.61,56.65 37.82,57.64C37.61,57.91 37.28,58.37 37.10,58.65C36.92,58.93 36.69,59.26 36.58,59.38C36.29,59.71 35.47,60.88 35.21,61.32C35.08,61.54 34.87,61.83 34.75,61.97C34.44,62.30 33.67,63.42 33.39,63.94C33.26,64.16 32.99,64.53 32.77,64.77C32.36,65.20 32.27,65.39 32.34,65.66C32.42,65.99 32.04,65.98 41.53,65.99C56.07,66.00 67.07,66.07 67.34,66.14C67.90,66.28 68.09,66.77 68.09,68.00C68.09,68.93 67.93,69.38 67.50,69.66C67.26,69.82 67.26,69.82 49.24,69.82C37.18,69.82 30.94,69.84 30.37,69.89C29.66,69.94 29.42,69.94 28.88,69.85C28.04,69.72 27.45,69.72 26.72,69.88C26.01,70.02 25.73,70.03 25.45,69.91ZM6.09,69.88C5.46,69.83 5.25,69.74 4.93,69.39C4.49,68.90 4.45,68.64 4.61,67.34C4.65,67.10 4.66,66.01 4.64,64.91C4.60,62.38 4.60,65.26 4.62,34.06C4.63,19.33 4.62,7.04 4.59,6.75C4.54,6.12 4.68,5.69 5.04,5.38C5.33,5.12 5.60,5.06 6.52,5.06C7.58,5.06 7.85,5.18 8.10,5.78C8.21,6.05 8.20,2.99 8.27,47.88C8.29,58.49 8.32,62.39 8.37,62.49C8.62,62.96 9.07,62.71 9.70,61.76C9.86,61.51 10.14,61.14 10.30,60.95C10.47,60.75 10.71,60.44 10.85,60.25C11.17,59.80 11.89,58.87 12.25,58.44C12.41,58.25 12.68,57.89 12.84,57.63C13.00,57.38 13.28,57.02 13.46,56.84C13.64,56.66 13.89,56.30 14.02,56.05C14.31,55.51 14.69,54.96 15.21,54.33C15.41,54.08 15.75,53.62 15.96,53.31C16.55,52.45 17.12,51.69 17.40,51.37C17.55,51.21 17.75,50.91 17.86,50.71C17.97,50.51 18.20,50.20 18.38,50.03C18.55,49.86 18.81,49.55 18.95,49.34C19.09,49.14 19.31,48.86 19.44,48.72C19.56,48.58 19.81,48.25 19.99,48.00C20.17,47.74 20.54,47.25 20.81,46.91C21.91,45.52 22.53,44.70 22.80,44.25C22.95,43.99 23.22,43.60 23.40,43.38C23.58,43.15 23.82,42.83 23.94,42.66C24.05,42.48 24.26,42.22 24.40,42.06C24.55,41.91 24.98,41.31 25.37,40.74C25.76,40.17 26.20,39.55 26.35,39.37C26.51,39.19 26.73,38.88 26.86,38.69C26.98,38.50 27.21,38.20 27.38,38.03C27.70,37.70 28.14,37.11 28.75,36.22C28.96,35.92 29.25,35.52 29.40,35.35C29.55,35.17 29.73,34.94 29.81,34.82C29.89,34.71 30.09,34.46 30.25,34.27C30.41,34.09 30.66,33.75 30.79,33.52C30.92,33.29 31.19,32.93 31.38,32.72C31.57,32.50 31.83,32.19 31.94,32.02C32.21,31.63 32.95,30.64 34.18,29.06C34.38,28.80 34.68,28.38 34.86,28.12C35.03,27.85 35.32,27.46 35.51,27.24C36.00,26.65 36.42,26.12 36.85,25.51C37.07,25.22 37.35,24.87 37.49,24.73C37.62,24.58 37.84,24.30 37.97,24.10C38.21,23.71 39.10,22.52 39.38,22.22C39.55,22.03 39.97,21.44 40.74,20.31C40.97,19.99 41.27,19.58 41.42,19.41C41.58,19.24 41.78,18.93 41.89,18.73C41.99,18.52 42.22,18.19 42.40,18.00C42.58,17.81 42.82,17.53 42.94,17.38C43.06,17.22 43.28,16.99 43.42,16.85C43.57,16.72 43.79,16.45 43.90,16.26C44.18,15.81 45.08,14.91 45.39,14.78C45.66,14.67 47.33,14.47 48.00,14.47C48.79,14.47 49.19,14.77 49.19,15.39C49.19,15.79 49.11,15.93 48.69,16.30C48.49,16.48 48.23,16.78 48.13,16.96C48.02,17.15 47.82,17.44 47.68,17.61C47.54,17.77 47.33,18.09 47.22,18.31C47.10,18.54 46.88,18.86 46.74,19.03C46.60,19.20 46.37,19.51 46.23,19.72C46.09,19.93 45.85,20.25 45.69,20.44C45.53,20.63 45.29,20.96 45.16,21.19C45.03,21.41 44.79,21.75 44.63,21.94C44.47,22.13 44.24,22.42 44.13,22.58C44.02,22.75 43.80,23.02 43.66,23.19C43.51,23.35 43.26,23.69 43.10,23.93C42.95,24.17 42.73,24.47 42.61,24.60C42.49,24.74 42.27,25.03 42.12,25.25C41.98,25.47 41.74,25.80 41.59,25.97C41.45,26.14 41.24,26.42 41.13,26.58C41.02,26.75 40.80,27.02 40.66,27.19C40.51,27.35 40.25,27.70 40.09,27.95C39.93,28.20 39.71,28.51 39.59,28.63C39.48,28.75 39.27,29.04 39.12,29.26C38.98,29.48 38.68,29.87 38.47,30.12C38.26,30.38 37.91,30.85 37.70,31.17C37.49,31.48 37.18,31.90 37.02,32.10C36.85,32.30 36.58,32.65 36.41,32.88C36.24,33.10 35.92,33.47 35.71,33.70C35.50,33.92 35.24,34.28 35.13,34.48C35.03,34.69 34.82,35.01 34.66,35.19C34.50,35.38 34.26,35.71 34.12,35.94C33.99,36.16 33.75,36.50 33.59,36.68C33.43,36.87 33.21,37.17 33.10,37.34C32.98,37.51 32.76,37.80 32.60,37.97C32.43,38.14 32.21,38.40 32.11,38.56C32.00,38.72 31.77,39.03 31.59,39.25C31.41,39.47 31.22,39.74 31.17,39.84C31.07,40.04 30.43,40.86 29.78,41.62C29.26,42.23 28.71,42.96 28.27,43.62C28.08,43.92 27.80,44.28 27.66,44.44C27.52,44.59 27.27,44.93 27.10,45.19C26.94,45.45 26.71,45.75 26.59,45.88C26.48,46.00 26.22,46.32 26.02,46.60C25.82,46.88 25.43,47.40 25.16,47.75C23.78,49.52 23.49,49.91 21.91,52.00C21.77,52.19 21.46,52.60 21.22,52.91C20.98,53.22 20.62,53.69 20.41,53.97C20.20,54.24 19.88,54.65 19.68,54.88C19.49,55.11 19.25,55.44 19.14,55.63C19.03,55.82 18.80,56.14 18.63,56.34C18.45,56.53 18.19,56.87 18.05,57.08C17.91,57.29 17.67,57.61 17.53,57.78C17.39,57.95 17.16,58.26 17.02,58.47C16.88,58.67 16.67,58.93 16.56,59.03C16.45,59.13 16.17,59.50 15.93,59.84C15.70,60.19 15.29,60.74 15.03,61.06C14.77,61.39 14.42,61.86 14.25,62.11C14.08,62.36 13.81,62.70 13.67,62.86C13.52,63.02 13.15,63.48 12.84,63.87C12.53,64.26 12.10,64.78 11.89,65.02C11.66,65.28 11.39,65.65 11.26,65.92C11.14,66.18 10.88,66.56 10.69,66.78C10.50,67.00 10.23,67.37 10.10,67.61C9.97,67.85 9.70,68.22 9.51,68.42C9.32,68.63 8.99,68.98 8.78,69.20C8.13,69.89 7.69,70.00 6.09,69.88Z"/><path fill="currentColor" d="M4.993428571428572 100.6 7.0765714285714285 96.0H7.727142857142857L9.816857142857142 100.6H9.126857142857142L7.267142857142857 96.368H7.529999999999999L5.670285714285714 100.6ZM5.880571428571429 99.44999999999999 6.058 98.9242857142857H8.647142857142857L8.837714285714286 99.44999999999999ZM11.925657142857142 100.6V96.0H13.719657142857143Q14.324228571428572 96.0 14.751371428571428 96.19057142857142Q15.178514285714286 96.38114285714285 15.408514285714286 96.74257142857142Q15.638514285714285 97.104 15.638514285714285 97.60342857142857Q15.638514285714285 98.10285714285713 15.408514285714286 98.46099999999998Q15.178514285714286 98.81914285714285 14.751371428571428 99.00971428571428Q14.324228571428572 99.20028571428571 13.719657142857143 99.20028571428571H12.287085714285714L12.582799999999999 98.898V100.6ZM15.001085714285715 100.6 13.831371428571428 98.93085714285714H14.534514285714286L15.717371428571429 100.6ZM12.582799999999999 98.96371428571427 12.287085714285714 98.64171428571429H13.699942857142856Q14.3308 98.64171428571429 14.656085714285714 98.369Q14.981371428571428 98.09628571428571 14.981371428571428 97.60342857142857Q14.981371428571428 97.11057142857142 14.656085714285714 96.84114285714284Q14.3308 96.57171428571428 13.699942857142856 96.57171428571428H12.287085714285714L12.582799999999999 96.24314285714286ZM20.20502857142857 100.65257142857142Q19.679314285714284 100.65257142857142 19.229171428571426 100.47514285714286Q18.779028571428572 100.29771428571428 18.450457142857143 99.97899999999998Q18.121885714285714 99.6602857142857 17.937885714285713 99.23314285714285Q17.753885714285715 98.806 17.753885714285715 98.3Q17.753885714285715 97.794 17.937885714285713 97.36685714285713Q18.121885714285714 96.93971428571427 18.450457142857143 96.621Q18.779028571428572 96.30228571428572 19.225885714285717 96.12485714285714Q19.672742857142858 95.94742857142856 20.20502857142857 95.94742857142856Q20.730742857142857 95.94742857142856 21.174314285714285 96.12157142857143Q21.617885714285713 96.29571428571428 21.949742857142855 96.61442857142856Q22.281599999999997 96.93314285714285 22.462314285714285 97.36028571428571Q22.643028571428573 97.78742857142856 22.643028571428573 98.3Q22.643028571428573 98.81257142857142 22.462314285714285 99.23971428571429Q22.281599999999997 99.66685714285714 21.949742857142855 99.98557142857143Q21.617885714285713 100.30428571428571 21.174314285714285 100.47842857142857Q20.730742857142857 100.65257142857142 20.20502857142857 100.65257142857142ZM21.709885714285715 101.55942857142857Q21.479885714285714 101.55942857142857 21.2696 101.50357142857143Q21.059314285714287 101.44771428571428 20.849028571428573 101.32614285714286Q20.63874285714286 101.20457142857143 20.415314285714288 101.01071428571427Q20.191885714285714 100.81685714285713 19.92902857142857 100.53428571428572L20.63217142857143 100.3502857142857Q20.829314285714286 100.59342857142856 21.01002857142857 100.74785714285713Q21.190742857142858 100.90228571428571 21.36817142857143 100.9712857142857Q21.5456 101.0402857142857 21.71645714285714 101.0402857142857Q22.209314285714285 101.0402857142857 22.5576 100.646L22.866457142857143 101.02057142857143Q22.4196 101.55942857142857 21.709885714285715 101.55942857142857ZM20.20502857142857 100.06771428571427Q20.58617142857143 100.06771428571427 20.911457142857145 99.9362857142857Q21.236742857142858 99.80485714285713 21.476599999999998 99.56171428571427Q21.71645714285714 99.31857142857142 21.851171428571426 98.99657142857143Q21.985885714285715 98.67457142857143 21.985885714285715 98.3Q21.985885714285715 97.91885714285714 21.851171428571426 97.59685714285715Q21.71645714285714 97.27485714285714 21.476599999999998 97.035Q21.236742857142858 96.79514285714285 20.911457142857145 96.66371428571428Q20.58617142857143 96.5322857142857 20.20502857142857 96.5322857142857Q19.817314285714286 96.5322857142857 19.49202857142857 96.66371428571428Q19.166742857142857 96.79514285714285 18.9236 97.035Q18.680457142857144 97.27485714285714 18.545742857142855 97.59685714285715Q18.41102857142857 97.91885714285714 18.41102857142857 98.3Q18.41102857142857 98.67457142857143 18.545742857142855 98.99657142857143Q18.680457142857144 99.31857142857142 18.9236 99.56171428571427Q19.166742857142857 99.80485714285713 19.49202857142857 99.9362857142857Q19.817314285714286 100.06771428571427 20.20502857142857 100.06771428571427ZM26.97954285714286 100.65257142857142Q26.072685714285715 100.65257142857142 25.55354285714286 100.13342857142857Q25.0344 99.61428571428571 25.0344 98.61542857142857V96.0H25.69154285714286V98.58914285714285Q25.69154285714286 99.35799999999999 26.02997142857143 99.71285714285713Q26.3684 100.06771428571427 26.986114285714287 100.06771428571427Q27.610400000000002 100.06771428571427 27.94882857142857 99.71285714285713Q28.287257142857143 99.35799999999999 28.287257142857143 98.58914285714285V96.0H28.924685714285715V98.61542857142857Q28.924685714285715 99.61428571428571 28.40882857142857 100.13342857142857Q27.89297142857143 100.65257142857142 26.97954285714286 100.65257142857142ZM31.697200000000002 100.6V96.0H32.35434285714286V100.6ZM36.07314285714286 100.6V96.57171428571428H34.496V96.0H38.30085714285715V96.57171428571428H36.72371428571429V100.6ZM41.04051428571429 97.98457142857143H43.40622857142858V98.54314285714285H41.04051428571429ZM41.09965714285715 100.02828571428572H43.780800000000006V100.6H40.44251428571429V96.0H43.68880000000001V96.57171428571428H41.09965714285715ZM47.18417142857144 100.6V96.57171428571428H45.60702857142858V96.0H49.411885714285724V96.57171428571428H47.834742857142864V100.6ZM53.459257142857155 100.65257142857142Q52.55240000000001 100.65257142857142 52.03325714285715 100.13342857142857Q51.5141142857143 99.61428571428571 51.5141142857143 98.61542857142857V96.0H52.17125714285715V98.58914285714285Q52.17125714285715 99.35799999999999 52.50968571428572 99.71285714285713Q52.848114285714296 100.06771428571427 53.46582857142858 100.06771428571427Q54.09011428571429 100.06771428571427 54.428542857142865 99.71285714285713Q54.76697142857144 99.35799999999999 54.76697142857144 98.58914285714285V96.0H55.40440000000001V98.61542857142857Q55.40440000000001 99.61428571428571 54.888542857142866 100.13342857142857Q54.37268571428572 100.65257142857142 53.459257142857155 100.65257142857142ZM58.17691428571429 100.6V96.0H59.970914285714294Q60.57548571428572 96.0 61.00262857142857 96.19057142857142Q61.429771428571435 96.38114285714285 61.65977142857143 96.74257142857142Q61.889771428571436 97.104 61.889771428571436 97.60342857142857Q61.889771428571436 98.10285714285713 61.65977142857143 98.46099999999998Q61.429771428571435 98.81914285714285 61.00262857142857 99.00971428571428Q60.57548571428572 99.20028571428571 59.970914285714294 99.20028571428571H58.538342857142865L58.83405714285715 98.898V100.6ZM61.252342857142864 100.6 60.08262857142858 98.93085714285714H60.78577142857144L61.968628571428575 100.6ZM58.83405714285715 98.96371428571427 58.538342857142865 98.64171428571429H59.95120000000001Q60.582057142857145 98.64171428571429 60.907342857142865 98.369Q61.23262857142858 98.09628571428571 61.23262857142858 97.60342857142857Q61.23262857142858 97.11057142857142 60.907342857142865 96.84114285714284Q60.582057142857145 96.57171428571428 59.95120000000001 96.57171428571428H58.538342857142865L58.83405714285715 96.24314285714286ZM63.68314285714286 100.6 65.76628571428571 96.0H66.41685714285714L68.50657142857143 100.6H67.81657142857144L65.95685714285715 96.368H66.21971428571429L64.36 100.6ZM64.57028571428572 99.44999999999999 64.7477142857143 98.9242857142857H67.33685714285714L67.52742857142857 99.44999999999999Z"/></svg></div><span>Zavie Arquitetura</span><small>Ver Instagram</small></a>
@@ -534,266 +305,105 @@ footer a{color:#c4cedb}
   </div>
 </section>
 
-<section class="faq-sec claro" id="perguntas">
-  <div class="miolo">
-    <div class="intro"><span class="rotulo">Dúvidas</span><h2>Perguntas frequentes</h2><p>Não encontrou a sua? Pergunte direto pelo WhatsApp.</p></div>
-    <div class="faq">
-      <details><summary>O que é ART e por que ela importa?</summary><p>A Anotação de Responsabilidade Técnica registra no CREA quem é o engenheiro responsável pelo serviço. Sem ela, o laudo perde força perante condomínio, prefeitura, seguradora ou Justiça.</p></details>
-      <details><summary>Quanto tempo leva para receber o laudo?</summary><p>Depende do tamanho do imóvel e do tipo de laudo. O prazo vem escrito na proposta, antes da vistoria.</p></details>
-      <details><summary>Preciso estar presente na vistoria?</summary><p>É recomendável que alguém acompanhe para dar acesso e contar o histórico do imóvel, mas não precisa ser o proprietário.</p></details>
-      <details><summary>O laudo cautelar é obrigatório?</summary><p>Muitas prefeituras e condomínios exigem antes de obras com escavação ou demolição. Mesmo quando não é exigido, é a principal proteção da construtora e do vizinho.</p></details>
-    </div>
-  </div>
-</section>
-
 <section class="contato" id="contato">
   <div class="miolo">
-    <div class="revela">
-      <img class="logo" src="logo-completo.png" alt="Mantovany Engenharia e Construção" width="200">
-      <span class="rotulo">Contato</span>
-      <h2>Conte o seu <span class="destaque">caso.</span></h2>
-      <p>Mande uma mensagem com o endereço, o tipo de imóvel e o que está acontecendo. Respondemos com os próximos passos e uma proposta.</p>
-      <p style="font-size:.95rem">Atendemos São Paulo e Grande SP. Engenheiro responsável com registro ativo no CREA.</p>
+    <div class="grade">
+      <div class="revela">
+        <span class="rotulo">Contato</span>
+        <h2 style="margin-top:20px">Tem um terreno, uma obra <em>ou um imóvel para avaliar?</em></h2>
+        <p>Conte o seu caso. Respondemos com os próximos passos e uma proposta por escrito, antes de qualquer visita. Atendemos São Paulo e Grande SP.</p>
+      </div>
+      <div class="canais revela">
+        <a class="canal wpp" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento"><span><small>WhatsApp</small><b>(11) 97866-7370</b></span><span class="seta">Abrir conversa →</span></a>
+        <a class="canal" href="tel:+5511978667370"><span><small>Telefone</small><b>+55 11 97866-7370</b></span><span class="seta">Ligar →</span></a>
+        <a class="canal" href="mailto:contato@mantovanyengenharia.com"><span><small>E-mail</small><b>contato@mantovanyengenharia.com</b></span><span class="seta">Escrever →</span></a>
+      </div>
     </div>
-    <div class="canais revela d1">
-      <a class="canal wpp" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20vistoria"><span><small>WhatsApp</small><b>(11) 97866-7370</b></span><span class="seta">Abrir conversa →</span></a>
-      <a class="canal" href="tel:+5511978667370"><span><small>Telefone</small><b>+55 11 97866-7370</b></span><span class="seta">Ligar →</span></a>
-      <a class="canal" href="mailto:contato@mantovanyengenharia.com"><span><small>E-mail</small><b>contato@mantovanyengenharia.com</b></span><span class="seta">Escrever →</span></a>
-    </div>
+    <div class="assinatura" aria-hidden="true">Mantov<em>a</em>ny</div>
   </div>
 </section>
 </main>
 
-<footer>
-  <div class="miolo">
-    <div>
-      <span>© 2026 Mantovany Engenharia e Construção · Responsável técnico com CREA ativo</span>
-      <p class="creditos">Fotos e vídeos: Pexels. Animação do pilar: renderização própria.</p>
-    </div>
-    <span>Criadores do <a href="https://ymobra.com.br">YMOBRA</a></span>
-  </div>
-</footer>
+<footer><div class="miolo"><span>© 2026 Mantovany Engenharia e Construção · Responsável técnico com CREA ativo</span><span>Criadores do <a href="https://ymobra.com.br">YMOBRA</a></span></div></footer>
 
-<a class="flutuante" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20vistoria" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 10.5c.3 1.6 1.9 3.2 3.5 3.5l1.2-1 1.8.8-.4 1.6c-3 .2-6.4-3.2-6.2-6.2l1.6-.4.8 1.8z" fill="currentColor" stroke="none"/></svg></a>
-<a class="barra-wpp" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20vistoria"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Pedir orçamento pelo WhatsApp</a>
+<a class="flutuante" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></a>
+<a class="barra-wpp" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Pedir orçamento pelo WhatsApp</a>
 
-<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
-<script type="module">
-// Cenas 3D: prédio em nuvem de pontos no topo e projeto em linhas douradas.
-import * as THREE from 'three';
-const reduzir = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const prog = (el) => { const r = el.getBoundingClientRect(), t = r.height - innerHeight; return Math.min(1, Math.max(0, -r.top / t)); };
-const suave = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
-const criarRenderer = (canvas) => { try { const r = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, preserveDrawingBuffer: true }); r.setPixelRatio(Math.min(devicePixelRatio, innerWidth < 700 ? 1.5 : 2)); return r; } catch (e) { return null; } };
-const quandoVisivel = (el, fn) => { let vis = false, rodando = false; const loop = (t) => { if (!vis) { rodando = false; return; } fn(t); requestAnimationFrame(loop); };
-  new IntersectionObserver(([e]) => { vis = e.isIntersecting; if (vis && !rodando) { rodando = true; requestAnimationFrame(loop); } }, { rootMargin: '200px' }).observe(el); };
-
-/* ---------- TOPO: prédio que se monta a partir de pontos ---------- */
-(() => {
-  const hero = document.getElementById('hero'), canvas = document.getElementById('nuvem');
-  const renderer = criarRenderer(canvas); if (!renderer) return;
-  const cena = new THREE.Scene(), cam = new THREE.PerspectiveCamera(36, 1, 0.1, 400);
-  const W = 12, D = 8, AND = 7, HA = 3.2, ALT = AND * HA;
-  const alvos = [], tipo = [];
-  const add = (x, y, z, t) => { alvos.push(x, y, z); tipo.push(t); };
-  // 3 = projeto (malha no chão), 1 = lajes, 0 = pilares, 2 = grua
-  for (let x = -W / 2 - 3; x <= W / 2 + 3; x += 0.5) for (let z = -D / 2 - 3; z <= D / 2 + 3; z += 0.5) if (Math.random() < 0.45) add(x, 0, z, 3);
-  for (let a = 0; a <= AND; a++) {
-    const y = a * HA;
-    for (let x = -W / 2; x <= W / 2 + 0.01; x += 0.4) for (let z = -D / 2; z <= D / 2 + 0.01; z += 0.4) {
-      const borda = Math.abs(x) > W / 2 - 0.3 || Math.abs(z) > D / 2 - 0.3;
-      if (borda || Math.random() < 0.22) add(x, y, z, 1);
-    }
-  }
-  for (let x = -W / 2; x <= W / 2 + 0.01; x += W / 4) for (let z = -D / 2; z <= D / 2 + 0.01; z += D / 2)
-    for (let y = 0; y < ALT; y += 0.16) add(x + (Math.random() - 0.5) * 0.1, y, z + (Math.random() - 0.5) * 0.1, 0);
-  const gx = W / 2 + 3.5, gz = -1, gh = ALT + 7;
-  for (let y = 0; y < gh; y += 0.22) for (const [dx, dz] of [[-0.5, -0.5], [0.5, -0.5], [-0.5, 0.5], [0.5, 0.5]]) add(gx + dx, y, gz + dz, 2);
-  for (let x = gx - 22; x <= gx + 6; x += 0.2) { add(x, gh, gz - 0.4, 2); add(x, gh, gz + 0.4, 2); if (x < gx) add(x, gh + 1.6 * (1 - (gx - x) / 22), gz, 2); }
-  for (let y = gh - 11; y < gh; y += 0.25) add(gx - 12, y, gz, 2);
-  const N = alvos.length / 3;
-  const inicio = new Float32Array(N * 3), atraso = new Float32Array(N), tam = new Float32Array(N);
-  for (let i = 0; i < N; i++) {
-    const r = 35 + Math.random() * 35, th = Math.random() * 6.283, ph = Math.acos(2 * Math.random() - 1);
-    inicio[i * 3] = r * Math.sin(ph) * Math.cos(th); inicio[i * 3 + 1] = r * Math.cos(ph) * 0.6 + 10; inicio[i * 3 + 2] = r * Math.sin(ph) * Math.sin(th);
-    const y = alvos[i * 3 + 1], t = tipo[i];
-    atraso[i] = t === 3 ? Math.random() * 0.1 : t === 2 ? 0.32 + Math.random() * 0.15 : 0.1 + (y / ALT) * 0.55 + Math.random() * 0.07;
-    tam[i] = t === 3 ? 0.75 : 1.0;
-  }
-  const geo = new THREE.BufferGeometry();
-  geo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(alvos), 3));
-  geo.setAttribute('inicio', new THREE.BufferAttribute(inicio, 3));
-  geo.setAttribute('atraso', new THREE.BufferAttribute(atraso, 1));
-  geo.setAttribute('tipo', new THREE.BufferAttribute(new Float32Array(tipo), 1));
-  geo.setAttribute('tam', new THREE.BufferAttribute(tam, 1));
-  const mat = new THREE.ShaderMaterial({
-    transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
-    uniforms: { uP: { value: 0 }, uT: { value: 0 }, uPx: { value: renderer.getPixelRatio() } },
-    vertexShader: `
-      attribute vec3 inicio; attribute float atraso; attribute float tipo; attribute float tam;
-      uniform float uP; uniform float uT; uniform float uPx;
-      varying float vF; varying float vTipo;
-      void main(){
-        float f = clamp((uP*1.25 - atraso)/0.22, 0.0, 1.0); f = f*f*(3.0-2.0*f);
-        vec3 flut = vec3(sin(uT*.6+inicio.x), cos(uT*.5+inicio.y), sin(uT*.4+inicio.z))*0.7*(1.0-f);
-        vec3 p = mix(inicio, position, f) + flut;
-        vF = f; vTipo = tipo;
-        vec4 mv = modelViewMatrix*vec4(p,1.0);
-        gl_PointSize = tam*uPx*mix(1.5,2.8,f)*(80.0/-mv.z);
-        gl_Position = projectionMatrix*mv;
-      }`,
-    fragmentShader: `
-      uniform float uP; varying float vF; varying float vTipo;
-      void main(){
-        float d = length(gl_PointCoord-.5); if(d>.5) discard;
-        float a = smoothstep(.5,.08,d);
-        vec3 branco = vec3(.78,.84,.94), ouro = vec3(.96,.74,.32);
-        float m = vTipo>2.5 ? .55 : (vTipo>1.5 ? .9 : .1);
-        vec3 cor = mix(branco, ouro, m);
-        float acende = smoothstep(.72,1.0,uP)*step(.5,vTipo)*step(vTipo,1.5);
-        cor = mix(cor, ouro, acende*.65);
-        gl_FragColor = vec4(cor, a*mix(.4,1.0,vF));
-      }`
-  });
-  cena.add(new THREE.Points(geo, mat));
-
-  const ancoras = [new THREE.Vector3(-W / 2 - 1.5, 0, D / 2 + 1.5), new THREE.Vector3(gx - 12, gh - 11, gz), new THREE.Vector3(W / 2, ALT * 0.55, D / 2), new THREE.Vector3(-W / 2, ALT, -D / 2)];
-  const limiares = [0.06, 0.34, 0.58, 0.82];
-  const tags = [...hero.querySelectorAll('.etiqueta')];
-  const pct = hero.querySelector('[data-pct]'), med = hero.querySelector('.medidor');
-  const tam_ = () => { const w = canvas.clientWidth, h = canvas.clientHeight; renderer.setSize(w, h, false); cam.aspect = w / h;
-    if (w / h > 1.2) cam.setViewOffset(w, h, -w * 0.17, 0, w, h); else cam.setViewOffset(w, h, 0, h * 0.3, w, h);
-    cam.updateProjectionMatrix(); };
-  addEventListener('resize', tam_); tam_();
-  let pS = prog(hero), ult = performance.now(); const t0 = ult;
-  const centro = new THREE.Vector3(0, ALT * 0.45, 0), v = new THREE.Vector3();
-  quandoVisivel(hero, (agora) => {
-    const dt = Math.min(0.1, (agora - ult) / 1000); ult = agora; const t = (agora - t0) / 1000;
-    pS += (prog(hero) - pS) * (1 - Math.exp(-dt * 6));
-    mat.uniforms.uP.value = pS; mat.uniforms.uT.value = reduzir ? 0 : t;
-    const ang = -0.75 + pS * 1.25 + (reduzir ? 0 : t * 0.025);
-    const dist = (cam.aspect < 1 ? 80 : 58) - pS * 8, alt = 20 - pS * 7;
-    cam.position.set(Math.sin(ang) * dist, alt, Math.cos(ang) * dist); cam.lookAt(centro);
-    renderer.render(cena, cam);
-    const w = canvas.clientWidth, h = canvas.clientHeight;
-    tags.forEach((el, i) => {
-      v.copy(ancoras[i]).project(cam);
-      const on = pS > limiares[i] && v.z < 1;
-      el.classList.toggle('on', on);
-      el.style.left = ((v.x + 1) / 2 * w) + 'px'; el.style.top = ((1 - v.y) / 2 * h) + 'px';
-    });
-    pct.textContent = Math.round(pS * 100) + '%'; med.style.setProperty('--p', pS);
-    hero.classList.toggle('montando', pS > 0.2);
-  });
-})();
-
-</script>
 <script>
 (() => {
   const reduzir = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const prog = (el) => { const r = el.getBoundingClientRect(), t = r.height - innerHeight; return Math.min(1, Math.max(0, -r.top / t)); };
-  const suave = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
 
-  // topo sólido ao rolar
-  const topo = document.getElementById('topo');
-  const ajTopo = () => topo.classList.toggle('solido', scrollY > 40);
+  // topo: escuro sobre a animação, claro sobre as seções claras
+  const topo = document.getElementById('topo'), ciclo = document.getElementById('ciclo'), contato = document.getElementById('contato');
+  const ajTopo = () => { const fimCiclo = ciclo.getBoundingClientRect().bottom, iniCont = contato.getBoundingClientRect().top;
+    const claro = fimCiclo < 76 && iniCont > 76; topo.classList.toggle('claro-topo', claro); topo.classList.toggle('solido', !claro && scrollY > 40); };
   addEventListener('scroll', ajTopo, { passive: true }); ajTopo();
 
-  // ---------- Gantt ----------
-  const gantt = document.getElementById('gantt');
-  const tarefas = [['Projeto e aprovação', 0, 2], ['Fundação', 1.8, 1.7], ['Estrutura', 3.2, 3], ['Alvenaria', 5.2, 2.4], ['Instalações', 6.2, 3], ['Revestimentos', 8, 2.3], ['Acabamento', 9.6, 1.9], ['Entrega', 11.3, 0.7]];
-  if (gantt) {
-    gantt.innerHTML = `<div class="quadro vidro"><div class="cab"><b>Cronograma da obra</b><span>Mês 1 a 12</span></div>
-      <div class="semanas">${['', ...Array.from({ length: 12 }, (_, i) => 'M' + (i + 1))].map((s) => `<span>${s}</span>`).join('')}</div>
-      ${tarefas.map(([n, a, d]) => `<div class="linha"><span>${n}</span><div class="trilho"><div class="barra" style="left:${a / 12 * 100}%;width:${d / 12 * 100}%"><i></i></div></div></div>`).join('')}
-      <div class="kpis"><div class="kpi vidro"><small>Avanço físico</small><b data-k="av">0<em>%</em></b></div><div class="kpi vidro"><small>Etapa atual</small><b data-k="et" style="font-size:1.15rem;margin-top:12px">Projeto</b></div><div class="kpi vidro"><small>Relatórios</small><b style="font-size:1.15rem;margin-top:12px">Diário no YMOBRA</b></div></div>
-      <p class="nota">Exemplo ilustrativo de cronograma</p></div>`;
-  }
-  const barras = gantt ? [...gantt.querySelectorAll('.barra i')] : [];
-  let hoje; if (gantt) { hoje = document.createElement('div'); hoje.className = 'hoje'; gantt.querySelector('.quadro').appendChild(hoje); }
-  const desenharGantt = (f) => {
-    const m = f * 12;
-    barras.forEach((b, i) => { const [, a, d] = tarefas[i]; b.style.setProperty('--f', Math.min(1, Math.max(0, (m - a) / d))); });
-    const q = gantt.querySelector('.quadro'), tr = gantt.querySelector('.trilho');
-    const x0 = tr.offsetLeft + tr.parentElement.offsetLeft, w = tr.offsetWidth;
-    hoje.style.left = (x0 + w * f) + 'px';
-    const total = tarefas.reduce((s, t) => s + t[2], 0), feito = tarefas.reduce((s, [, a, d]) => s + Math.min(d, Math.max(0, m - a)), 0);
-    gantt.querySelector('[data-k="av"]').innerHTML = Math.round(feito / total * 100) + '<em>%</em>';
-    const atual = tarefas.filter(([, a]) => m >= a).pop() || tarefas[0];
-    gantt.querySelector('[data-k="et"]').textContent = atual[0];
-  };
-
-  // ---------- Sequência do pilar (laudos) ----------
-  const seq = document.getElementById('seq-pilar'), ctx = seq && seq.getContext('2d');
-  const TOTAL = 72, pasta = `pilar/${Math.min(innerWidth * (devicePixelRatio || 1), 2400) > 1400 ? 1920 : 1280}/`;
+  // ---------- sequência do prédio ----------
+  const canvas = document.getElementById('seq'), ctx = canvas.getContext('2d');
+  const TOTAL = 96, pasta = `ciclo/${Math.min(innerWidth * (devicePixelRatio || 1), 2600) > 1300 ? 1600 : 960}/`;
   const quadros = new Array(TOTAL);
   const carregar = (i) => { const im = new Image(); im.decoding = 'async'; im.src = `${pasta}${String(i + 1).padStart(3, '0')}.webp`; quadros[i] = im; return im; };
-  let seqIniciada = false;
-  const iniciarSeq = () => { if (seqIniciada) return; seqIniciada = true; carregar(0).onload = () => { const ordem = []; for (const passo of [8, 4, 2, 1]) for (let i = 0; i < TOTAL; i += passo) if (!ordem.includes(i)) ordem.push(i); ordem.forEach((i) => { if (!quadros[i]) carregar(i); }); }; };
   const perto = (i) => { for (let d = 0; d < TOTAL; d++) for (const k of [i - d, i + d]) { const q = quadros[k]; if (q && q.complete && q.naturalWidth) return q; } };
-  const ajSeq = () => { if (!seq) return; const d = Math.min(devicePixelRatio || 1, 2); seq.width = seq.clientWidth * d; seq.height = seq.clientHeight * d; seqDes = null; };
-  let seqDes = null;
-  const desenharSeq = (f) => {
-    const img = perto(Math.round(f * (TOTAL - 1))); if (!img || img === seqDes) return; seqDes = img;
-    const cw = seq.width, ch = seq.height, e = Math.max(cw / img.naturalWidth, ch / img.naturalHeight), w = img.naturalWidth * e, h = img.naturalHeight * e;
-    const x = Math.min(0, Math.max(cw - w, cw / 2 - w * 0.55));
-    ctx.drawImage(img, x, (ch - h) / 2, w, h);
+  carregar(0).onload = () => { const ordem = []; for (const p of [12, 6, 3, 1]) for (let i = 0; i < TOTAL; i += p) if (!ordem.includes(i)) ordem.push(i); ordem.forEach((i) => { if (!quadros[i]) carregar(i); }); };
+  const ajustar = () => { const d = Math.min(devicePixelRatio || 1, 2); canvas.width = canvas.clientWidth * d; canvas.height = canvas.clientHeight * d; desenhado = null; };
+  let desenhado = null;
+  const desenhar = (img) => { const cw = canvas.width, ch = canvas.height, e = Math.max(cw / img.naturalWidth, ch / img.naturalHeight), w = img.naturalWidth * e, h = img.naturalHeight * e;
+    const foco = cw / ch < 1 ? 0.52 : 0.42; const x = Math.min(0, Math.max(cw - w, cw / 2 - w * foco));
+    ctx.drawImage(img, x, (ch - h) / 2, w, h); };
+  addEventListener('resize', ajustar); ajustar();
+
+  const fases = [...document.querySelectorAll('.fase')], marcos = [...document.querySelectorAll('.linha-tempo li')];
+  const limites = marcos.map((m) => +m.dataset.ir).concat(1.0001);
+  const andar = document.querySelector('[data-andar]'), contador = document.querySelector('.contador-andar');
+  let faseAtual = 0;
+  marcos.forEach((m) => m.addEventListener('click', () => { const r = ciclo.getBoundingClientRect(); scrollTo({ top: scrollY + r.top + (ciclo.offsetHeight - innerHeight) * (+m.dataset.ir + 0.02), behavior: reduzir ? 'auto' : 'smooth' }); }));
+
+  let pS = prog(ciclo), ult = performance.now();
+  const loop = (agora) => {
+    const dt = Math.min(0.1, (agora - ult) / 1000); ult = agora;
+    const alvo = prog(ciclo); pS += (alvo - pS) * (reduzir ? 1 : 1 - Math.exp(-dt * 8)); if (Math.abs(alvo - pS) < 0.0004) pS = alvo;
+    const q = Math.round(pS * (TOTAL - 1)), img = perto(q);
+    if (img && img !== desenhado) { desenhar(img); desenhado = img; }
+    const f = fases.findIndex((el) => pS < +el.dataset.ate);
+    if (f !== faseAtual) { fases.forEach((el, i) => el.classList.toggle('on', i === f)); faseAtual = f; }
+    marcos.forEach((m, i) => { const a = limites[i], b = limites[i + 1]; m.style.setProperty('--f', Math.min(1, Math.max(0, (pS - a) / (b - a)))); m.classList.toggle('on', pS >= a && pS < b); });
+    const quadro = q + 1, k = Math.min(8, Math.max(1, Math.floor((quadro - 18) / 5) + 1));
+    contador.classList.toggle('on', quadro >= 18 && quadro <= 60); andar.textContent = k;
+    requestAnimationFrame(loop);
   };
-  addEventListener('resize', ajSeq); ajSeq();
-  new IntersectionObserver(([e]) => { if (e.isIntersecting) iniciarSeq(); }, { rootMargin: '150% 0px' }).observe(document.getElementById('laudos'));
-
-  // ---------- Seções que entram na janela ----------
-  const zooms = [...document.querySelectorAll('.zoom')].map((sec) => ({ sec, midia: sec.querySelector('.midia'), interno: sec.querySelector('.midia > *'), aro: sec.querySelector('.aro'), gig: sec.querySelector('.gigante'), pS: 0 }));
-  const atualizarZooms = (dt) => {
-    const vw = innerWidth, vh = Math.max(innerHeight, 560), cel = vw < 700;
-    for (const z of zooms) {
-      const r = z.sec.getBoundingClientRect(); if (r.bottom < -50 || r.top > vh + 50) continue;
-      const alvo = prog(z.sec); z.pS += (alvo - z.pS) * (reduzir ? 1 : 1 - Math.exp(-dt * 8));
-      const p = z.pS, e = suave(0.04, 0.46, p);
-      let w0 = cel ? vw * 0.66 : Math.min(vw * 0.26, 380), h0 = w0 * 1.4; if (h0 > vh * 0.64) { h0 = vh * 0.64; w0 = h0 / 1.4; }
-      const w = w0 + (vw - w0) * e, h = h0 + (vh - h0) * e, rx = w0 * 0.46 * (1 - e), ry = h0 * 0.32 * (1 - e);
-      const ix = (vw - w) / 2, iy = (vh - h) / 2;
-      z.midia.style.clipPath = `inset(${iy}px ${ix}px ${iy}px ${ix}px round ${rx}px / ${ry}px)`;
-      z.midia.style.setProperty('--escuro', suave(0.35, 0.6, p));
-      z.interno.style.transform = `scale(${1.22 - 0.22 * e})`;
-      z.aro.style.width = w + 'px'; z.aro.style.height = h + 'px'; z.aro.style.borderRadius = `${rx}px / ${ry}px`; z.aro.style.opacity = 1 - suave(0.25, 0.42, p);
-      z.gig.style.opacity = 1 - e * 1.6;
-      z.sec.classList.toggle('aberta', p > 0.52);
-      if (z.sec.id === 'laudos') desenharSeq(suave(0.12, 0.95, p));
-      if (z.sec.id === 'gestao') desenharGantt(suave(0.1, 0.9, p));
-    }
-  };
-
-  // vídeo de obra: toca só quando a seção está na tela
-  document.querySelectorAll('.zoom video').forEach((v) => new IntersectionObserver(([e]) => { if (e.isIntersecting) { v.preload = 'auto'; v.play().catch(() => {}); } else v.pause(); }, { rootMargin: '100px' }).observe(v.closest('.zoom')));
-
-  // ---------- Cartões que empilham ----------
-  const folhas = [...document.querySelectorAll('.folha')];
-  const atualizarFolhas = () => folhas.forEach((f, i) => {
-    const prox = folhas[i + 1]; if (!prox) return;
-    const r = f.getBoundingClientRect(), k = Math.min(1, Math.max(0, (r.bottom - prox.getBoundingClientRect().top) / r.height));
-    f.style.transform = `scale(${1 - 0.05 * k})`; f.style.filter = `brightness(${1 - 0.4 * k})`;
-  });
-
-  let ult = performance.now();
-  const loop = (agora) => { const dt = Math.min(0.1, (agora - ult) / 1000); ult = agora; atualizarZooms(dt); atualizarFolhas(); requestAnimationFrame(loop); };
   requestAnimationFrame(loop);
 
-  // aparecer ao rolar + números
+  // aparecer e contar
   if (!reduzir && 'IntersectionObserver' in window) {
-    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('visivel'); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('visivel'); io.unobserve(e.target); } }), { threshold: 0.12 });
     document.querySelectorAll('.revela').forEach((el) => io.observe(el));
-    const io2 = new IntersectionObserver((es) => es.forEach((e) => {
-      if (!e.isIntersecting) return; io2.unobserve(e.target);
-      const fim = +e.target.dataset.contar, t0 = performance.now();
-      const passo = (t) => { const p = Math.min(1, (t - t0) / 1200); e.target.textContent = Math.round(fim * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(passo); };
-      requestAnimationFrame(passo);
-    }), { threshold: 0.6 });
+    const io2 = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) return; io2.unobserve(e.target);
+      const fim = +e.target.dataset.contar, t0 = performance.now(); const passo = (t) => { const p = Math.min(1, (t - t0) / 1300); e.target.textContent = Math.round(fim * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(passo); }; requestAnimationFrame(passo); }), { threshold: 0.6 });
     document.querySelectorAll('[data-contar]').forEach((el) => { el.textContent = '0'; io2.observe(el); });
   } else document.querySelectorAll('.revela').forEach((el) => el.classList.add('visivel'));
 })();
 </script>
-
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+import { iniciarPlanta } from './planta.js';
+const lista = document.getElementById('lista-amb'), ficha = document.getElementById('ficha');
+const fmt = (n) => n.toFixed(1).replace('.', ',') + ' m²';
+const mostrar = (a) => {
+  lista.querySelectorAll('button').forEach((b) => b.classList.toggle('on', a && b.dataset.id === a.id));
+  if (!a) { ficha.classList.add('vazia'); return; }
+  ficha.querySelector('[data-f="area"]').textContent = fmt(a.area); ficha.querySelector('[data-f="nome"]').textContent = a.nome; ficha.querySelector('[data-f="desc"]').textContent = a.d;
+  ficha.classList.remove('vazia');
+};
+const p = iniciarPlanta({ canvas: document.getElementById('maquete'), rotulo: document.getElementById('balao'), aoSelecionar: mostrar,
+  aoPronto: (AMB) => {
+    const visiveis = AMB.filter((a) => a.id !== 'hall');
+    lista.innerHTML = visiveis.map((a) => `<li><button type="button" data-id="${a.id}">${a.nome}<span>${fmt(a.area)}</span></button></li>`).join('');
+    document.querySelector('[data-total]').textContent = fmt(AMB.filter((a) => a.id !== 'varanda').reduce((s, a) => s + a.area, 0)) + ' + varanda';
+  } });
+if (p) lista.addEventListener('click', (e) => { const b = e.target.closest('button'); if (b) p.selecionar(b.dataset.id); });
+</script>
 <script>
   // Contador de acessos sem cookie (só números por dia, sem IP nem identificação): vai para a Central do YMOBRA
   (() => { try {
