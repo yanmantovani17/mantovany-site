@@ -214,23 +214,23 @@ footer a{color:#c4cedb}
     <canvas id="seq" role="img" aria-label="Animação de um prédio: projeto em linhas douradas sobre o terreno, fundação, estrutura de concreto subindo com grua, fachada e o prédio pronto ao entardecer"></canvas>
     <div class="contador-andar" aria-hidden="true"><small>Estrutura</small><b><span data-andar>1</span> / 8</b><small style="margin-top:6px">pavimentos</small></div>
 
-    <div class="fase on" data-ate="0.12">
+    <div class="fase on" data-ate="0.13">
       <span class="rotulo">Mantovany · Engenharia civil</span>
       <h1>Do terreno <em>à chave.</em></h1>
       <p>Projeto, gestão, obra, vistoria e laudo com o mesmo engenheiro responsável. Role para ver um prédio sair do papel.</p>
       <div class="acoes"><a class="btn btn-ouro" href="https://wa.me/5511978667370?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento">Pedir orçamento</a><a class="btn btn-linha" href="#planta">Ver o projeto em 3D</a></div>
     </div>
-    <div class="fase" data-ate="0.2">
+    <div class="fase" data-ate="0.3">
       <span class="rotulo">01 · O projeto</span>
       <h2>Cada linha pensada <em>antes da primeira estaca.</em></h2>
       <p>Levantamento, projeto e aprovação na prefeitura. A obra começa certa quando começa no papel.</p>
     </div>
-    <div class="fase" data-ate="0.6">
+    <div class="fase" data-ate="0.68">
       <span class="rotulo">02 · A estrutura</span>
       <h2>Fundação, pilares e lajes <em>com controle técnico.</em></h2>
       <p>Planejamento, cronograma e acompanhamento de cada concretagem, com diário de obra no YMOBRA.</p>
     </div>
-    <div class="fase" data-ate="0.8">
+    <div class="fase" data-ate="0.9">
       <span class="rotulo">03 · O fechamento</span>
       <h2>Fachada e acabamento <em>no prazo combinado.</em></h2>
       <p>Gestão de equipes, medições e controle de custos até a última esquadria.</p>
@@ -369,8 +369,8 @@ footer a{color:#c4cedb}
     const f = fases.findIndex((el) => pS < +el.dataset.ate);
     if (f !== faseAtual) { fases.forEach((el, i) => el.classList.toggle('on', i === f)); faseAtual = f; }
     marcos.forEach((m, i) => { const a = limites[i], b = limites[i + 1]; m.style.setProperty('--f', Math.min(1, Math.max(0, (pS - a) / (b - a)))); m.classList.toggle('on', pS >= a && pS < b); });
-    const quadro = q + 1, k = Math.min(8, Math.max(1, Math.floor((quadro - 18) / 5) + 1));
-    contador.classList.toggle('on', quadro >= 18 && quadro <= 60); andar.textContent = k;
+    const quadro = q + 1, k = Math.min(8, Math.max(1, Math.floor((quadro - 30) / 4.5) + 1));
+    contador.classList.toggle('on', quadro >= 30 && quadro <= 66); andar.textContent = k;
     requestAnimationFrame(loop);
   };
   requestAnimationFrame(loop);
